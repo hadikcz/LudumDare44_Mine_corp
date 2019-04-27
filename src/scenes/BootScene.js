@@ -24,5 +24,7 @@ export default class BootScene extends Phaser.Scene {
             // this.scene.start('GameOverLostScene');
         }, this);
         this.load.image('bg', 'assets/images/bg.png');
+        this.load.image('block', 'assets/images/block.png');
+        this.load.image('landing_ship', 'assets/images/landing_ship.png');
     }
 }

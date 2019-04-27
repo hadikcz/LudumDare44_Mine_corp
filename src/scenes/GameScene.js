@@ -1,6 +1,5 @@
 /* eslint-disable no-trailing-spaces */
 /* global __DEV__ */
-import * as dat from 'dat.gui';
 import Phaser from 'phaser';
 import Controller from '../Controller';
 import EffectManager from './../effects/EffectManager';
@@ -26,16 +25,16 @@ export default class GameScene extends Phaser.Scene {
     }
 
     create () {
+        window.gameScene = this;
         this.physics.world.setBounds(0, 0, GameConfig.World.width, GameConfig.World.height);
+        // this.matter.world.setBounds(0, 0, GameConfig.World.width, GameConfig.World.height);
         this.effectManager = new EffectManager(this);
         this.cameras.main.setOrigin(0, 0);
         this.cameras.main.startFollow({ x: 0, y: 0 });
         this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
 
         this.lightSystem = new LightSystem(this);
-
         this.gameEnvironment = new GameEnvironment(this);
-
         this.controller = new Controller(this);
 
         this.ui = new UI(this);
@@ -51,10 +50,29 @@ export default class GameScene extends Phaser.Scene {
         //         this.fadeRect.destroy();
         //     }
         // });
+
+        this.input.on('dragstart', function (pointer, obj) {
+            obj.body.moves = false;
+        });
+
+        this.input.on('drag', function (pointer, obj, dragX, dragY) {
+            obj.setPosition(dragX, dragY);
+        });
+
+        this.input.on('dragend', function (pointer, obj) {
+            obj.body.moves = true;
+        });
     }
 
     update () {
         this.controller.update();
         this.gameEnvironment.update();
+    }
+
+    /**
+     * @return {Phaser.Physics.Arcade.Body}
+     */
+    getPlanetColliderBody () {
+        return this.gameEnvironment.planet.planetCollider.body;
     }
 }

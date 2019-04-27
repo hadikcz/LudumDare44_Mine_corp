@@ -17,5 +17,19 @@ export default {
         UpOnLights: 11,
         Night: 12,
         Text: 50
+    },
+    Gravity: {
+        accelerateSpeed: 800
+    },
+    Planet: {
+        radius: 230,
+        offset: {
+            x: 25,
+            y: 25
+        },
+        offsetCircle: {
+            x: 10,
+            y: 10
+        }
     }
 };

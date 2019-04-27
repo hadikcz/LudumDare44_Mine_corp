@@ -4,7 +4,6 @@ export default class FlyText extends Phaser.GameObjects.Text {
     constructor (scene) {
         super(scene, -1000, -100, '', { fontFamily: 'AldotheApache, Verdana, Arial', fontSize: 32, color: '#0000FF' });
 
-        this.scene.physics.world.enable(this);
         this.scene.add.existing(this);
 
         this.setStroke('#FFFFFF', 8);

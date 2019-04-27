@@ -17,6 +17,15 @@ const config = {
     },
     physics: {
         default: 'arcade',
+        // matter: {
+        //     gravity: {
+        //         scale: 0
+        //     },
+        //     debug: true
+        // },
+        // plugins: {
+        //     attractors: true
+        // },
         arcade: {
             debug: false
         }

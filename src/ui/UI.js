@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Phaser from 'phaser';
-import GameConfig from './../GameConfig';
 
 export default class UI {
     /**
@@ -11,6 +10,5 @@ export default class UI {
          * @type {Phaser.Scene}
          */
         this.scene = scene;
-
     }
 }
