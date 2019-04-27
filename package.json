@@ -1,0 +1,50 @@
+{
+  "name": "Our_shelter_ld43",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Vladimír Novák <hadikcze@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --config webpack.config.js",
+    "build": "webpack --config webpack.production.config.js",
+    "test": "mocha --require @babel/register"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "expose-loader": "^0.7.5",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.2",
+    "zip-webpack-plugin": "^3.0.0"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.3",
+    "fs": "0.0.1-security",
+    "gamee-js": "^2.2.0",
+    "jquery": "^3.3.1",
+    "phaser": "^3.15.1",
+    "phaser-animated-tiles": "^2.0.2",
+    "shortid": "^2.2.14",
+    "slick-carousel": "^1.8.1"
+  }
+}

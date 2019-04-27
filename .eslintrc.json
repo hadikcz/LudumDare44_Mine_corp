@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "valid-jsdoc": ["error", {"requireParamDescription": false, "requireReturnDescription": false, "requireReturn": false }],
+    "no-trailing-spaces": ["warn", { "skipBlankLines": true }]
+  },
+  "globals": {
+    "Phaser": true
+  },
+  "settings": {
+    "import/core-modules": ["phaser"]
+  }
+}
