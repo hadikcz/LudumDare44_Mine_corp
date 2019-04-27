@@ -22,7 +22,6 @@ export default class GameScene extends Phaser.Scene {
          */
         this.ui = null;
 
-
         this.gameOver = false;
     }
 
@@ -33,9 +32,7 @@ export default class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow({ x: 0, y: 0 });
         this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
 
-        this.add.rectangle(0, 0, GameConfig.World.width, GameConfig.World.height, 0xFFFFFF, 1).setAlpha(1).setOrigin(0, 0).setDepth(99999);
         this.lightSystem = new LightSystem(this);
-
 
         this.gameEnvironment = new GameEnvironment(this);
 

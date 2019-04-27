@@ -16,7 +16,7 @@ body {
     -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
     image-rendering: pixelated;                  /* Chrome 41 */
     font-family: 'AldotheApache', Arial;
-    background: #000;
+    background: #7599bb;
 }
 #content {
     position: absolute;

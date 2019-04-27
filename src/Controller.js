@@ -3,7 +3,6 @@ export default class Controller {
      * @param {GameScene} scene
      */
     constructor (scene) {
-
         /**
          * @type {GameScene}
          */
