@@ -38,3 +38,22 @@ body {
     font-size: 25px;
     margin: 10px
 }
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #66ff00 transparent;
+    zoom: 0.5;
+    transform: translateY(-50%);
+    animation: blinker 2s linear infinite;
+}
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
