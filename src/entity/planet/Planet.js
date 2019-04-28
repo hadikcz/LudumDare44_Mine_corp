@@ -52,8 +52,6 @@ export default class Planet {
          */
         this.planetHpText = this.scene.add.text(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, '100%', { fill: '#ff0000' }).setDepth(Depths.UI);
 
-        // this.scene.matter.add.mouseSpring();
-
         this.scene.events.on(Events.ApplyDamageToPlanet, (damage) => {
             this.hp.take(damage);
             this._processMineCorpIncome(damage);
@@ -62,6 +60,11 @@ export default class Planet {
         this.scene.events.on(Events.ReturnDamageToPlanet, (damage) => {
             this.hp.add(damage);
         });
+
+        // debug land
+        // Planet.getLandCircle().getPoints(64).forEach((point) => {
+        //     this.scene.add.circle(point.x, point.y, 2, 0xFF0000).setDepth(Depths.UI);
+        // });
     }
 
     update () {
@@ -112,8 +115,8 @@ export default class Planet {
      */
     static getCenterOfPlanet () {
         return {
-            x: GameConfig.World.width / 2,
-            y: GameConfig.World.height / 2
+            x: (GameConfig.World.width / 2) + GameConfig.World.offsetX,
+            y: GameConfig.World.height / 2 + GameConfig.World.offsetY
         };
     }
 
@@ -122,8 +125,8 @@ export default class Planet {
      */
     static getLandCircle () {
         return new Phaser.Curves.Ellipse(
-            GameEnvironment.getCenterOfTheMap().x,
-            GameEnvironment.getCenterOfTheMap().y,
+            Planet.getCenterOfPlanet().x,
+            Planet.getCenterOfPlanet().y,
             GameConfig.Planet.radius
         );
     }

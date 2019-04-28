@@ -28,7 +28,7 @@ export default class GameEnvironment {
         this.scene.physics.add.collider(this.planet.planetCollider, this.blocks);
         this.scene.physics.add.collider(this.blocks, this.blocks);
 
-        this._createTestBlocks();
+        // this._createTestBlocks();
     }
 
     update () {
@@ -41,15 +41,5 @@ export default class GameEnvironment {
             let block = new Block(this.scene, pos.x, pos.y);
             this.blocks.add(block);
         }
-    }
-
-    /**
-     * @return {{x: number, y: number}}
-     */
-    static getCenterOfTheMap () {
-        return {
-            x: GameConfig.World.width / 2,
-            y: GameConfig.World.height / 2
-        };
     }
 }

@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import GameEnvironment from 'core/GameEnvironment';
 import GameConfig from 'GameConfig';
+import Planet from 'entity/planet/Planet';
 
 export default class Block extends Phaser.GameObjects.Image {
     constructor (scene, x, y) {
@@ -27,6 +28,6 @@ export default class Block extends Phaser.GameObjects.Image {
     }
 
     preUpdate () {
-        this.scene.physics.accelerateToObject(this, GameEnvironment.getCenterOfTheMap(), GameConfig.Gravity.accelerateSpeed);
+        this.scene.physics.accelerateToObject(this, Planet.getCenterOfPlanet(), GameConfig.Gravity.accelerateSpeed);
     }
 }

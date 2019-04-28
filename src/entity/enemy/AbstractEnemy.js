@@ -132,8 +132,27 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             y: landY,
             onComplete: () => {
                 this._phase = EnemyPhase.LANDED;
+                // this.setRotation(Planet.getRotationTowardPlanetCenter(this.x, this.y))
             }
         });
+
+        setTimeout(() => {
+            let newRotation = Planet.getRotationTowardPlanetCenter(this.x, this.y);
+            let diff = Math.abs(newRotation - this.rotation);
+            console.log(newRotation + ' vs' + this.rotation + ' diff: ' + diff);
+            if (diff > 0.5) {
+                return;
+            }
+            console.log('start turning');
+            this.scene.tweens.add({
+                targets: this,
+                ease: 'Linear',
+                duration: Enemies.SHIPS.landingTime * 0.7,
+                // duration: 200,
+                rotation: newRotation
+            });
+        }, Enemies.SHIPS.landingTime - (Enemies.SHIPS.landingTime * 0.7));
+
         this._phase = EnemyPhase.LANDING;
 
         // debug

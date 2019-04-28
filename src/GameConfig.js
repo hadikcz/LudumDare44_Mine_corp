@@ -6,7 +6,9 @@ export default {
     },
     World: {
         width: 1024,
-        height: 640
+        height: 640,
+        offsetX: 35,
+        offsetY: 0
     },
     DepthLayers: {
         Surface: 1,
@@ -26,10 +28,10 @@ export default {
             offsetAngle: 12
         },
         spawnRadius: 500,
-        radius: 230,
+        radius: 188, // 230
         offset: {
-            x: 25,
-            y: 25
+            x: 17, // 51
+            y: 17 // 16
         },
         offsetCircle: {
             x: 10,
