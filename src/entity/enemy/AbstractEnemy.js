@@ -47,7 +47,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
          * @type {boolean}
          * @protected
          */
-        this._canAttack = false;
+        this._canMine = false;
 
         /**
          * @private
@@ -72,6 +72,11 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.add(this.image);
 
         /**
+         * @type {number}
+         */
+        this.totalMined = 0;
+
+        /**
          * @type {Phaser.GameObjects.Text}
          */
         this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
@@ -82,7 +87,8 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             repeat: Infinity,
             callbackScope: this,
             callback: () => {
-                if (this._canAttack) {
+                if (this._canMine) {
+                    this.totalMined += this.enemyData.damage;
                     this.scene.events.emit(Events.ApplyDamageToPlanet, this.enemyData.damage);
                 }
             }
@@ -162,7 +168,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     destroy () {
-        this._canAttack = false;
+        this._canMine = false;
         this.hpText.destroy();
         super.destroy();
     }

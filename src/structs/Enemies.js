@@ -2,7 +2,8 @@ export default {
     SHIPS: {
         landingTime: 2500, // 2500..5000
         launchTime: 5000,
-        waitBeforeLaunchTime: 500
+        waitBeforeLaunchTime: 500,
+        returnValueAfterDestroyShip: 1.2
     },
     MAN: {
         landingTime: 750,
@@ -21,6 +22,13 @@ export default {
             name: 'Transport ship',
             hp: 8,
             damage: 1
+        },
+        {
+            type: 'mining_ship', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
+            name: 'Mining ship',
+            hp: 15,
+            damage: 15,
+            waitBeforeLaunchTime: 20000
         }
     ],
     /**

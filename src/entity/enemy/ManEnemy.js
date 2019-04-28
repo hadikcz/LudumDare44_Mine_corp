@@ -39,14 +39,14 @@ export default class ManEnemy extends AbstractEnemy {
             this._startWandering();
         }
 
-        if (this._phase === EnemyPhase.MAN_START_MINING) {
+        if (this._phase === EnemyPhase.START_MINING) {
             this._startMining();
         }
     }
 
     _startMining () {
-        this._canAttack = true;
-        this._phase = EnemyPhase.MAN_MINING;
+        this._canMine = true;
+        this._phase = EnemyPhase.MINING;
         this.scene.time.addEvent({
             delay: Enemies.MAN.miningTime,
             callbackScope: this,
@@ -57,7 +57,7 @@ export default class ManEnemy extends AbstractEnemy {
     }
 
     _startWandering () {
-        this._canAttack = false;
+        this._canMine = false;
         this._phase = EnemyPhase.MAN_WANDERING;
         let circle = new Phaser.Curves.Ellipse(this.x, this.y, 64);
         let randomPointAroundPlayer = circle.getRandomPoint();
@@ -73,7 +73,7 @@ export default class ManEnemy extends AbstractEnemy {
             y: randomPointToMove.y,
             onComplete: () => {
                 this.wanderingAnimationTween.pause();
-                this._phase = EnemyPhase.MAN_START_MINING;
+                this._phase = EnemyPhase.START_MINING;
             }
         });
     }

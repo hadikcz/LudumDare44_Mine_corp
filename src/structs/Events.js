@@ -1,3 +1,4 @@
 export default {
-    ApplyDamageToPlanet: 'ApplyDamageToPlanet'
+    ApplyDamageToPlanet: 'ApplyDamageToPlanet',
+    ReturnDamageToPlanet: 'ReturnDamageToPlanet'
 };

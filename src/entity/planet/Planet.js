@@ -41,6 +41,10 @@ export default class Planet {
         this.scene.events.on(Events.ApplyDamageToPlanet, (damage) => {
             this.hp.take(damage);
         });
+
+        this.scene.events.on(Events.ReturnDamageToPlanet, (damage) => {
+            this.hp.add(damage);
+        });
     }
 
     update () {
