@@ -29,7 +29,10 @@ export default class Lightning extends Phaser.GameObjects.Image {
             scaleX: 1,
             scaleY: 1,
             duration: Attacks.Volcano.growTime,
-            ease: 'Linear'
+            ease: 'Linear',
+            onComplete: () => {
+                this.scene.cameras.main.flash(500, 255, 0, 0, true);
+            }
         });
         this.scene.time.addEvent({
             delay: 5000,
