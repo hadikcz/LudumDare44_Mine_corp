@@ -32,8 +32,10 @@ export default class Debris extends Phaser.GameObjects.Image {
     launch (x, y, rotation, velocityX = 0, velocityY = 0, customImage = false) {
         if (customImage) {
             this.setFrame(customImage);
+            this.body.setSize(4, 4);
         } else {
             this.setFrame('debris' + Phaser.Math.RND.integerInRange(1, 3));
+            this.body.setSize(11, 11);
         }
         this.setPosition(x, y);
         this.setRotation(Phaser.Math.RND.rotation());
