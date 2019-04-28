@@ -23,6 +23,8 @@ export default class Lightning extends Phaser.GameObjects.Image {
         this.setVisible(true);
         this.setActive(true);
 
+        this.scene.cameras.main.flash(85, 255, 255, 255, true);
+
         this.scene.time.addEvent({
             delay: 150,
             callbackScope: this,
