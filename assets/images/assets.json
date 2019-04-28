@@ -220,6 +220,27 @@
 					}
 				},
 				{
+					"filename": "smoke",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 9,
+						"h": 9
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 9,
+						"h": 9
+					},
+					"frame": {
+						"x": 168,
+						"y": 171,
+						"w": 9,
+						"h": 9
+					}
+				},
+				{
 					"filename": "debris1",
 					"rotated": false,
 					"trimmed": false,
@@ -330,6 +351,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:c0489c7d7dc2996052436a2d237e9c55:90ac72a9d49912bfe57a6b032a00e70b:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:f142b95e0ff36f4f786944e996e6429a:497255ad5e85ec4da7e579f171d98911:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

@@ -12,12 +12,22 @@ export default class FactoryEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
         super(scene, FactoryEnemy.TYPE, 'factory', x, y);
         this.setDepth(Depths.SHIPS);
+
+        /**
+         * @type {{x: number, y: number}}
+         * @private
+         */
+        this._smokeFrom = TransformHelpers.calcPivot(this.x, this.y, Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2, 45);
     }
 
     preUpdate () {
         super.preUpdate();
         if (this._phase === EnemyPhase.LANDED) {
             this._startMining();
+        }
+
+        if (this._phase === EnemyPhase.MINING) {
+            this.scene.effectManager.launchSmoke(this._smokeFrom.x, this._smokeFrom.y);
         }
     }
 

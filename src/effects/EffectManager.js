@@ -5,6 +5,7 @@ import Tornado from 'effects/Tornado';
 import Volcano from 'effects/Volcano';
 import Asteroid from 'effects/Asteroid';
 import Debris from 'effects/Debris';
+import Smoke from 'effects/Smoke';
 
 export default class EffectManger {
     /**
@@ -72,6 +73,14 @@ export default class EffectManger {
          */
         this.debrisGroup = this.scene.add.group({
             classType: Debris,
+            runChildUpdate: true
+        });
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         */
+        this._smokeGroup = this.scene.add.group({
+            classType: Smoke,
             runChildUpdate: true
         });
 
@@ -190,6 +199,23 @@ export default class EffectManger {
     }
 
     /**
+     * @param {number} x
+     * @param {number} y
+     * @return {Debris}
+     */
+    launchSmoke (x, y) {
+        let group = this._smokeGroup;
+        /** @type {Smoke} */
+        let effect = group.getFirstDead();
+        if (!effect) {
+            effect = new Smoke(this.scene);
+            group.add(effect);
+        }
+        effect.launch(x, y);
+        return effect;
+    }
+
+    /**
      * @private
      */
     _preparePools () {
@@ -228,6 +254,12 @@ export default class EffectManger {
         group = this.debrisGroup;
         for (let i = 0; i < group.maxSize; i++) {
             let effect = new Debris(this.scene);
+            group.add(effect);
+        }
+
+        group = this._smokeGroup;
+        for (let i = 0; i < group.maxSize; i++) {
+            let effect = new Smoke(this.scene);
             group.add(effect);
         }
     }
