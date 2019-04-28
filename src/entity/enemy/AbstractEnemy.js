@@ -62,8 +62,6 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             y: landY,
             onComplete: () => {
                 this._phase = 'landed';
-                console.log('landed');
-                this.tint = 0xFF0000;
             }
         });
 
