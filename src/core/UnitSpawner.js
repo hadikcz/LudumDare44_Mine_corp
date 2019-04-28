@@ -3,6 +3,7 @@ import LandingShipEnemy from 'entity/enemy/LandingShipEnemy';
 import GameConfig from 'GameConfig';
 import ArrayHelpers from 'helpers/ArrayHelpers';
 import ManEnemy from 'entity/enemy/ManEnemy';
+import Depths from 'structs/Depths';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -41,6 +42,9 @@ export default class UnitSpawner {
         if (deployOverY === undefined) {
             deployOverY = spawnY;
         }
+
+        // this.scene.add.circle(spawnX, spawnY, 2, 0xFF0000).setDepth(Depths.UI);
+        // this.scene.add.circle(deployOverX, deployOverY, 2, 0x00FF00).setDepth(Depths.UI);
 
         unit.landOnGround(deployOverX, deployOverY);
     }

@@ -4,6 +4,7 @@ import GameEnvironment from 'core/GameEnvironment';
 import TransformHelpers from 'helpers/TransformHelpers';
 import EnemyPhase from 'structs/EnemyPhase';
 import Planet from 'entity/planet/Planet';
+import Enemies from 'structs/Enemies';
 
 /**
  * @abstract
@@ -59,7 +60,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Expo.Out,
-            duration: 5000,
+            duration: Enemies.SHIPS.landingTime,
             x: landX,
             y: landY,
             onComplete: () => {
@@ -81,7 +82,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Linear.Linear,
-            duration: 1000,
+            duration: Enemies.MAN.landingTime,
             x: landPosition.x,
             y: landPosition.y,
             onComplete: () => {
@@ -94,7 +95,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Expo.In,
-            duration: 5000,
+            duration: Enemies.SHIPS.launchTime,
             x: this._spawn.x,
             y: this._spawn.y,
             onComplete: () => {

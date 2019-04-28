@@ -3,6 +3,7 @@ import EnemyPhase from 'structs/EnemyPhase';
 import ManEnemy from 'entity/enemy/ManEnemy';
 import TransformHelpers from 'helpers/TransformHelpers';
 import Depths from 'structs/Depths';
+import Enemies from 'structs/Enemies';
 
 export default class LandingShipEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
@@ -23,12 +24,13 @@ export default class LandingShipEnemy extends AbstractEnemy {
         setTimeout(() => {
             this.launchToSpace();
             this._phase = EnemyPhase.LAUNCH;
-        }, 5000);
+        }, Enemies.SHIPS.waitBeforeLaunchTime);
 
-        console.log('deployting man');
         let angleModifier = Phaser.Math.RND.integerInRange(0, 1) === 1 ? 1 : -1;
-        let deployOver = TransformHelpers.calcPivot(this.x, this.y, angleModifier * Math.PI / 2, Phaser.Math.RND.integerInRange(25, 35));
-        this.scene.unitSpawner.deployOnLandUnit(ManEnemy.TYPE, this.x, this.y, deployOver.x, deployOver.y)
+        let circle = new Phaser.Curves.Ellipse(this.x, this.y, 90);
+        // let deployOver = TransformHelpers.calcPivot(this.x, this.y, angleModifier * Math.PI / 2, Phaser.Math.RND.integerInRange(25, 35));
+        let deployOver = circle.getRandomPoint();
+        this.scene.unitSpawner.deployOnLandUnit(ManEnemy.TYPE, this.x, this.y, deployOver.x, deployOver.y);
     }
 
     static get TYPE () {

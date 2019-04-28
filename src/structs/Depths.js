@@ -7,5 +7,6 @@ export default {
     CLOUDS: 35,
     SHIPS: 100,
     MAN: 120,
-    DEBRIS: 150
+    DEBRIS: 150,
+    UI: 10000
 };
