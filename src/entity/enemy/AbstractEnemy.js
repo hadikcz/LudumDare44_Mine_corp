@@ -1,10 +1,9 @@
 import Phaser from 'phaser';
-import GameConfig from 'GameConfig';
-import GameEnvironment from 'core/GameEnvironment';
-import TransformHelpers from 'helpers/TransformHelpers';
 import EnemyPhase from 'structs/EnemyPhase';
 import Planet from 'entity/planet/Planet';
 import Enemies from 'structs/Enemies';
+import Counter from 'structs/Counter';
+import Depths from 'structs/Depths';
 
 /**
  * @abstract
@@ -50,12 +49,47 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.graphics = this.scene.add.graphics();
 
         /**
+         * @type {object}
+         */
+        this.enemyData = Enemies.getDataByType(this.type);
+
+        /**
+         * @type {Counter}
+         */
+        this.hp = new Counter(this.enemyData.hp);
+
+        /**
          * @type {Phaser.GameObjects.Image}
          */
         this.image = this.scene.add.image(0, 0, key).setOrigin(0.5, 1);
         this.add(this.image);
 
+        /**
+         * @type {Phaser.GameObjects.Text}
+         */
+        this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
+    }
+
+    preUpdate () {
+        this.hpText.setPosition(this.x, this.y);
+        this.hpText.setText(this.hp.getPercent() + '%');
+
+        if (this._phase === EnemyPhase.LANDING) {
+            this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
+        }
+
+        if (this._phase === EnemyPhase.ENDED) {
+            this.destroy();
+        }
+
+        if (this.hp.get() <= 0) {
+            this.destroy();
+        }
+    }
+
+    applyDamage (damage) {
+        this.hp.take(damage);
     }
 
     land (landX, landY) {
@@ -109,14 +143,9 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         });
     }
 
-    preUpdate () {
-        if (this._phase === EnemyPhase.LANDING) {
-            this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
-        }
-
-        if (this._phase === EnemyPhase.ENDED) {
-            this.destroy();
-        }
+    destroy () {
+        this.hpText.destroy();
+        super.destroy();
     }
 
     static get ENEMY_TYPE_MAN () {

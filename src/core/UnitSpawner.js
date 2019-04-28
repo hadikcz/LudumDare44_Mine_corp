@@ -1,9 +1,7 @@
 import Planet from 'entity/planet/Planet';
 import LandingShipEnemy from 'entity/enemy/LandingShipEnemy';
-import GameConfig from 'GameConfig';
 import ArrayHelpers from 'helpers/ArrayHelpers';
 import ManEnemy from 'entity/enemy/ManEnemy';
-import Depths from 'structs/Depths';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -12,6 +10,11 @@ export default class UnitSpawner {
          * @type {GameScene}
          */
         this.scene = scene;
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         */
+        this.units = this.scene.add.group();
 
         this.scene.time.addEvent({
             repeat: Infinity,
@@ -31,20 +34,20 @@ export default class UnitSpawner {
         let spawnPosition = Planet.calculateSpawnPosition(landingPosition.x, landingPosition.y);
 
         let unit = this._createUnitByType(LandingShipEnemy.TYPE, spawnPosition.x, spawnPosition.y);
+        this.units.add(unit);
         unit.land(landingPosition.x, landingPosition.y);
     }
 
     deployOnLandUnit (unitType, spawnX, spawnY, deployOverX, deployOverY) {
         let unit = this._createUnitByType(ManEnemy.TYPE, spawnX, spawnY);
+        this.units.add(unit);
+
         if (deployOverX === undefined) {
             deployOverX = spawnX;
         }
         if (deployOverY === undefined) {
             deployOverY = spawnY;
         }
-
-        // this.scene.add.circle(spawnX, spawnY, 2, 0xFF0000).setDepth(Depths.UI);
-        // this.scene.add.circle(deployOverX, deployOverY, 2, 0x00FF00).setDepth(Depths.UI);
 
         unit.landOnGround(deployOverX, deployOverY);
     }

@@ -4,14 +4,14 @@ export default {
         duration: -1, // -1 = instant
         coolDown: 500, // ms
         damage: 1, // per s
-        radius: 5, //px
+        radius: 15, //px
     },
     Tornado: {
         name: 'Tornado',
         duration: 5000,
         coolDown: 20000, // ms
         damage: 2.5, // per s
-        radius: 15, //px
+        radius: 30, //px
     },
     Volcano: {
         name: 'Volcano',
