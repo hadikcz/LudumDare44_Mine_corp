@@ -82,7 +82,11 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
 
-        this.scene.time.addEvent({
+        /**
+         * @private
+         * @type {Phaser.Time.TimerEvent}
+         */
+        this.mineTimeEvent = this.scene.time.addEvent({
             delay: 1000,
             repeat: Infinity,
             callbackScope: this,
@@ -168,6 +172,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     destroy () {
+        this.mineTimeEvent.destroy();
         this._canMine = false;
         this.hpText.destroy();
         super.destroy();
