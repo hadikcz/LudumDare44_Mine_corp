@@ -6,6 +6,7 @@ import MiningShipEnemy from 'entity/enemy/MiningShipEnemy';
 import Events from 'structs/Events';
 import FactoryEnemy from 'entity/enemy/FactoryEnemy';
 import RobotEnemy from 'entity/enemy/RobotEnemy';
+import Enemies from 'structs/Enemies';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -27,30 +28,62 @@ export default class UnitSpawner {
         this._mineOpStarts = false;
 
         this.scene.time.addEvent({
-            repeat: Infinity,
             delay: 3000,
             callbackScope: this,
-            callback: this._spawn
+            callback: () => {
+                this.scene.events.emit(Events.MineOperationsBegin);
+                this._mineOpStarts = true;
+            }
+        });
+
+        // spawn intervals
+        this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
+            callbackScope: this,
+            callback: this._spawnTransportShip
+        });
+
+        this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
+            callbackScope: this,
+            callback: this._spawnMiningShip
+        });
+
+        this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
+            callbackScope: this,
+            callback: this._spawnFactory
+        });
+
+        this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
+            callbackScope: this,
+            callback: this._spawnRobot
         });
     }
 
-    _spawn () {
-        if (!this._mineOpStarts) {
-            this.scene.events.emit(Events.MineOperationsBegin);
-            this._mineOpStarts = true;
-        }
+    _spawnTransportShip () {
+        let landPosition = this._getRandomLandPosition();
+        this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
+    }
 
+    _spawnMiningShip () {
+        let landPosition = this._getRandomLandPosition();
+        this.landUnit(MiningShipEnemy.TYPE, landPosition.x, landPosition.y);
+    }
+
+    _spawnFactory () {
+        let landPosition = this._getRandomLandPosition();
+        this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
+    }
+
+    _spawnRobot () {
         let landPosition = this._getRandomLandPosition();
         this.landUnit(RobotEnemy.TYPE, landPosition.x, landPosition.y);
-        // this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
-        // let rnd = Phaser.Math.RND.integerInRange(0, 2);
-        // if (rnd === 0) {
-        //     this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
-        // } else if (rnd === 1) {
-        //     this.landUnit(MiningShipEnemy.TYPE, landPosition.x, landPosition.y);
-        // } else if (rnd === 2) {
-        //     this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
-        // }
     }
 
     deployFromSurface (unitType, pointerX, pointerY) {

@@ -44,7 +44,6 @@ export default class Debris extends Phaser.GameObjects.Image {
         this.setScale(1, 1);
 
         if (velocityX && velocityY) {
-            console.log(velocityX);
             this.body.setVelocity(velocityX, velocityY);
         }
 

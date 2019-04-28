@@ -29,6 +29,7 @@ export default {
             name: 'Transport ship',
             hp: 8,
             damage: 1,
+            timeBetweenSpawn: 5000,
             particles: {
                 height: 55,
                 force: [50, 450]
@@ -39,6 +40,7 @@ export default {
             name: 'Mining ship',
             hp: 15,
             damage: 15,
+            timeBetweenSpawn: 10000,
             waitBeforeLaunchTime: 15000,
             particles: {
                 height: 55,
@@ -50,6 +52,7 @@ export default {
             name: 'Factory',
             hp: 20,
             damage: 20,
+            timeBetweenSpawn: 20000,
             waitBeforeLaunchTime: 20000,
             particles: {
                 height: 55,
@@ -61,6 +64,7 @@ export default {
             name: 'Huge robot',
             hp: 45,
             damage: 45,
+            timeBetweenSpawn: 35000,
             waitBeforeLaunchTime: 45000,
             particles: {
                 height: 55,
