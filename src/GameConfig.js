@@ -25,7 +25,7 @@ export default {
         landing: {
             offsetAngle: 12
         },
-        spawnRadius: 1500,
+        spawnRadius: 500,
         radius: 230,
         offset: {
             x: 25,

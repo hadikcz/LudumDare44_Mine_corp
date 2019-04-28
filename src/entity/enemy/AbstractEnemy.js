@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import GameConfig from 'GameConfig';
 import GameEnvironment from 'core/GameEnvironment';
+import TransformHelpers from 'helpers/TransformHelpers';
 
 /**
  * @abstract
@@ -22,18 +23,37 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.type = type;
 
         /**
+         * @type {string}
+         * @private
+         */
+        this._phase = 'spawned';
+
+        /**
          * @type {Phaser.Math.Vector2}
          * @private
          */
         this._spawn = new Phaser.Math.Vector2(x, y);
+
+        /**
+         * @type {Phaser.Math.Vector2}
+         * @private
+         */
+        this._landing = new Phaser.Math.Vector2(0, 0);
+
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Graphics}
+         */
+        this.graphics = this.scene.add.graphics();
 
         let image = this.scene.add.image(0, 0, key).setOrigin(0.5, 1);
         this.add(image);
     }
 
     land (landX, landY) {
-        let rotation = Phaser.Math.Angle.Between(this.x, this.y, landX, landY) - Math.PI / 2;
-        this.setRotation(rotation);
+        this._landing.set(landX, landY);
+        this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, landX, landY) - Math.PI / 2);
+
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Expo.Out,
@@ -41,6 +61,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             x: landX,
             y: landY,
             onComplete: () => {
+                this._phase = 'landed';
                 console.log('landed');
                 this.tint = 0xFF0000;
             }
@@ -50,48 +71,13 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.scene.add.line(0, 0, this.x, this.y, landX, landY, 0xFF0000).setOrigin(0, 0);
         this.scene.add.circle(this.x, this.y, 8, 0x00FF00);
         this.scene.add.circle(landX, landY, 8, 0xFF0000);
+        this._phase = 'landing';
     }
 
-    /**
-     * @return {{position: {Phaser.Math.Vector2}, rotation: number}}
-     */
-    getLandingPositionAndRotation () {
-        let planetCircle = this.getPlanetCircle();
-        let points = planetCircle.getPoints(256);
-
-        let nearestPoint = null;
-        let minDistance = Infinity;
-
-        points.forEach((point) => {
-            let distance = Phaser.Math.Distance.Between(point.x, point.y, this._spawn.x, this._spawn.y);
-            if (distance < minDistance) {
-                nearestPoint = point;
-                minDistance = distance;
-            }
-        });
-
-        return {
-            position: nearestPoint,
-            rotation: Phaser.Math.Angle.Between(this._spawn.x, this._spawn.y, nearestPoint.x, nearestPoint.y) - Math.PI / 2
-        };
-    }
-
-    /**
-     * @return {Phaser.Curves.Ellipse}
-     */
-    getPlanetCircle () {
-        let planetCircle = new Phaser.Curves.Ellipse(
-            GameEnvironment.getCenterOfTheMap().x + GameConfig.Planet.offsetCircle.x,
-            GameEnvironment.getCenterOfTheMap().y + GameConfig.Planet.offsetCircle.y,
-            GameConfig.Planet.radius,
-            GameConfig.Planet.radius
-        );
-        return planetCircle;
-
-        let points = planetCircle.getPoints(150);
-        points.forEach((point) => {
-            this.scene.add.circle(point.x, point.y, 3, 0xff0000);
-        });
+    preUpdate () {
+        if (this._phase === 'landing') {
+            this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
+        }
     }
 
     static get ENEMY_TYPE_MAN () {
