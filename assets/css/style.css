@@ -90,3 +90,20 @@ body {
     -webkit-filter:saturate(1);
     filter: saturate(1);
 }
+
+.attackBar .progress {
+    position: absolute;
+    margin-top: -21px;
+    width: 73%;
+    height: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background: black;
+    margin-left: 9px;
+}
+
+.attackBar .progress .progress-inner{
+    width: 100%;
+    height: 100%;
+    background: #ff1e00;
+}
