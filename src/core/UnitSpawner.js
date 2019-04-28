@@ -17,6 +17,12 @@ export default class UnitSpawner {
          */
         this.units = this.scene.add.group();
 
+        /**
+         * @type {boolean}
+         * @private
+         */
+        this._mineOpStarts = false;
+
         this.scene.time.addEvent({
             repeat: Infinity,
             delay: 3000,
@@ -26,6 +32,11 @@ export default class UnitSpawner {
     }
 
     _spawn () {
+        if (!this._mineOpStarts) {
+            this.scene.ui.mineCorpIncomeUI.show();
+            this._mineOpStarts = true;
+        }
+
         let landPosition = this._getRandomLandPosition();
 
         if (Phaser.Math.RND.integerInRange(0, 1)) {

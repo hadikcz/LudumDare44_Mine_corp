@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Phaser from 'phaser';
+import MineCorpIncomeUI from 'ui/MineCorpIncomeUI';
 
 export default class UI {
     /**
@@ -10,5 +11,10 @@ export default class UI {
          * @type {Phaser.Scene}
          */
         this.scene = scene;
+
+        /**
+         * @type {MineCorpIncomeUI}
+         */
+        this.mineCorpIncomeUI = new MineCorpIncomeUI(this.scene, this.scene.gameEnvironment.planet);
     }
 }

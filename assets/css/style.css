@@ -22,3 +22,19 @@ body {
     position: absolute;
     z-index: 0;
 }
+
+#ui {
+    position: absolute;
+    width: 1024px;
+    height: 640px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.income {
+    color: white;
+    font-size: 25px;
+    margin: 10px
+}

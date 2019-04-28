@@ -32,6 +32,11 @@ export default class Planet {
         this.hp = new Counter(10000);
 
         /**
+         * @type {number}
+         */
+        this.mineCorpIncome = 0;
+
+        /**
          * @type {Phaser.GameObjects.Text}
          */
         this.planetHpText = this.scene.add.text(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, '100%', { fill: '#ff0000' }).setDepth(Depths.UI);
@@ -40,6 +45,7 @@ export default class Planet {
 
         this.scene.events.on(Events.ApplyDamageToPlanet, (damage) => {
             this.hp.take(damage);
+            this._processMineCorpIncome(damage);
         });
 
         this.scene.events.on(Events.ReturnDamageToPlanet, (damage) => {
@@ -49,6 +55,11 @@ export default class Planet {
 
     update () {
         this.planetHpText.setText(Math.floor(this.hp.getPercent()) + '% (' + this.hp.get() + ')');
+    }
+
+    _processMineCorpIncome (damage) {
+        let income = damage * Phaser.Math.RND.integerInRange(1, 4);
+        this.mineCorpIncome += Math.round(income);
     }
 
     /**
