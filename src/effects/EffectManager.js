@@ -1,5 +1,6 @@
 import GameScene from './../scenes/GameScene';
 import FlyText from './FlyText';
+import Lightning from 'effects/Lightning';
 
 export default class EffectManger {
     /**
@@ -20,6 +21,16 @@ export default class EffectManger {
             maxSize: 20,
             runChildUpdate: true
 
+        });
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         * @private
+         */
+        this._lightningGroup = this.scene.add.group({
+            classType: Lightning,
+            maxSize: 20,
+            runChildUpdate: true
         });
 
         this._preparePools();
@@ -45,6 +56,24 @@ export default class EffectManger {
     }
 
     /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} rotation
+     * @return {Lightning}
+     */
+    launchLightning (x, y, rotation) {
+        let group = this._lightningGroup;
+        /** @type {FlyText} */
+        let effect = group.getFirstDead();
+        if (!effect) {
+            effect = new Lightning(this.scene);
+            group.add(effect);
+        }
+        effect.launch(x, y, rotation);
+        return effect;
+    }
+
+    /**
      * @private
      */
     _preparePools () {
@@ -53,6 +82,12 @@ export default class EffectManger {
         group = this._flyTextGroup;
         for (let i = 0; i < group.maxSize; i++) {
             let effect = new FlyText(this.scene);
+            group.add(effect);
+        }
+
+        group = this._lightningGroup;
+        for (let i = 0; i < group.maxSize; i++) {
+            let effect = new Lightning(this.scene);
             group.add(effect);
         }
     }

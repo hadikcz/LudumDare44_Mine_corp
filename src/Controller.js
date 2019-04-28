@@ -12,7 +12,8 @@ export default class Controller {
         this.scene = scene;
 
         this.scene.input.on('pointerdown', (pointer) => {
-            this.scene.unitSpawner.landUnit(LandingShipEnemy.TYPE, pointer.worldX, pointer.worldY);
+            // this.scene.unitSpawner.landUnit(LandingShipEnemy.TYPE, pointer.worldX, pointer.worldY);
+            this.scene.attackManager.attack();
         });
     }
 }

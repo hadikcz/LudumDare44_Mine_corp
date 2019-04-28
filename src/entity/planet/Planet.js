@@ -72,4 +72,13 @@ export default class Planet {
         let points = Planet.getLandCircle().getPoints(256);
         return TransformHelpers.getNearest(points, pointerX, pointerY);
     }
+
+    /**
+     * @param {number} x
+     * @param {number} y
+     * @return {number}
+     */
+    static getRotationTowardPlanetCenter (x, y) {
+        return Phaser.Math.Angle.Between(x, y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2;
+    }
 }

@@ -8,6 +8,7 @@ import GameEnvironment from '../core/GameEnvironment';
 import LightSystem from './../core/lights/LightSystem';
 import UI from './../ui/UI';
 import UnitSpawner from 'core/UnitSpawner';
+import AttackManager from 'core/AttackManager';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -43,6 +44,8 @@ export default class GameScene extends Phaser.Scene {
 
         this.unitSpawner = new UnitSpawner(this);
         this.controller = new Controller(this);
+
+        this.attackManager = new AttackManager(this);
 
         this.ui = new UI(this);
 
