@@ -5,6 +5,7 @@ import ManEnemy from 'entity/enemy/ManEnemy';
 import MiningShipEnemy from 'entity/enemy/MiningShipEnemy';
 import Events from 'structs/Events';
 import FactoryEnemy from 'entity/enemy/FactoryEnemy';
+import RobotEnemy from 'entity/enemy/RobotEnemy';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -40,8 +41,8 @@ export default class UnitSpawner {
         }
 
         let landPosition = this._getRandomLandPosition();
-
-        this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
+        this.landUnit(RobotEnemy.TYPE, landPosition.x, landPosition.y);
+        // this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
         // let rnd = Phaser.Math.RND.integerInRange(0, 2);
         // if (rnd === 0) {
         //     this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
@@ -96,6 +97,8 @@ export default class UnitSpawner {
                 return new MiningShipEnemy(this.scene, x, y);
             case FactoryEnemy.TYPE:
                 return new FactoryEnemy(this.scene, x, y);
+            case RobotEnemy.TYPE:
+                return new RobotEnemy(this.scene, x, y);
         }
     }
 }

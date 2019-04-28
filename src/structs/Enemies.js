@@ -39,7 +39,7 @@ export default {
             name: 'Mining ship',
             hp: 15,
             damage: 15,
-            waitBeforeLaunchTime: 20000,
+            waitBeforeLaunchTime: 15000,
             particles: {
                 height: 55,
                 force: [50, 450]
@@ -51,6 +51,17 @@ export default {
             hp: 20,
             damage: 20,
             waitBeforeLaunchTime: 20000,
+            particles: {
+                height: 55,
+                force: [50, 450]
+            }
+        },
+        {
+            type: 'huge_robot', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
+            name: 'Huge robot',
+            hp: 45,
+            damage: 45,
+            waitBeforeLaunchTime: 45000,
             particles: {
                 height: 55,
                 force: [50, 450]

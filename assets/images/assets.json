@@ -4,8 +4,8 @@
 			"image": "assets.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 178,
-				"h": 245
+				"w": 186,
+				"h": 252
 			},
 			"scale": 1,
 			"frames": [
@@ -28,27 +28,6 @@
 						"y": 1,
 						"w": 134,
 						"h": 84
-					}
-				},
-				{
-					"filename": "lightning",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 168
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 40,
-						"h": 168
-					},
-					"frame": {
-						"x": 137,
-						"y": 1,
-						"w": 40,
-						"h": 168
 					}
 				},
 				{
@@ -94,6 +73,48 @@
 					}
 				},
 				{
+					"filename": "lightning",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 168
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 168
+					},
+					"frame": {
+						"x": 137,
+						"y": 1,
+						"w": 40,
+						"h": 168
+					}
+				},
+				{
+					"filename": "robot",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 49,
+						"h": 85
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 5,
+						"w": 44,
+						"h": 80
+					},
+					"frame": {
+						"x": 83,
+						"y": 87,
+						"w": 44,
+						"h": 80
+					}
+				},
+				{
 					"filename": "mining_ship",
 					"rotated": false,
 					"trimmed": true,
@@ -109,51 +130,9 @@
 					},
 					"frame": {
 						"x": 83,
-						"y": 87,
+						"y": 169,
 						"w": 40,
 						"h": 76
-					}
-				},
-				{
-					"filename": "factory",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 59,
-						"h": 45
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 59,
-						"h": 45
-					},
-					"frame": {
-						"x": 1,
-						"y": 199,
-						"w": 59,
-						"h": 45
-					}
-				},
-				{
-					"filename": "man",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 22,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 16,
-						"w": 18,
-						"h": 36
-					},
-					"frame": {
-						"x": 62,
-						"y": 199,
-						"w": 18,
-						"h": 36
 					}
 				},
 				{
@@ -171,10 +150,52 @@
 						"h": 63
 					},
 					"frame": {
-						"x": 83,
+						"x": 125,
 						"y": 171,
 						"w": 60,
 						"h": 63
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 16,
+						"w": 18,
+						"h": 36
+					},
+					"frame": {
+						"x": 1,
+						"y": 194,
+						"w": 18,
+						"h": 36
+					}
+				},
+				{
+					"filename": "factory",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 59,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 59,
+						"h": 45
+					},
+					"frame": {
+						"x": 21,
+						"y": 199,
+						"w": 59,
+						"h": 45
 					}
 				},
 				{
@@ -192,8 +213,8 @@
 						"h": 5
 					},
 					"frame": {
-						"x": 145,
-						"y": 171,
+						"x": 1,
+						"y": 246,
 						"w": 21,
 						"h": 5
 					}
@@ -213,52 +234,10 @@
 						"h": 5
 					},
 					"frame": {
-						"x": 145,
-						"y": 178,
+						"x": 24,
+						"y": 246,
 						"w": 21,
 						"h": 5
-					}
-				},
-				{
-					"filename": "smoke",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 9,
-						"h": 9
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 9,
-						"h": 9
-					},
-					"frame": {
-						"x": 168,
-						"y": 171,
-						"w": 9,
-						"h": 9
-					}
-				},
-				{
-					"filename": "debris1",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 8,
-						"h": 7
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 8,
-						"h": 7
-					},
-					"frame": {
-						"x": 62,
-						"y": 237,
-						"w": 8,
-						"h": 7
 					}
 				},
 				{
@@ -276,8 +255,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 145,
-						"y": 185,
+						"x": 1,
+						"y": 232,
 						"w": 11,
 						"h": 11
 					}
@@ -297,10 +276,52 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 145,
-						"y": 198,
+						"x": 125,
+						"y": 236,
 						"w": 11,
 						"h": 11
+					}
+				},
+				{
+					"filename": "smoke",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 9,
+						"h": 9
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 9,
+						"h": 9
+					},
+					"frame": {
+						"x": 138,
+						"y": 236,
+						"w": 9,
+						"h": 9
+					}
+				},
+				{
+					"filename": "debris1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 7
+					},
+					"frame": {
+						"x": 149,
+						"y": 236,
+						"w": 8,
+						"h": 7
 					}
 				},
 				{
@@ -318,7 +339,7 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 1,
+						"x": 21,
 						"y": 194,
 						"w": 7,
 						"h": 2
@@ -339,8 +360,8 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 83,
-						"y": 165,
+						"x": 179,
+						"y": 1,
 						"w": 2,
 						"h": 2
 					}
@@ -351,6 +372,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:f142b95e0ff36f4f786944e996e6429a:497255ad5e85ec4da7e579f171d98911:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:3791c5818bf00957ef6f2402a41b0be6:4ac4c33bfa39d90ac1827339e1bbeca9:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
