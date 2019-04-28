@@ -31,16 +31,15 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this.add(image);
     }
 
-    land () {
-        let landingData = this.getLandingPositionAndRotation();
-
-        this.setRotation(landingData.rotation);
+    land (landX, landY) {
+        let rotation = Phaser.Math.Angle.Between(this.x, this.y, landX, landY) - Math.PI / 2;
+        this.setRotation(rotation);
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Expo.Out,
             duration: 5000,
-            x: landingData.position.x,
-            y: landingData.position.y,
+            x: landX,
+            y: landY,
             onComplete: () => {
                 console.log('landed');
                 this.tint = 0xFF0000;
@@ -48,9 +47,9 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         });
 
         // debug
-        this.scene.add.line(0, 0, this._spawn.x, this._spawn.y, landingData.position.x, landingData.position.y, 0xFF0000).setOrigin(0, 0);
-        this.scene.add.circle(this._spawn.x, this._spawn.y, 8, 0x00FF00);
-        this.scene.add.circle(landingData.position.x, landingData.position.y, 8, 0xFF0000);
+        this.scene.add.line(0, 0, this.x, this.y, landX, landY, 0xFF0000).setOrigin(0, 0);
+        this.scene.add.circle(this.x, this.y, 8, 0x00FF00);
+        this.scene.add.circle(landX, landY, 8, 0xFF0000);
     }
 
     /**

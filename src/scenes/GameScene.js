@@ -7,6 +7,7 @@ import GameConfig from './../GameConfig';
 import GameEnvironment from '../core/GameEnvironment';
 import LightSystem from './../core/lights/LightSystem';
 import UI from './../ui/UI';
+import UnitSpawner from 'core/UnitSpawner';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -33,8 +34,13 @@ export default class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow({ x: 0, y: 0 });
         this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
 
+        this.cameras.main.setZoom(0.5);
+        this.cameras.main.startFollow({x: -GameConfig.World.width / 2, y: -GameConfig.World.height / 2});
+
         this.lightSystem = new LightSystem(this);
         this.gameEnvironment = new GameEnvironment(this);
+
+        this.unitSpawner = new UnitSpawner(this);
         this.controller = new Controller(this);
 
         this.ui = new UI(this);
@@ -65,7 +71,6 @@ export default class GameScene extends Phaser.Scene {
     }
 
     update () {
-        this.controller.update();
         this.gameEnvironment.update();
     }
 

@@ -14,7 +14,7 @@ export default class Planet {
         /**
          * @type {PlanetCollider}
          */
-        this.planetCollider = new PlanetCollider(this.scene, GameEnvironment.getCenterOfTheMap().x, GameEnvironment.getCenterOfTheMap().y);
+        this.planetCollider = new PlanetCollider(this.scene, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y);
 
         // this.scene.matter.add.mouseSpring();
     }
@@ -32,10 +32,20 @@ export default class Planet {
      */
     static getSpawnCircle () {
         return new Phaser.Curves.Ellipse(
-            GameEnvironment.getCenterOfTheMap().x,
-            GameEnvironment.getCenterOfTheMap().y,
+            Planet.getCenterOfPlanet().x,
+            Planet.getCenterOfPlanet().y,
             GameConfig.Planet.spawnRadius
         );
+    }
+
+    /**
+     * @return {{x: number, y: number}}
+     */
+    static getCenterOfPlanet () {
+        return {
+            x: GameConfig.World.width / 2,
+            y: GameConfig.World.height / 2
+        };
     }
 
     // _createPlanetColliderAndAttractor () {
