@@ -35,7 +35,7 @@ export default class AttackManager {
         this.locks = {};
         this.locks[Attacks.TYPES.LIGHTNING] = false;
         this.locks[Attacks.TYPES.TORNADO] = false; // true
-        this.locks[Attacks.TYPES.VOLCANO] = true; // true
+        this.locks[Attacks.TYPES.VOLCANO] = false; // true
         this.locks[Attacks.TYPES.ASTEROID] = true; // true
 
         this.cooldowns = {};
@@ -59,6 +59,9 @@ export default class AttackManager {
                 break;
             case Attacks.TYPES.TORNADO:
                 this._launchTornado(landPosition.x, landPosition.y);
+                break;
+            case Attacks.TYPES.VOLCANO:
+                this._launchVolcano(landPosition.x, landPosition.y);
                 break;
         }
     }
@@ -138,5 +141,23 @@ export default class AttackManager {
         setTimeout(() => {
             this.cooldowns[Attacks.TYPES.TORNADO] = false;
         }, Attacks.Tornado.coolDown);
+    }
+
+    /**
+     * @param {number} x
+     * @param {number} y
+     * @private
+     */
+    _launchVolcano (x, y) {
+        if (this.cooldowns[Attacks.TYPES.VOLCANO]) return;
+
+        let rotation = Planet.getRotationTowardPlanetCenter(x, y);
+        this.scene.effectManager.launchVolcano(x, y, rotation);
+        this.findAndDamageEnemies(x, y, Attacks.Volcano);
+
+        this.cooldowns[Attacks.TYPES.VOLCANO] = true;
+        setTimeout(() => {
+            this.cooldowns[Attacks.TYPES.VOLCANO] = false;
+        }, Attacks.Volcano.coolDown);
     }
 }

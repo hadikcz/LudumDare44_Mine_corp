@@ -4,8 +4,8 @@
 			"image": "assets.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 98,
-				"h": 248
+				"w": 178,
+				"h": 202
 			},
 			"scale": 1,
 			"frames": [
@@ -31,24 +31,24 @@
 					}
 				},
 				{
-					"filename": "mining_ship",
+					"filename": "volcano",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 44,
-						"h": 79
+						"w": 134,
+						"h": 84
 					},
 					"spriteSourceSize": {
 						"x": 0,
-						"y": 3,
-						"w": 40,
-						"h": 76
+						"y": 0,
+						"w": 134,
+						"h": 84
 					},
 					"frame": {
-						"x": 1,
-						"y": 171,
-						"w": 40,
-						"h": 76
+						"x": 43,
+						"y": 1,
+						"w": 134,
+						"h": 84
 					}
 				},
 				{
@@ -67,7 +67,7 @@
 					},
 					"frame": {
 						"x": 43,
-						"y": 1,
+						"y": 87,
 						"w": 24,
 						"h": 110
 					}
@@ -87,10 +87,31 @@
 						"h": 105
 					},
 					"frame": {
-						"x": 43,
-						"y": 113,
+						"x": 69,
+						"y": 87,
 						"w": 54,
 						"h": 105
+					}
+				},
+				{
+					"filename": "mining_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 79
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 40,
+						"h": 76
+					},
+					"frame": {
+						"x": 125,
+						"y": 87,
+						"w": 40,
+						"h": 76
 					}
 				},
 				{
@@ -108,8 +129,8 @@
 						"h": 36
 					},
 					"frame": {
-						"x": 69,
-						"y": 1,
+						"x": 125,
+						"y": 165,
 						"w": 18,
 						"h": 36
 					}
@@ -120,6 +141,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:57fd9664d045734f2531f77e63aab68d:68ea60b9524d041069ac5d12eec43791:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:a50be143d4a62b924ad07f9cee36e7b7:4a15fee85fc1910dbc1e67a9b506a3c6:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
