@@ -30,6 +30,30 @@ export default class AttackBarUI {
                 self.redraw();
             }
         });
+
+        this.scene.input.keyboard.on('keydown', function (event) {
+            console.log(event);
+            if (event.key === 'q' || event.key === '1') {
+                self.switchTo(Attacks.TYPES.LIGHTNING);
+            }
+
+            if (event.key === 'w' || event.key === '2') {
+                self.switchTo(Attacks.TYPES.TORNADO);
+            }
+
+            if (event.key === 'e' || event.key === '3') {
+                self.switchTo(Attacks.TYPES.VOLCANO);
+            }
+
+            if (event.key === 'r' || event.key === '4') {
+                self.switchTo(Attacks.TYPES.ASTEROID);
+            }
+        });
+    }
+
+    switchTo (type) {
+        this.scene.attackManager.switchAttackType(type);
+        this.redraw();
     }
 
     redraw () {

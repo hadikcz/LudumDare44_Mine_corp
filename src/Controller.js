@@ -1,5 +1,6 @@
 
 import LandingShipEnemy from 'entity/enemy/LandingShipEnemy';
+import Attacks from 'structs/Attacks';
 
 export default class Controller {
     /**
