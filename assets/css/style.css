@@ -37,6 +37,7 @@ body {
     color: white;
     font-size: 25px;
     margin: 10px
+    position: absolute;
 }
 
 .triangle {
@@ -51,9 +52,20 @@ body {
     animation: blinker 2s linear infinite;
 }
 
-
 @keyframes blinker {
     50% {
         opacity: 0;
     }
+}
+
+.attackBar {
+    position: absolute;
+    right: 15px;
+    pointer-events: all;
+}
+
+.attackBar .button {
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
 }

@@ -3,7 +3,7 @@ import Depths from 'structs/Depths';
 
 export default class Lightning extends Phaser.GameObjects.Image {
     constructor (scene) {
-        super(scene, -1000, -1000, 'Lightning');
+        super(scene, -1000, -1000, 'assets', 'lightning');
         this.scene.add.existing(this);
         this.setOrigin(0.5, 1);
         this.setDepth(Depths.ATTACKS);

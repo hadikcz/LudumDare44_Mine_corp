@@ -68,7 +68,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         /**
          * @type {Phaser.GameObjects.Image}
          */
-        this.image = this.scene.add.image(0, 0, key).setOrigin(0.5, 1);
+        this.image = this.scene.add.image(0, 0, 'assets', key).setOrigin(0.5, 1);
         this.add(this.image);
 
         /**
