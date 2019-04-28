@@ -4,6 +4,8 @@ import GameConfig from 'GameConfig';
 import ArrayHelpers from 'helpers/ArrayHelpers';
 import TransformHelpers from 'helpers/TransformHelpers';
 import Depths from 'structs/Depths';
+import Counter from 'structs/Counter';
+import Events from 'structs/Events';
 
 export default class Planet {
     constructor (scene) {
@@ -24,7 +26,25 @@ export default class Planet {
          */
         this.planetCollider = new PlanetCollider(this.scene, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y);
 
+        /**
+         * @type {Counter}
+         */
+        this.hp = new Counter(10000);
+
+        /**
+         * @type {Phaser.GameObjects.Text}
+         */
+        this.planetHpText = this.scene.add.text(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, '100%', { fill: '#ff0000' }).setDepth(Depths.UI);
+
         // this.scene.matter.add.mouseSpring();
+
+        this.scene.events.on(Events.ApplyDamageToPlanet, (damage) => {
+            this.hp.take(damage);
+        });
+    }
+
+    update () {
+        this.planetHpText.setText(Math.floor(this.hp.getPercent()) + '% (' + this.hp.get() + ')');
     }
 
     /**

@@ -31,7 +31,9 @@ export default class GameEnvironment {
         this._createTestBlocks();
     }
 
-    update () {}
+    update () {
+        this.planet.update();
+    }
 
     _createTestBlocks () {
         for (var i = 0; i < 25; i++) {

@@ -4,6 +4,7 @@ import Planet from 'entity/planet/Planet';
 import Enemies from 'structs/Enemies';
 import Counter from 'structs/Counter';
 import Depths from 'structs/Depths';
+import Events from 'structs/Events';
 
 /**
  * @abstract
@@ -43,6 +44,12 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         this._landing = new Phaser.Math.Vector2(0, 0);
 
         /**
+         * @type {boolean}
+         * @protected
+         */
+        this._canAttack = false;
+
+        /**
          * @private
          * @type {Phaser.GameObjects.Graphics}
          */
@@ -69,6 +76,17 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
          */
         this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
+
+        this.scene.time.addEvent({
+            delay: 1000,
+            repeat: Infinity,
+            callbackScope: this,
+            callback: () => {
+                if (this._canAttack) {
+                    this.scene.events.emit(Events.ApplyDamageToPlanet, this.enemyData.damage);
+                }
+            }
+        });
     }
 
     preUpdate () {
@@ -144,6 +162,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     destroy () {
+        this._canAttack = false;
         this.hpText.destroy();
         super.destroy();
     }

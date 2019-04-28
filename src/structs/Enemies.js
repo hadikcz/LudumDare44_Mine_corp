@@ -1,12 +1,12 @@
 export default {
     SHIPS: {
-        landingTime: 5000, // 5000
+        landingTime: 2500, // 2500..5000
         launchTime: 5000,
         waitBeforeLaunchTime: 500
     },
     MAN: {
         landingTime: 750,
-        wanderingTime: 3000,
+        wanderingTime: [800, 3000],
         miningTime: 2000
     },
     list: [
