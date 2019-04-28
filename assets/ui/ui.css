@@ -1,7 +1,7 @@
 /* -----------------------------------------------------
    created with https://www.codeandweb.com/texturepacker 
    -----------------------------------------------------
-   $TexturePacker:SmartUpdate:745eb82fba47aa7b51d3ec74c39b1e97:888ec0bf811010fb8cba1c22ee58c8da:4c7ccf045e54e36629c6cbec5cb72956$
+   $TexturePacker:SmartUpdate:aa28dffe4a415e36e5fbf6a0692371c9:ce74a2dd8c53159ea153d38f8493fd92:4c7ccf045e54e36629c6cbec5cb72956$
    -----------------------------------------------------
 
    usage: <span class="{-spritename-} sprite"></span>
@@ -12,9 +12,10 @@
 
 .sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(ui.png);}
 
-.button_off {width:64px; height:64px; background-position: -1px -1px}
-.button_on {width:64px; height:64px; background-position: -67px -1px}
-.lightning_icon {width:64px; height:64px; background-position: -133px -1px}
-.lock {width:46px; height:46px; background-position: -331px -1px}
-.tornado_icon {width:64px; height:64px; background-position: -199px -1px}
-.volcano_icon {width:64px; height:64px; background-position: -265px -1px}
+.asteroid_icon {width:64px; height:64px; background-position: -1px -1px}
+.button_off {width:64px; height:64px; background-position: -67px -1px}
+.button_on {width:64px; height:64px; background-position: -133px -1px}
+.lightning_icon {width:64px; height:64px; background-position: -199px -1px}
+.lock {width:46px; height:46px; background-position: -397px -1px}
+.tornado_icon {width:64px; height:64px; background-position: -265px -1px}
+.volcano_icon {width:64px; height:64px; background-position: -331px -1px}

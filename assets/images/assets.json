@@ -5,31 +5,10 @@
 			"format": "RGBA8888",
 			"size": {
 				"w": 178,
-				"h": 202
+				"h": 237
 			},
 			"scale": 1,
 			"frames": [
-				{
-					"filename": "lightning",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 168
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 40,
-						"h": 168
-					},
-					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 40,
-						"h": 168
-					}
-				},
 				{
 					"filename": "volcano",
 					"rotated": false,
@@ -45,31 +24,31 @@
 						"h": 84
 					},
 					"frame": {
-						"x": 43,
+						"x": 1,
 						"y": 1,
 						"w": 134,
 						"h": 84
 					}
 				},
 				{
-					"filename": "landing_ship",
+					"filename": "lightning",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 24,
-						"h": 110
+						"w": 40,
+						"h": 168
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 24,
-						"h": 110
+						"w": 40,
+						"h": 168
 					},
 					"frame": {
-						"x": 43,
-						"y": 87,
-						"w": 24,
-						"h": 110
+						"x": 137,
+						"y": 1,
+						"w": 40,
+						"h": 168
 					}
 				},
 				{
@@ -87,31 +66,31 @@
 						"h": 105
 					},
 					"frame": {
-						"x": 69,
+						"x": 1,
 						"y": 87,
 						"w": 54,
 						"h": 105
 					}
 				},
 				{
-					"filename": "mining_ship",
+					"filename": "landing_ship",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 44,
-						"h": 79
+						"w": 24,
+						"h": 110
 					},
 					"spriteSourceSize": {
 						"x": 0,
-						"y": 3,
-						"w": 40,
-						"h": 76
+						"y": 0,
+						"w": 24,
+						"h": 110
 					},
 					"frame": {
-						"x": 125,
+						"x": 57,
 						"y": 87,
-						"w": 40,
-						"h": 76
+						"w": 24,
+						"h": 110
 					}
 				},
 				{
@@ -129,10 +108,52 @@
 						"h": 36
 					},
 					"frame": {
-						"x": 125,
-						"y": 165,
+						"x": 1,
+						"y": 194,
 						"w": 18,
 						"h": 36
+					}
+				},
+				{
+					"filename": "mining_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 79
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 40,
+						"h": 76
+					},
+					"frame": {
+						"x": 83,
+						"y": 87,
+						"w": 40,
+						"h": 76
+					}
+				},
+				{
+					"filename": "asteroid",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 75,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 10,
+						"w": 62,
+						"h": 65
+					},
+					"frame": {
+						"x": 83,
+						"y": 171,
+						"w": 62,
+						"h": 65
 					}
 				}
 			]
@@ -141,6 +162,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:a50be143d4a62b924ad07f9cee36e7b7:4a15fee85fc1910dbc1e67a9b506a3c6:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:32b33c6e46b34b3dbe8d44d57731555b:83f20af505100a80730cceec9b7af88a:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

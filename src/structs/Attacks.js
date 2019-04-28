@@ -24,9 +24,10 @@ export default {
     Asteroid: {
         name: 'Asteroid',
         duration: -1,
-        coolDown: 60000, // ms
+        coolDown: 60000, // 60000ms
         damage: 50, // per s
-        radius: 125
+        radius: 125,
+        landingTime: 1500
     },
     TYPES: {
         LIGHTNING: 'lightning',

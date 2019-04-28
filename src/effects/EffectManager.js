@@ -3,6 +3,7 @@ import FlyText from './FlyText';
 import Lightning from 'effects/Lightning';
 import Tornado from 'effects/Tornado';
 import Volcano from 'effects/Volcano';
+import Asteroid from 'effects/Asteroid';
 
 export default class EffectManger {
     /**
@@ -51,6 +52,16 @@ export default class EffectManger {
          */
         this._volcanoGroup = this.scene.add.group({
             classType: Volcano,
+            maxSize: 20,
+            runChildUpdate: true
+        });
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         * @private
+         */
+        this._asteroidGroup = this.scene.add.group({
+            classType: Asteroid,
             maxSize: 20,
             runChildUpdate: true
         });
@@ -132,6 +143,24 @@ export default class EffectManger {
     }
 
     /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} rotation
+     * @return {Tornado}
+     */
+    launchAsteroid (x, y, rotation) {
+        let group = this._asteroidGroup;
+        /** @type {FlyText} */
+        let effect = group.getFirstDead();
+        if (!effect) {
+            effect = new Asteroid(this.scene);
+            group.add(effect);
+        }
+        effect.launch(x, y, rotation);
+        return effect;
+    }
+
+    /**
      * @private
      */
     _preparePools () {
@@ -158,6 +187,12 @@ export default class EffectManger {
         group = this._volcanoGroup;
         for (let i = 0; i < group.maxSize; i++) {
             let effect = new Volcano(this.scene);
+            group.add(effect);
+        }
+
+        group = this._asteroidGroup;
+        for (let i = 0; i < group.maxSize; i++) {
+            let effect = new Asteroid(this.scene);
             group.add(effect);
         }
     }

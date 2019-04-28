@@ -37,7 +37,7 @@ export default class AttackManager {
         this.locks[Attacks.TYPES.LIGHTNING] = false;
         this.locks[Attacks.TYPES.TORNADO] = false; // true
         this.locks[Attacks.TYPES.VOLCANO] = false; // true
-        this.locks[Attacks.TYPES.ASTEROID] = true; // true
+        this.locks[Attacks.TYPES.ASTEROID] = false; // true
 
         this.cooldowns = {};
         this.cooldowns[Attacks.TYPES.ASTEROID] = false;
@@ -63,6 +63,9 @@ export default class AttackManager {
                 break;
             case Attacks.TYPES.VOLCANO:
                 this._launchVolcano(landPosition.x, landPosition.y);
+                break;
+            case Attacks.TYPES.ASTEROID:
+                this._launchAsteroid(landPosition.x, landPosition.y);
                 break;
         }
     }
@@ -168,5 +171,27 @@ export default class AttackManager {
         }, Attacks.Volcano.coolDown);
 
         this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.VOLCANO);
+    }
+
+    /**
+     * @param {number} x
+     * @param {number} y
+     * @private
+     */
+    _launchAsteroid (x, y) {
+        if (this.cooldowns[Attacks.TYPES.ASTEROID]) return;
+
+        let rotation = Planet.getRotationTowardPlanetCenter(x, y);
+        this.scene.effectManager.launchAsteroid(x, y, rotation);
+        setTimeout(() => {
+            this.findAndDamageEnemies(x, y, Attacks.Asteroid);
+        }, Attacks.Asteroid.landingTime);
+
+        this.cooldowns[Attacks.TYPES.ASTEROID] = true;
+        setTimeout(() => {
+            this.cooldowns[Attacks.TYPES.ASTEROID] = false;
+        }, Attacks.Asteroid.coolDown);
+
+        this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.ASTEROID);
     }
 }

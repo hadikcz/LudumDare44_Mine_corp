@@ -89,13 +89,14 @@ export default class Planet {
     /**
      * @param {number} landingX
      * @param {number} landingY
+     * @param {number} customSpawnRadius
      * @return {{x: number, y: number}}
      * @private
      */
-    static calculateSpawnPosition (landingX, landingY) {
+    static calculateSpawnPosition (landingX, landingY, customSpawnRadius = GameConfig.Planet.spawnRadius) {
         let angle = Phaser.Math.Angle.Between(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, landingX, landingY);
         angle -= Phaser.Math.DegToRad(GameConfig.Planet.landing.offsetAngle);
-        return TransformHelpers.calcPivot(landingX, landingY, angle, GameConfig.Planet.spawnRadius);
+        return TransformHelpers.calcPivot(landingX, landingY, angle, customSpawnRadius);
     }
 
     /**
