@@ -104,21 +104,31 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
          * @type {ProgressBarUI}
          */
         this.healthbar = new ProgressBarUI(this.scene, {
+            x: 20,
+            y: -5,
+            rotation: -Math.PI / 2,
             atlas: 'assets',
             atlasBg: 'healthbar_bg',
             atlasBar: 'healthbar_bar',
-            // barAlpha: 0.4,
             depth: Depths.UI,
-            followTarget: this,
             offsetX: 0,
             offsetY: 0
         });
+
+        this.add(this.healthbar.bgImage);
+        this.add(this.healthbar.barImage);
+        this.healthbar.hide();
     }
 
     preUpdate () {
         // this.hpText.setPosition(this.x, this.y);
         // this.hpText.setText(Math.round(this.hp.getPercent()) + '%');
 
+        if (this.hp.getPercent() >= 100) {
+            this.healthbar.hide();
+        } else {
+            this.healthbar.show();
+        }
         this.healthbar.setPercent(Math.round(this.hp.getPercent()));
 
         if (this._phase === EnemyPhase.LANDING) {

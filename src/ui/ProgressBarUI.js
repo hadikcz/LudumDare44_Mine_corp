@@ -165,6 +165,10 @@ export default class ProgressBarUI extends Phaser.GameObjects.Container {
         if (this.config.offsetY === undefined) {
             this.config.offsetY = 0;
         }
+
+        if (this.config.rotation === undefined) {
+            this.config.rotation = 0;
+        }
     }
 
     /**
@@ -181,6 +185,7 @@ export default class ProgressBarUI extends Phaser.GameObjects.Container {
             throw 'No bg texture given';
         }
         this.bgImage.setOrigin(0);
+        this.bgImage.setRotation(this.config.rotation);
         this.add(this.bgImage);
     }
 
@@ -201,6 +206,7 @@ export default class ProgressBarUI extends Phaser.GameObjects.Container {
             this.barImage.setAlpha(this.config.barAlpha);
         }
         this.barImage.setOrigin(0);
+        this.barImage.setRotation(this.config.rotation);
         this.add(this.barImage);
     }
 }
