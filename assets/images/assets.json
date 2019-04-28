@@ -199,6 +199,48 @@
 					}
 				},
 				{
+					"filename": "limb",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 7,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 7,
+						"h": 2
+					},
+					"frame": {
+						"x": 83,
+						"y": 165,
+						"w": 7,
+						"h": 2
+					}
+				},
+				{
+					"filename": "bloodCell",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2,
+						"h": 2
+					},
+					"frame": {
+						"x": 83,
+						"y": 169,
+						"w": 2,
+						"h": 2
+					}
+				},
+				{
 					"filename": "asteroid",
 					"rotated": false,
 					"trimmed": false,
@@ -213,7 +255,7 @@
 						"h": 63
 					},
 					"frame": {
-						"x": 83,
+						"x": 87,
 						"y": 171,
 						"w": 60,
 						"h": 63
@@ -225,6 +267,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:967fbace89a2ce6648b5a4b02455b53d:285a38f92a7696d67c0ebb9c2867e649:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:ff8dfa3bc0d3366690ab841635bb0be2:413198aaa2990499d0a3053b59267beb:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

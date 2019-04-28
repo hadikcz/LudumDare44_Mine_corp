@@ -56,4 +56,16 @@ export default class TransformHelpers {
 
         return Math.sqrt(dx * dx + dy * dy);
     }
+
+    /**
+     * @param {number} rotation
+     * @param {number} speed
+     * @return {{x: number, y: number}}
+     */
+    static rotationToVelocity (rotation, speed) {
+        return {
+            x: speed * Math.cos(rotation),
+            y: speed * Math.sin(rotation)
+        };
+    }
 }

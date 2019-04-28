@@ -3,9 +3,9 @@ import Depths from 'structs/Depths';
 import Planet from 'entity/planet/Planet';
 import GameConfig from 'GameConfig';
 
-export default class Debris extends Phaser.GameObjects.Image {
+export default class BloodCell extends Phaser.GameObjects.Image {
     constructor (scene) {
-        super(scene, -1000, -1000, 'assets', 'debris' + Phaser.Math.RND.integerInRange(1, 3));
+        super(scene, -1000, -1000, 'assets', 'bloodCell');
         this.scene.add.existing(this);
         this.setDepth(Depths.DEBRIS);
         this.setActive(false);
@@ -29,14 +29,9 @@ export default class Debris extends Phaser.GameObjects.Image {
      * @param {number} velocityX
      * @param {number} velocityY
      */
-    launch (x, y, rotation, velocityX = 0, velocityY = 0, customImage = false) {
-        if (customImage) {
-            this.setFrame(customImage);
-        } else {
-            this.setFrame('debris' + Phaser.Math.RND.integerInRange(1, 3));
-        }
+    launch (x, y, rotation, velocityX = 0, velocityY = 0) {
         this.setPosition(x, y);
-        this.setRotation(Phaser.Math.RND.rotation());
+        this.setRotation(rotation);
         this.setVisible(true);
         this.setActive(true);
         this.setScale(1, 1);

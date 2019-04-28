@@ -174,9 +174,11 @@ export default class EffectManger {
      * @param {number} x
      * @param {number} y
      * @param {number} rotation
+     * @param {number} velocityX
+     * @param {number} velocityY
      * @return {Debris}
      */
-    launchDebris (x, y, rotation) {
+    launchDebris (x, y, rotation, velocityX = 0, velocityY = 0, customImage = false) {
         let group = this.debrisGroup;
         /** @type {FlyText} */
         let effect = group.getFirstDead();
@@ -184,7 +186,7 @@ export default class EffectManger {
             effect = new Debris(this.scene);
             group.add(effect);
         }
-        effect.launch(x, y, rotation);
+        effect.launch(x, y, rotation, velocityX, velocityY, customImage);
         return effect;
     }
 

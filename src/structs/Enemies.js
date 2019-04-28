@@ -15,20 +15,32 @@ export default {
             type: 'man',
             name: 'Man',
             hp: 1,
-            damage: 1
+            damage: 1,
+            particles: {
+                height: 20,
+                force: [50, 180]
+            }
         },
         {
             type: 'landing_ship', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
             name: 'Transport ship',
             hp: 8,
-            damage: 1
+            damage: 1,
+            particles: {
+                height: 55,
+                force: [50, 450]
+            }
         },
         {
             type: 'mining_ship', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
             name: 'Mining ship',
             hp: 15,
             damage: 15,
-            waitBeforeLaunchTime: 20000
+            waitBeforeLaunchTime: 20000,
+            particles: {
+                height: 55,
+                force: [50, 450]
+            }
         }
     ],
     /**

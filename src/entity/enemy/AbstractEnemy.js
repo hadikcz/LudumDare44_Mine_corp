@@ -5,6 +5,7 @@ import Enemies from 'structs/Enemies';
 import Counter from 'structs/Counter';
 import Depths from 'structs/Depths';
 import Events from 'structs/Events';
+import TransformHelpers from 'helpers/TransformHelpers';
 
 /**
  * @abstract
@@ -191,16 +192,29 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     destroy () {
-        if (this.hp.get() <= 0 && this.type !== 'man') {
-            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
-            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
-            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
-            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
+        if (this.hp.get() <= 0) {
+            if (this.type !== 'man') {
+                this.spawnDebris(15);
+            } else {
+                this.spawnDebris(15, 'bloodCell');
+                this.spawnDebris(4, 'limb');
+            }
         }
         this.mineTimeEvent.destroy();
         this._canMine = false;
         this.hpText.destroy();
         super.destroy();
+    }
+
+    spawnDebris (count = 3, customImage = false) {
+        let angleOutOfCore = Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2;
+
+        for (let i = 0; i < count; i++) {
+            let modifiedAngle = angleOutOfCore + Phaser.Math.DegToRad(Phaser.Math.RND.integerInRange(-80, 80));
+            let velocity = TransformHelpers.rotationToVelocity(modifiedAngle, Phaser.Math.RND.integerInRange(this.enemyData.particles.force[0], this.enemyData.particles.force[1]));
+            let centerOfObject = TransformHelpers.calcPivot(this.x, this.y, angleOutOfCore, this.enemyData.particles.height);
+            this.scene.effectManager.launchDebris(centerOfObject.x, centerOfObject.y, this.rotation, velocity.x, velocity.y, customImage);
+        }
     }
 
     static get ENEMY_TYPE_MAN () {
