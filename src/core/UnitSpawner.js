@@ -4,6 +4,7 @@ import ArrayHelpers from 'helpers/ArrayHelpers';
 import ManEnemy from 'entity/enemy/ManEnemy';
 import MiningShipEnemy from 'entity/enemy/MiningShipEnemy';
 import Events from 'structs/Events';
+import FactoryEnemy from 'entity/enemy/FactoryEnemy';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -40,11 +41,22 @@ export default class UnitSpawner {
 
         let landPosition = this._getRandomLandPosition();
 
-        if (Phaser.Math.RND.integerInRange(0, 1)) {
-            this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
-        } else {
-            this.landUnit(MiningShipEnemy.TYPE, landPosition.x, landPosition.y);
-        }
+        this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
+        // let rnd = Phaser.Math.RND.integerInRange(0, 2);
+        // if (rnd === 0) {
+        //     this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
+        // } else if (rnd === 1) {
+        //     this.landUnit(MiningShipEnemy.TYPE, landPosition.x, landPosition.y);
+        // } else if (rnd === 2) {
+        //     this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
+        // }
+    }
+
+    deployFromSurface (unitType, pointerX, pointerY) {
+        let landingPosition = Planet.findNearestLandPosition(pointerX, pointerY);
+        let unit = this._createUnitByType(unitType, landingPosition.x, landingPosition.y);
+        this.units.add(unit);
+        unit.deployFromSurface(landingPosition.x, landingPosition.y);
     }
 
     landUnit (unitType, pointerX, pointerY) {
@@ -82,6 +94,8 @@ export default class UnitSpawner {
                 return new ManEnemy(this.scene, x, y);
             case MiningShipEnemy.TYPE:
                 return new MiningShipEnemy(this.scene, x, y);
+            case FactoryEnemy.TYPE:
+                return new FactoryEnemy(this.scene, x, y);
         }
     }
 }

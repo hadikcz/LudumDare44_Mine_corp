@@ -5,7 +5,7 @@
 			"format": "RGBA8888",
 			"size": {
 				"w": 178,
-				"h": 235
+				"h": 245
 			},
 			"scale": 1,
 			"frames": [
@@ -28,6 +28,27 @@
 						"y": 1,
 						"w": 134,
 						"h": 84
+					}
+				},
+				{
+					"filename": "lightning",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 168
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 168
+					},
+					"frame": {
+						"x": 137,
+						"y": 1,
+						"w": 40,
+						"h": 168
 					}
 				},
 				{
@@ -73,27 +94,6 @@
 					}
 				},
 				{
-					"filename": "lightning",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 168
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 40,
-						"h": 168
-					},
-					"frame": {
-						"x": 137,
-						"y": 1,
-						"w": 40,
-						"h": 168
-					}
-				},
-				{
 					"filename": "mining_ship",
 					"rotated": false,
 					"trimmed": true,
@@ -115,6 +115,48 @@
 					}
 				},
 				{
+					"filename": "factory",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 59,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 59,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 199,
+						"w": 59,
+						"h": 45
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 16,
+						"w": 18,
+						"h": 36
+					},
+					"frame": {
+						"x": 62,
+						"y": 199,
+						"w": 18,
+						"h": 36
+					}
+				},
+				{
 					"filename": "asteroid",
 					"rotated": false,
 					"trimmed": false,
@@ -133,27 +175,6 @@
 						"y": 171,
 						"w": 60,
 						"h": 63
-					}
-				},
-				{
-					"filename": "man",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 22,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 16,
-						"w": 18,
-						"h": 36
-					},
-					"frame": {
-						"x": 1,
-						"y": 194,
-						"w": 18,
-						"h": 36
 					}
 				},
 				{
@@ -192,10 +213,31 @@
 						"h": 5
 					},
 					"frame": {
-						"x": 21,
-						"y": 194,
+						"x": 145,
+						"y": 178,
 						"w": 21,
 						"h": 5
+					}
+				},
+				{
+					"filename": "debris1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 7
+					},
+					"frame": {
+						"x": 62,
+						"y": 237,
+						"w": 8,
+						"h": 7
 					}
 				},
 				{
@@ -214,7 +256,7 @@
 					},
 					"frame": {
 						"x": 145,
-						"y": 178,
+						"y": 185,
 						"w": 11,
 						"h": 11
 					}
@@ -234,8 +276,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 21,
-						"y": 201,
+						"x": 145,
+						"y": 198,
 						"w": 11,
 						"h": 11
 					}
@@ -256,30 +298,9 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 232,
+						"y": 194,
 						"w": 7,
 						"h": 2
-					}
-				},
-				{
-					"filename": "debris1",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 8,
-						"h": 7
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 8,
-						"h": 7
-					},
-					"frame": {
-						"x": 125,
-						"y": 87,
-						"w": 8,
-						"h": 7
 					}
 				},
 				{
@@ -297,8 +318,8 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 10,
-						"y": 232,
+						"x": 83,
+						"y": 165,
 						"w": 2,
 						"h": 2
 					}
@@ -309,6 +330,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:074933d17ad9447d89d4177233265e9b:42e8147bb57c8fa7cb3c60e93966a526:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:c0489c7d7dc2996052436a2d237e9c55:90ac72a9d49912bfe57a6b032a00e70b:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

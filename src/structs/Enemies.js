@@ -10,6 +10,9 @@ export default {
         wanderingTime: [800, 3000],
         miningTime: 2000
     },
+    FACTORY: {
+        deployTime: 2500
+    },
     list: [
         {
             type: 'man',
@@ -36,6 +39,17 @@ export default {
             name: 'Mining ship',
             hp: 15,
             damage: 15,
+            waitBeforeLaunchTime: 20000,
+            particles: {
+                height: 55,
+                force: [50, 450]
+            }
+        },
+        {
+            type: 'factory', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
+            name: 'Factory',
+            hp: 20,
+            damage: 20,
             waitBeforeLaunchTime: 20000,
             particles: {
                 height: 55,
