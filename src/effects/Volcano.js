@@ -7,7 +7,7 @@ export default class Lightning extends Phaser.GameObjects.Image {
         super(scene, -1000, -1000, 'assets', 'volcano');
         this.scene.add.existing(this);
         this.setOrigin(0.5, 1);
-        this.setDepth(Depths.ATTACKS);
+        this.setDepth(Depths.VOLCANOS);
         this.setActive(false);
         this.setVisible(false);
         this.setScale(0, 0);
@@ -28,7 +28,7 @@ export default class Lightning extends Phaser.GameObjects.Image {
             targets: this,
             scaleX: 1,
             scaleY: 1,
-            duration: 800,
+            duration: Attacks.Volcano.growTime,
             ease: 'Linear'
         });
         this.scene.time.addEvent({

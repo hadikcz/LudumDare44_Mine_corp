@@ -153,7 +153,9 @@ export default class AttackManager {
 
         let rotation = Planet.getRotationTowardPlanetCenter(x, y);
         this.scene.effectManager.launchVolcano(x, y, rotation);
-        this.findAndDamageEnemies(x, y, Attacks.Volcano);
+        setTimeout(() => {
+            this.findAndDamageEnemies(x, y, Attacks.Volcano);
+        }, Attacks.Volcano.growTime);
 
         this.cooldowns[Attacks.TYPES.VOLCANO] = true;
         setTimeout(() => {

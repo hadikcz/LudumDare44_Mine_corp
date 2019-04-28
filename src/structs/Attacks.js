@@ -18,7 +18,8 @@ export default {
         duration: -1,
         coolDown: 45000, // ms
         damage: 20, // per s
-        radius: 75
+        radius: 75,
+        growTime: 800
     },
     Asteroid: {
         name: 'Asteroid',

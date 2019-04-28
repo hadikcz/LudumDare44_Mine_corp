@@ -4,6 +4,7 @@ export default {
     PLANET_LAYER2: 6,
     PLANET_LAYER3: 20,
     PLANET_LAYER4: 21,
+    VOLCANOS: 34,
     CLOUDS: 35,
     SHIPS: 100,
     MAN: 120,
