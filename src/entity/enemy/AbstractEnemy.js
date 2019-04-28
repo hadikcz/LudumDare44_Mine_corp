@@ -97,7 +97,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
 
     preUpdate () {
         this.hpText.setPosition(this.x, this.y);
-        this.hpText.setText(this.hp.getPercent() + '%');
+        this.hpText.setText(Math.round(this.hp.getPercent()) + '%');
 
         if (this._phase === EnemyPhase.LANDING) {
             this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
