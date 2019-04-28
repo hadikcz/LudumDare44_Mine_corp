@@ -1,5 +1,3 @@
-import AbstractEnemy from 'entity/enemy/AbstractEnemy';
-
 export default {
     SHIPS: {
         landingTime: 5000, // 5000
