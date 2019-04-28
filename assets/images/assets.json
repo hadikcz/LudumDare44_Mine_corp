@@ -5,7 +5,7 @@
 			"format": "RGBA8888",
 			"size": {
 				"w": 178,
-				"h": 237
+				"h": 235
 			},
 			"scale": 1,
 			"frames": [
@@ -115,6 +115,69 @@
 					}
 				},
 				{
+					"filename": "debris2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 21,
+						"y": 194,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "debris3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 34,
+						"y": 194,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "debris1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 7
+					},
+					"frame": {
+						"x": 47,
+						"y": 194,
+						"w": 8,
+						"h": 7
+					}
+				},
+				{
 					"filename": "mining_ship",
 					"rotated": false,
 					"trimmed": true,
@@ -138,22 +201,22 @@
 				{
 					"filename": "asteroid",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 75,
-						"h": 83
+						"w": 60,
+						"h": 63
 					},
 					"spriteSourceSize": {
-						"x": 2,
-						"y": 10,
-						"w": 62,
-						"h": 65
+						"x": 0,
+						"y": 0,
+						"w": 60,
+						"h": 63
 					},
 					"frame": {
 						"x": 83,
 						"y": 171,
-						"w": 62,
-						"h": 65
+						"w": 60,
+						"h": 63
 					}
 				}
 			]
@@ -162,6 +225,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:32b33c6e46b34b3dbe8d44d57731555b:83f20af505100a80730cceec9b7af88a:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:967fbace89a2ce6648b5a4b02455b53d:285a38f92a7696d67c0ebb9c2867e649:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

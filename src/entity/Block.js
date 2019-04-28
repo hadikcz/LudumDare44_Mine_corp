@@ -14,9 +14,9 @@ export default class Block extends Phaser.GameObjects.Image {
 
         let radius = 16;
         this.body.setCircle(radius, -radius / 2, -radius / 2);
+        this.body.setBounce(0.2);
 
         this.body.setVelocity(Phaser.Math.Between(100, 150), Phaser.Math.Between(150, 200));
-        this.body.setBounce(0.2);
 
         // if (Math.random() > 0.5) {
         //     this.body.velocity.x *= -1;

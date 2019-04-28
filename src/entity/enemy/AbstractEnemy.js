@@ -191,6 +191,12 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     destroy () {
+        if (this.hp.get() <= 0 && this.type !== 'man') {
+            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
+            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
+            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
+            this.scene.effectManager.launchDebris(this.x, this.y, this.rotation);
+        }
         this.mineTimeEvent.destroy();
         this._canMine = false;
         this.hpText.destroy();

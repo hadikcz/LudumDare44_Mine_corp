@@ -28,7 +28,7 @@ const config = {
         //     attractors: true
         // },
         arcade: {
-            debug: false
+            debug: true
         }
     },
     antialias: true,

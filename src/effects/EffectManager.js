@@ -4,6 +4,7 @@ import Lightning from 'effects/Lightning';
 import Tornado from 'effects/Tornado';
 import Volcano from 'effects/Volcano';
 import Asteroid from 'effects/Asteroid';
+import Debris from 'effects/Debris';
 
 export default class EffectManger {
     /**
@@ -62,6 +63,15 @@ export default class EffectManger {
          */
         this._asteroidGroup = this.scene.add.group({
             classType: Asteroid,
+            maxSize: 20,
+            runChildUpdate: true
+        });
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         */
+        this.debrisGroup = this.scene.add.group({
+            classType: Debris,
             maxSize: 20,
             runChildUpdate: true
         });
@@ -161,6 +171,24 @@ export default class EffectManger {
     }
 
     /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} rotation
+     * @return {Debris}
+     */
+    launchDebris (x, y, rotation) {
+        let group = this.debrisGroup;
+        /** @type {FlyText} */
+        let effect = group.getFirstDead();
+        if (!effect) {
+            effect = new Debris(this.scene);
+            group.add(effect);
+        }
+        effect.launch(x, y, rotation);
+        return effect;
+    }
+
+    /**
      * @private
      */
     _preparePools () {
@@ -193,6 +221,12 @@ export default class EffectManger {
         group = this._asteroidGroup;
         for (let i = 0; i < group.maxSize; i++) {
             let effect = new Asteroid(this.scene);
+            group.add(effect);
+        }
+
+        group = this.debrisGroup;
+        for (let i = 0; i < group.maxSize; i++) {
+            let effect = new Debris(this.scene);
             group.add(effect);
         }
     }
