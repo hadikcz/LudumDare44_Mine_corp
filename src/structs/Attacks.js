@@ -10,7 +10,7 @@ export default {
         name: 'Tornado',
         duration: 5000,
         coolDown: 20000, // 20000 ms
-        damage: 2.5, // per s
+        damage: 0.25, // per 100ms (2.5 per s)
         radius: 30 // px
     },
     Volcano: {

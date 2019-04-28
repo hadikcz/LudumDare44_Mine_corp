@@ -137,7 +137,7 @@ export default class AttackManager {
         this.findAndDamageEnemies(x, y, Attacks.Tornado);
         let dealDamageInterval = setInterval(() => {
             this.findAndDamageEnemies(x, y, Attacks.Tornado);
-        }, 1000);
+        }, 100);
 
         setTimeout(() => {
             clearInterval(dealDamageInterval);

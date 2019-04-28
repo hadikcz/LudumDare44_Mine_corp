@@ -2,7 +2,7 @@ export default {
     SHIPS: {
         landingTime: 2500, // 2500..5000
         launchTime: 5000,
-        waitBeforeLaunchTime: 500,
+        waitBeforeLaunchTime: 1,
         returnValueAfterDestroyShip: 1.2
     },
     MAN: {
