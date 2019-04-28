@@ -26,6 +26,11 @@ export default class Planet {
          * @type {Phaser.GameObjects.Image}
          */
         this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER4);
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.coreNoColor = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core_no_color').setDepth(Depths.PLANET_LAYER3);
 
         /**
          * @type {PlanetCollider}
@@ -62,11 +67,18 @@ export default class Planet {
     update () {
         this.planetHpText.setText(Math.floor(this.hp.getPercent()) + '% (' + this.hp.get() + ')');
 
-        let scale = this.hp.getPercent() / 100;
+        let alpha = this.hp.getPercent() / 110;
+        let scale = this.hp.getPercent() / 85;
         if (scale <= 0.25) {
             scale = 0.25;
         }
+        if (scale > 1) {
+            scale = 1;
+        }
+
         this.core.setScale(scale);
+        this.coreNoColor.setScale(scale);
+        this.core.setAlpha(alpha);
     }
 
     _processMineCorpIncome (damage) {
