@@ -2,6 +2,7 @@ import Planet from 'entity/planet/Planet';
 import LandingShipEnemy from 'entity/enemy/LandingShipEnemy';
 import GameConfig from 'GameConfig';
 import ArrayHelpers from 'helpers/ArrayHelpers';
+import ManEnemy from 'entity/enemy/ManEnemy';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -28,11 +29,32 @@ export default class UnitSpawner {
         let landingPosition = Planet.findNearestLandPosition(pointerX, pointerY);
         let spawnPosition = Planet.calculateSpawnPosition(landingPosition.x, landingPosition.y);
 
-        let unit = new LandingShipEnemy(this.scene, spawnPosition.x, spawnPosition.y);
+        let unit = this._createUnitByType(LandingShipEnemy.TYPE, spawnPosition.x, spawnPosition.y);
         unit.land(landingPosition.x, landingPosition.y);
+    }
+
+    deployOnLandUnit (unitType, spawnX, spawnY, deployOverX, deployOverY) {
+        let unit = this._createUnitByType(ManEnemy.TYPE, spawnX, spawnY);
+        if (deployOverX === undefined) {
+            deployOverX = spawnX;
+        }
+        if (deployOverY === undefined) {
+            deployOverY = spawnY;
+        }
+
+        unit.landOnGround(deployOverX, deployOverY);
     }
 
     _getRandomLandPosition () {
         return ArrayHelpers.getRandomFromArray(Planet.getLandCircle().getPoints(512));
+    }
+
+    _createUnitByType (type, x, y) {
+        switch (type) {
+            case LandingShipEnemy.TYPE:
+                return new LandingShipEnemy(this.scene, x, y);
+            case ManEnemy.TYPE:
+                return new ManEnemy(this.scene, x, y);
+        }
     }
 }

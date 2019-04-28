@@ -34,8 +34,9 @@ export default class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow({ x: 0, y: 0 });
         this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
 
-        this.cameras.main.setZoom(0.5);
-        this.cameras.main.startFollow({x: -GameConfig.World.width / 2, y: -GameConfig.World.height / 2});
+        // unzoom 2x from center
+        // this.cameras.main.setZoom(0.5);
+        // this.cameras.main.startFollow({x: -GameConfig.World.width / 2, y: -GameConfig.World.height / 2});
 
         this.lightSystem = new LightSystem(this);
         this.gameEnvironment = new GameEnvironment(this);

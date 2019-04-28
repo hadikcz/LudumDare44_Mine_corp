@@ -2,6 +2,8 @@ import Phaser from 'phaser';
 import GameConfig from 'GameConfig';
 import GameEnvironment from 'core/GameEnvironment';
 import TransformHelpers from 'helpers/TransformHelpers';
+import EnemyPhase from 'structs/EnemyPhase';
+import Planet from 'entity/planet/Planet';
 
 /**
  * @abstract
@@ -24,9 +26,9 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
 
         /**
          * @type {string}
-         * @private
+         * @protected
          */
-        this._phase = 'spawned';
+        this._phase = EnemyPhase.SPAWNED;
 
         /**
          * @type {Phaser.Math.Vector2}
@@ -61,10 +63,10 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             x: landX,
             y: landY,
             onComplete: () => {
-                this._phase = 'landed';
+                this._phase = EnemyPhase.LANDED;
             }
         });
-        this._phase = 'landing';
+        this._phase = EnemyPhase.LANDING;
 
         // debug
         // this.scene.add.line(0, 0, this.x, this.y, landX, landY, 0xFF0000).setOrigin(0, 0);
@@ -72,9 +74,42 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         // this.scene.add.circle(landX, landY, 8, 0xFF0000);
     }
 
+    landOnGround (x, y) {
+        this._phase = EnemyPhase.LANDING;
+        let landPosition = Planet.findNearestLandPosition(x, y);
+
+        this.scene.tweens.add({
+            targets: this,
+            ease: Phaser.Math.Easing.Linear.Linear,
+            duration: 1000,
+            x: landPosition.x,
+            y: landPosition.y,
+            onComplete: () => {
+                this._phase = EnemyPhase.LANDED;
+            }
+        });
+    }
+
+    launchToSpace () {
+        this.scene.tweens.add({
+            targets: this,
+            ease: Phaser.Math.Easing.Expo.In,
+            duration: 5000,
+            x: this._spawn.x,
+            y: this._spawn.y,
+            onComplete: () => {
+                this._phase = EnemyPhase.ENDED;
+            }
+        });
+    }
+
     preUpdate () {
-        if (this._phase === 'landing') {
+        if (this._phase === EnemyPhase.LANDING) {
             this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
+        }
+
+        if (this._phase === EnemyPhase.ENDED) {
+            this.destroy();
         }
     }
 

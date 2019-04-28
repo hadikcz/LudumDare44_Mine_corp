@@ -3,6 +3,7 @@ import PlanetCollider from 'entity/planet/PlanetCollider';
 import GameConfig from 'GameConfig';
 import ArrayHelpers from 'helpers/ArrayHelpers';
 import TransformHelpers from 'helpers/TransformHelpers';
+import Depths from 'structs/Depths';
 
 export default class Planet {
     constructor (scene) {
@@ -11,6 +12,12 @@ export default class Planet {
          * @type {GameScene}
          */
         this.scene = scene;
+
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.bg = this.scene.add.image(0, 0, 'bg').setOrigin(0, 0).setDepth(Depths.PLANET_LAYER3);
 
         /**
          * @type {PlanetCollider}
