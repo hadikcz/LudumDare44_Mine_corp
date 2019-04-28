@@ -13,6 +13,11 @@ export default class AttackManager {
         this.scene = scene;
 
         /**
+         * @type {boolean}
+         */
+        this.lightningCooldown = false;
+
+        /**
          * @type {string}
          * @private
          */
@@ -30,9 +35,16 @@ export default class AttackManager {
     }
 
     _launchLightning (x, y) {
+        if (this.lightningCooldown) return;
+
         let rotation = Planet.getRotationTowardPlanetCenter(x, y);
         this.scene.effectManager.launchLightning(x, y, rotation);
         this.findAndDamageEnemies(x, y, Attacks.Lightning);
+
+        this.lightningCooldown = true;
+        setTimeout(() => {
+            this.lightningCooldown = false;
+        }, Attacks.Lightning.coolDown);
     }
 
     findAndDamageEnemies (x, y, attackData) {
