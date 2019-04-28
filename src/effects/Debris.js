@@ -15,7 +15,7 @@ export default class Debris extends Phaser.GameObjects.Image {
 
         // let radius = 16;
         // this.body.setCircle(radius, -radius / 2, -radius / 2);
-        this.body.setBounce(0.2);
+        this.body.setBounce(0.5);
     }
 
     preUpdate () {

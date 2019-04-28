@@ -27,7 +27,7 @@ export default class GameEnvironment {
 
         // this.scene.physics.add.collider(this.blocks, this.blocks);
         this.scene.physics.add.collider(this.planet.planetCollider, this.scene.effectManager.debrisGroup);
-        this.scene.physics.add.collider(this.scene.effectManager.debrisGroup, this.scene.effectManager.debrisGroup);
+        // this.scene.physics.add.collider(this.scene.effectManager.debrisGroup, this.scene.effectManager.debrisGroup);
 
         // this._createTestBlocks();
     }

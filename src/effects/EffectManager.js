@@ -72,7 +72,6 @@ export default class EffectManger {
          */
         this.debrisGroup = this.scene.add.group({
             classType: Debris,
-            maxSize: 20,
             runChildUpdate: true
         });
 

@@ -10,5 +10,6 @@ export default class PlanetCollider extends Phaser.GameObjects.Image {
 
         this.body.setCircle(GameConfig.Planet.radius, -GameConfig.Planet.radius + GameConfig.Planet.offset.x, -GameConfig.Planet.radius + GameConfig.Planet.offset.y);
         this.body.setImmovable(true);
+        this.body.setBounce(0.2);
     }
 }
