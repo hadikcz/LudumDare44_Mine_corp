@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Phaser from 'phaser';
 import MineCorpIncomeUI from 'ui/MineCorpIncomeUI';
+import AttackBarUI from 'ui/AttackBarUI';
 
 export default class UI {
     /**
@@ -16,5 +17,10 @@ export default class UI {
          * @type {MineCorpIncomeUI}
          */
         this.mineCorpIncomeUI = new MineCorpIncomeUI(this.scene, this.scene.gameEnvironment.planet);
+
+        /**
+         * @type {AttackBarUI}
+         */
+        this.attackBarUI = new AttackBarUI(this.scene, this.scene.attackManager);
     }
 }

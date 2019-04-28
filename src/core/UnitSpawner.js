@@ -3,6 +3,7 @@ import LandingShipEnemy from 'entity/enemy/LandingShipEnemy';
 import ArrayHelpers from 'helpers/ArrayHelpers';
 import ManEnemy from 'entity/enemy/ManEnemy';
 import MiningShipEnemy from 'entity/enemy/MiningShipEnemy';
+import Events from 'structs/Events';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -33,7 +34,7 @@ export default class UnitSpawner {
 
     _spawn () {
         if (!this._mineOpStarts) {
-            this.scene.ui.mineCorpIncomeUI.show();
+            this.scene.events.emit(Events.MineOperationsBegin);
             this._mineOpStarts = true;
         }
 

@@ -1,4 +1,5 @@
 export default {
     ApplyDamageToPlanet: 'ApplyDamageToPlanet',
-    ReturnDamageToPlanet: 'ReturnDamageToPlanet'
+    ReturnDamageToPlanet: 'ReturnDamageToPlanet',
+    MineOperationsBegin: 'MineOperationsBegin'
 };

@@ -28,9 +28,9 @@ export default {
         radius: 125
     },
     TYPES: {
-        LIGHTNING: 'Lightning',
-        TORNADO: 'Tornado',
-        VOLCANO: 'Volcano',
-        ASTEROID: 'Asteroid'
+        LIGHTNING: 'lightning',
+        TORNADO: 'tornado',
+        VOLCANO: 'volcano',
+        ASTEROID: 'asteroid'
     }
 };

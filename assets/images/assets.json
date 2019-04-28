@@ -1,0 +1,125 @@
+{
+	"textures": [
+		{
+			"image": "assets.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 98,
+				"h": 248
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "lightning",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 168
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 168
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 40,
+						"h": 168
+					}
+				},
+				{
+					"filename": "mining_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 79
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 40,
+						"h": 76
+					},
+					"frame": {
+						"x": 1,
+						"y": 171,
+						"w": 40,
+						"h": 76
+					}
+				},
+				{
+					"filename": "landing_ship",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 110
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 110
+					},
+					"frame": {
+						"x": 43,
+						"y": 1,
+						"w": 24,
+						"h": 110
+					}
+				},
+				{
+					"filename": "tornado",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 57,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 54,
+						"h": 105
+					},
+					"frame": {
+						"x": 43,
+						"y": 113,
+						"w": 54,
+						"h": 105
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 16,
+						"w": 18,
+						"h": 36
+					},
+					"frame": {
+						"x": 69,
+						"y": 1,
+						"w": 18,
+						"h": 36
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:5d0eea0b977a7a1ddb35528519f92488:57dee597dec053b4985a3ae7a752719c:a759b6bbc8381ac9c472b28f589ad0d6$"
+	}
+}

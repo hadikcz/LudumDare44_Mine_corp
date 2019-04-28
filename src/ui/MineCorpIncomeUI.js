@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import Events from 'structs/Events';
 
 export default class MineCorpIncomeUI {
     /**
@@ -17,6 +18,8 @@ export default class MineCorpIncomeUI {
          * @type {Planet}
          */
         this.planet = planet;
+
+        this.scene.events.on(Events.MineOperationsBegin, this.show, this);
     }
 
     show (startRefresh = true) {
