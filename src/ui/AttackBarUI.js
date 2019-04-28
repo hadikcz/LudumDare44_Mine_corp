@@ -20,7 +20,7 @@ export default class AttackBarUI {
          */
         this.attackManager = attackManager;
 
-        this.show(false);
+        // this.show(false);
         this.scene.events.on(Events.MineOperationsBegin, this.show, this);
 
         let self = this;
@@ -68,5 +68,9 @@ export default class AttackBarUI {
         } else {
             selector.show();
         }
+
+        setTimeout(() => {
+            $('.key-manual').fadeOut(1000);
+        }, 3500);
     }
 }

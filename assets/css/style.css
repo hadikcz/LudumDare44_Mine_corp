@@ -78,6 +78,14 @@ body {
     filter: saturate(0.2);
 }
 
+.attackBar .button .key-manual {
+    position: absolute;
+    color: white;
+    margin-top: -43px;
+    margin-left: 26px;
+    font-size: 23px;
+}
+
 .attackBar .button.active {
     -webkit-filter:saturate(1);
     filter: saturate(1);
