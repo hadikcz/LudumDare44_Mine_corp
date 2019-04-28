@@ -1,6 +1,7 @@
 import Planet from 'entity/planet/Planet';
 import Attacks from 'structs/Attacks';
 import Depths from 'structs/Depths';
+import Events from 'structs/Events';
 
 export default class AttackManager {
     /**
@@ -115,6 +116,8 @@ export default class AttackManager {
         setTimeout(() => {
             this.cooldowns[Attacks.TYPES.LIGHTNING] = false;
         }, Attacks.Lightning.coolDown);
+
+        this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.LIGHTNING);
     }
 
     /**
@@ -141,6 +144,8 @@ export default class AttackManager {
         setTimeout(() => {
             this.cooldowns[Attacks.TYPES.TORNADO] = false;
         }, Attacks.Tornado.coolDown);
+
+        this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.TORNADO);
     }
 
     /**
@@ -161,5 +166,7 @@ export default class AttackManager {
         setTimeout(() => {
             this.cooldowns[Attacks.TYPES.VOLCANO] = false;
         }, Attacks.Volcano.coolDown);
+
+        this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.VOLCANO);
     }
 }

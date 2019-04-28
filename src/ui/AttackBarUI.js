@@ -22,6 +22,7 @@ export default class AttackBarUI {
 
         this.show(false);
         this.scene.events.on(Events.MineOperationsBegin, this.show, this);
+        this.scene.events.on(Events.UsedAttack, this._usedAttack, this);
 
         let self = this;
         $('.button').on('click', function () {
@@ -72,5 +73,24 @@ export default class AttackBarUI {
         setTimeout(() => {
             $('.key-manual').fadeOut(1000);
         }, 3500);
+    }
+
+    _usedAttack (type) {
+        let attackData = Attacks.getDataByType(type);
+
+        // let selector = $('#progress-' + type);
+        let selectorInner = $('#progress-inner-' + type);
+        selectorInner.width('0%');
+
+        let countdownStart = Date.now();
+        let countdownInterval = setInterval(() => {
+            let elapsedTime = Date.now() - countdownStart;
+            let percent = (elapsedTime / attackData.coolDown);
+            selectorInner.width((percent * 100) + '%');
+            if (percent >= 1) {
+                selectorInner.width('100%');
+                clearInterval(countdownInterval);
+            }
+        }, 10);
     }
 }
