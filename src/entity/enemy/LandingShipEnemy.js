@@ -27,10 +27,16 @@ export default class LandingShipEnemy extends AbstractEnemy {
         }, Enemies.SHIPS.waitBeforeLaunchTime);
 
         let angleModifier = Phaser.Math.RND.integerInRange(0, 1) === 1 ? 1 : -1;
-        let circle = new Phaser.Curves.Ellipse(this.x, this.y, 90);
-        // let deployOver = TransformHelpers.calcPivot(this.x, this.y, angleModifier * Math.PI / 2, Phaser.Math.RND.integerInRange(25, 35));
-        let deployOver = circle.getRandomPoint();
-        this.scene.unitSpawner.deployOnLandUnit(ManEnemy.TYPE, this.x, this.y, deployOver.x, deployOver.y);
+
+        let heightFromShipLand = 35;
+        let from = TransformHelpers.calcPivot(this.x, this.y, this.rotation + Math.PI / 2, -heightFromShipLand);
+        let deployOver = TransformHelpers.calcPivot(
+            from.x,
+            from.y,
+            this.rotation + (angleModifier * Math.PI),
+            Phaser.Math.RND.integerInRange(25, 45)
+        );
+        this.scene.unitSpawner.deployOnLandUnit(ManEnemy.TYPE, from.x, from.y, deployOver.x, deployOver.y);
     }
 
     static get TYPE () {

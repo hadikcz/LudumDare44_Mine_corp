@@ -49,8 +49,13 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
          */
         this.graphics = this.scene.add.graphics();
 
-        let image = this.scene.add.image(0, 0, key).setOrigin(0.5, 1);
-        this.add(image);
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.image = this.scene.add.image(0, 0, key).setOrigin(0.5, 1);
+        this.add(this.image);
+
+        this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
     }
 
     land (landX, landY) {

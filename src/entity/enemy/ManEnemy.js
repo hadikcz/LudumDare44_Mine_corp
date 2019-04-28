@@ -3,15 +3,36 @@ import Depths from 'structs/Depths';
 import Phaser from "phaser";
 import Planet from 'entity/planet/Planet';
 import EnemyPhase from 'structs/EnemyPhase';
+import Enemies from 'structs/Enemies';
 
 export default class ManEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
         super(scene, ManEnemy.TYPE, 'man', x, y);
         this.setDepth(Depths.MAN);
+
+        this.wanderingAnimationTween = this.scene.tweens.add({
+            targets: this.image,
+            y: -5,
+            ease: 'Linear',
+            duration: 150,
+            yoyo: -1,
+            repeat: Infinity
+        });
+        this.wanderingAnimationTween.pause();
+
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Text}
+         */
+        // this.phaseText = this.scene.add.text(this.x, this.y, this._phase, {fill: '#FF0000'}).setDepth(Depths.UI);
     }
 
     preUpdate () {
         super.preUpdate();
+
+        // this.phaseText.setPosition(this.x, this.y);
+        // this.phaseText.setText(this._phase);
+
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
 
         if (this._phase === EnemyPhase.LANDED) {
@@ -19,8 +40,9 @@ export default class ManEnemy extends AbstractEnemy {
         }
 
         if (this._phase === EnemyPhase.MAN_START_MINING) {
+            this._phase = EnemyPhase.MAN_MINING;
             this.scene.time.addEvent({
-                delay: 3000,
+                delay: Enemies.MAN.miningTime,
                 callbackScope: this,
                 callback: () => {
                     this._startWandering();
@@ -35,23 +57,16 @@ export default class ManEnemy extends AbstractEnemy {
         let randomPointAroundPlayer = circle.getRandomPoint();
         let randomPointToMove = Planet.findNearestLandPosition(randomPointAroundPlayer.x, randomPointAroundPlayer.y);
 
-        let animationTween = this.scene.tweens.add({
-            targets: this,
-            originY: 1.5,
-            ease: 'Linear',
-            duration: 500,
-            yoyo: -1,
-            repeat: Infinity
-        });
+        this.wanderingAnimationTween.play();
 
         this.scene.tweens.add({
             targets: this,
             ease: Phaser.Math.Easing.Linear.Linear,
-            duration: 3000,
+            duration: Enemies.MAN.wanderingTime,
             x: randomPointToMove.x,
             y: randomPointToMove.y,
             onComplete: () => {
-                animationTween.stop();
+                this.wanderingAnimationTween.pause();
                 this._phase = EnemyPhase.MAN_START_MINING;
             }
         });
