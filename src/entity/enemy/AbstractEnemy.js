@@ -6,6 +6,7 @@ import Counter from 'structs/Counter';
 import Depths from 'structs/Depths';
 import Events from 'structs/Events';
 import TransformHelpers from 'helpers/TransformHelpers';
+import ProgressBarUI from 'ui/ProgressBarUI';
 
 /**
  * @abstract
@@ -80,7 +81,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         /**
          * @type {Phaser.GameObjects.Text}
          */
-        this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
+        // this.hpText = this.scene.add.text(this.x, this.y, this.hp.getPercent() + '%', { fill: '#FF0000' }).setDepth(Depths.UI);
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
 
         /**
@@ -98,11 +99,27 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
                 }
             }
         });
+
+        /**
+         * @type {ProgressBarUI}
+         */
+        this.healthbar = new ProgressBarUI(this.scene, {
+            atlas: 'assets',
+            atlasBg: 'healthbar_bg',
+            atlasBar: 'healthbar_bar',
+            // barAlpha: 0.4,
+            depth: Depths.UI,
+            followTarget: this,
+            offsetX: 0,
+            offsetY: 0
+        });
     }
 
     preUpdate () {
-        this.hpText.setPosition(this.x, this.y);
-        this.hpText.setText(Math.round(this.hp.getPercent()) + '%');
+        // this.hpText.setPosition(this.x, this.y);
+        // this.hpText.setText(Math.round(this.hp.getPercent()) + '%');
+
+        this.healthbar.setPercent(Math.round(this.hp.getPercent()));
 
         if (this._phase === EnemyPhase.LANDING) {
             this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, this._landing.x, this._landing.y) - Math.PI / 2);
@@ -202,7 +219,8 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         }
         this.mineTimeEvent.destroy();
         this._canMine = false;
-        this.hpText.destroy();
+        // this.hpText.destroy();
+        this.healthbar.destroy();
         super.destroy();
     }
 

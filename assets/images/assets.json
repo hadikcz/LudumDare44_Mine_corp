@@ -31,27 +31,6 @@
 					}
 				},
 				{
-					"filename": "lightning",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 168
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 40,
-						"h": 168
-					},
-					"frame": {
-						"x": 137,
-						"y": 1,
-						"w": 40,
-						"h": 168
-					}
-				},
-				{
 					"filename": "tornado",
 					"rotated": false,
 					"trimmed": true,
@@ -94,87 +73,24 @@
 					}
 				},
 				{
-					"filename": "man",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 22,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 16,
-						"w": 18,
-						"h": 36
-					},
-					"frame": {
-						"x": 1,
-						"y": 194,
-						"w": 18,
-						"h": 36
-					}
-				},
-				{
-					"filename": "debris2",
+					"filename": "lightning",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 11,
-						"h": 11
+						"w": 40,
+						"h": 168
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 11,
-						"h": 11
+						"w": 40,
+						"h": 168
 					},
 					"frame": {
-						"x": 21,
-						"y": 194,
-						"w": 11,
-						"h": 11
-					}
-				},
-				{
-					"filename": "debris3",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 11,
-						"h": 11
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 11,
-						"h": 11
-					},
-					"frame": {
-						"x": 34,
-						"y": 194,
-						"w": 11,
-						"h": 11
-					}
-				},
-				{
-					"filename": "debris1",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 8,
-						"h": 7
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 8,
-						"h": 7
-					},
-					"frame": {
-						"x": 47,
-						"y": 194,
-						"w": 8,
-						"h": 7
+						"x": 137,
+						"y": 1,
+						"w": 40,
+						"h": 168
 					}
 				},
 				{
@@ -199,6 +115,132 @@
 					}
 				},
 				{
+					"filename": "asteroid",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 60,
+						"h": 63
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 60,
+						"h": 63
+					},
+					"frame": {
+						"x": 83,
+						"y": 171,
+						"w": 60,
+						"h": 63
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 16,
+						"w": 18,
+						"h": 36
+					},
+					"frame": {
+						"x": 1,
+						"y": 194,
+						"w": 18,
+						"h": 36
+					}
+				},
+				{
+					"filename": "healthbar_bar",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 5
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 5
+					},
+					"frame": {
+						"x": 145,
+						"y": 171,
+						"w": 21,
+						"h": 5
+					}
+				},
+				{
+					"filename": "healthbar_bg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 21,
+						"h": 5
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 5
+					},
+					"frame": {
+						"x": 21,
+						"y": 194,
+						"w": 21,
+						"h": 5
+					}
+				},
+				{
+					"filename": "debris2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 145,
+						"y": 178,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "debris3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 21,
+						"y": 201,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
 					"filename": "limb",
 					"rotated": false,
 					"trimmed": false,
@@ -213,10 +255,31 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 83,
-						"y": 165,
+						"x": 1,
+						"y": 232,
 						"w": 7,
 						"h": 2
+					}
+				},
+				{
+					"filename": "debris1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 7
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 7
+					},
+					"frame": {
+						"x": 125,
+						"y": 87,
+						"w": 8,
+						"h": 7
 					}
 				},
 				{
@@ -234,31 +297,10 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 83,
-						"y": 169,
+						"x": 10,
+						"y": 232,
 						"w": 2,
 						"h": 2
-					}
-				},
-				{
-					"filename": "asteroid",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 60,
-						"h": 63
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 60,
-						"h": 63
-					},
-					"frame": {
-						"x": 87,
-						"y": 171,
-						"w": 60,
-						"h": 63
 					}
 				}
 			]
@@ -267,6 +309,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:ff8dfa3bc0d3366690ab841635bb0be2:413198aaa2990499d0a3053b59267beb:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:074933d17ad9447d89d4177233265e9b:42e8147bb57c8fa7cb3c60e93966a526:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
