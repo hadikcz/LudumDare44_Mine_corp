@@ -20,7 +20,9 @@ export default class MiningShipEnemy extends AbstractEnemy {
     }
 
     destroy () {
-        this.scene.events.emit(Events.ReturnDamageToPlanet, this.totalMined - this.totalMined / Enemies.SHIPS.returnValueAfterDestroyShip);
+        if (this.hp.get() <= 0) {
+            this.scene.events.emit(Events.ReturnDamageToPlanet, this.totalMined - this.totalMined / Enemies.SHIPS.returnValueAfterDestroyShip);
+        }
         super.destroy();
     }
 
