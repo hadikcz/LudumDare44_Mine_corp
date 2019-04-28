@@ -123,12 +123,20 @@ export default class AttackManager {
         if (this.cooldowns[Attacks.TYPES.TORNADO]) return;
 
         let rotation = Planet.getRotationTowardPlanetCenter(x, y);
-        this.scene.effectManager.launchLightning(x, y, rotation);
-        this.findAndDamageEnemies(x, y, Attacks.Lightning);
+        this.scene.effectManager.launchTornado(x, y, rotation);
+
+        this.findAndDamageEnemies(x, y, Attacks.Tornado);
+        let dealDamageInterval = setInterval(() => {
+            this.findAndDamageEnemies(x, y, Attacks.Tornado);
+        }, 1000);
+
+        setTimeout(() => {
+            clearInterval(dealDamageInterval);
+        }, Attacks.Tornado.duration);
 
         this.cooldowns[Attacks.TYPES.TORNADO] = true;
         setTimeout(() => {
             this.cooldowns[Attacks.TYPES.TORNADO] = false;
-        }, Attacks.Lightning.coolDown);
+        }, Attacks.Tornado.coolDown);
     }
 }
