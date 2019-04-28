@@ -1,5 +1,7 @@
 import GameEnvironment from 'core/GameEnvironment';
 import PlanetCollider from 'entity/planet/PlanetCollider';
+import GameConfig from 'GameConfig';
+import ArrayHelpers from 'helpers/ArrayHelpers';
 
 export default class Planet {
     constructor (scene) {
@@ -15,6 +17,25 @@ export default class Planet {
         this.planetCollider = new PlanetCollider(this.scene, GameEnvironment.getCenterOfTheMap().x, GameEnvironment.getCenterOfTheMap().y);
 
         // this.scene.matter.add.mouseSpring();
+    }
+
+    /**
+     * @return {Phaser.Math.Vector2}
+     */
+    static getRandomSpawn () {
+        let spawns = Planet.getSpawnCircle().getPoints(256);
+        return ArrayHelpers.getRandomFromArray(spawns);
+    }
+
+    /**
+     * @return {Phaser.Curves.Ellipse}
+     */
+    static getSpawnCircle () {
+        return new Phaser.Curves.Ellipse(
+            GameEnvironment.getCenterOfTheMap().x,
+            GameEnvironment.getCenterOfTheMap().y,
+            GameConfig.Planet.spawnRadius
+        );
     }
 
     // _createPlanetColliderAndAttractor () {

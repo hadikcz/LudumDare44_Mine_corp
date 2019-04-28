@@ -38,8 +38,7 @@ export default class GameEnvironment {
 
         this._createTestBlocks();
 
-        let spawn = new Phaser.Math.Vector2(-150, -150);
-        let enemy = new LandingShipEnemy(this.scene, spawn.x, spawn.y);
+        this.spawnRandomEnemies();
         // let enemy = new AbstractEnemy(this.scene, AbstractEnemy.ENEMY_TYPE_LANDING_SHIP, spawn.x, spawn.y);
         // let landingPosition = enemy.getLandingPositionAndRotation().position;
         //
@@ -50,6 +49,15 @@ export default class GameEnvironment {
     }
 
     update () {}
+
+    spawnRandomEnemies () {
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => {
+                let spawn = Planet.getRandomSpawn();
+                let enemy = new LandingShipEnemy(this.scene, spawn.x, spawn.y);
+            }, Phaser.Math.RND.integerInRange(1500, 4000));
+        }
+    }
 
     _createTestBlocks () {
         // this.scene.matter.add.imageStack('block', null, 0, 500, 50, 2, 0, 0, {

@@ -22,6 +22,7 @@ export default {
         accelerateSpeed: 800
     },
     Planet: {
+        spawnRadius: 1500,
         radius: 230,
         offset: {
             x: 25,
