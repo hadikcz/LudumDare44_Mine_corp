@@ -64,12 +64,12 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
                 this._phase = 'landed';
             }
         });
+        this._phase = 'landing';
 
         // debug
-        this.scene.add.line(0, 0, this.x, this.y, landX, landY, 0xFF0000).setOrigin(0, 0);
-        this.scene.add.circle(this.x, this.y, 8, 0x00FF00);
-        this.scene.add.circle(landX, landY, 8, 0xFF0000);
-        this._phase = 'landing';
+        // this.scene.add.line(0, 0, this.x, this.y, landX, landY, 0xFF0000).setOrigin(0, 0);
+        // this.scene.add.circle(this.x, this.y, 8, 0x00FF00);
+        // this.scene.add.circle(landX, landY, 8, 0xFF0000);
     }
 
     preUpdate () {

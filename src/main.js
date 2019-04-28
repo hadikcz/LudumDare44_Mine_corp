@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import BootScene from './scenes/BootScene';
 import GameScene from './scenes/GameScene';
 import GameConfig from './GameConfig.js';
+import Stats from 'stats.js/src/Stats';
 
 const config = {
     type: Phaser.CANVAS,
@@ -38,3 +39,11 @@ const config = {
 };
 
 let game = new Phaser.Game(config);
+
+var stats = new Stats();
+document.body.appendChild(stats.dom);
+
+requestAnimationFrame(function loop () {
+    stats.update();
+    requestAnimationFrame(loop);
+});
