@@ -18,7 +18,7 @@ export default class FactoryEnemy extends AbstractEnemy {
          * @type {{x: number, y: number}}
          * @private
          */
-        this._smokeFrom = TransformHelpers.calcPivot(this.x, this.y, Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2 - Phaser.Math.DegToRad(16), 105 / GameConfig.GameWindowSettings.zoom);
+        this._smokeFrom = TransformHelpers.calcPivot(this.x, this.y, Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2 - Phaser.Math.DegToRad(16), 70 / GameConfig.GameWindowSettings.zoom);
     }
 
     preUpdate () {
