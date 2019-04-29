@@ -7,7 +7,25 @@ import Enemies from 'structs/Enemies';
 
 export default class LandingShipEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
-        super(scene, LandingShipEnemy.TYPE, 'landing_ship', x, y);
+        super(scene, LandingShipEnemy.TYPE, 'transport_ship', x, y, 'assets2');
+
+        this.leftEngine = this.scene.add.image(-28, -15, 'assets2', 'transport_ship_flames').setOrigin(0.5, 0);
+        this.add(this.leftEngine);
+
+        this.rightEngine = this.scene.add.image(28, -15, 'assets2', 'transport_ship_flames').setOrigin(0.5, 0);
+        this.add(this.rightEngine);
+
+        // legs animation
+        setTimeout(() => {
+            // engine animation
+            this.scene.add.tween({
+                targets: [this.leftEngine, this.rightEngine],
+                duration: 750,
+                scaleX: 0,
+                scaleY: 0,
+                ease: Phaser.Math.Easing.Expo.In
+            });
+        }, 500);
 
         this.setDepth(Depths.SHIPS);
     }
@@ -24,6 +42,16 @@ export default class LandingShipEnemy extends AbstractEnemy {
         setTimeout(() => {
             this.launchToSpace();
             this._phase = EnemyPhase.LAUNCH;
+            setTimeout(() => {
+                // engine animation
+                this.scene.add.tween({
+                    targets: [this.leftEngine, this.rightEngine],
+                    duration: 4000,
+                    scaleX: 1,
+                    scaleY: 1,
+                    ease: Phaser.Math.Easing.Expo.Out
+                });
+            }, 1000);
         }, Enemies.SHIPS.waitBeforeLaunchTime);
 
         let count = Phaser.Math.RND.integerInRange(1, 3);
