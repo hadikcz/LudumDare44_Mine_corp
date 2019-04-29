@@ -23,6 +23,20 @@ export default class MiningShipEnemy extends AbstractEnemy {
         this.rightEngine = this.scene.add.image(67, -30, 'assets2', 'ship_flames').setOrigin(0.5, 0);
         this.add(this.rightEngine);
 
+        this.shipContainers = {};
+        // containers
+        this.shipContainers.x1 = this.scene.add.image(0, -60, 'assets2', 'ship_conteiner_1').setOrigin(0.5, 1).setAlpha(0);
+        this.add(this.shipContainers.x1);
+
+        this.shipContainers.x2 = this.scene.add.image(0, -60, 'assets2', 'ship_conteiner_2').setOrigin(0.5, 1).setAlpha(0);
+        this.add(this.shipContainers.x2);
+
+        this.shipContainers.x3 = this.scene.add.image(0, -60, 'assets2', 'ship_conteiner_3').setOrigin(0.5, 1).setAlpha(0);
+        this.add(this.shipContainers.x3);
+
+        this.shipContainers.x4 = this.scene.add.image(0, -60, 'assets2', 'ship_conteiner_4').setOrigin(0.5, 1).setAlpha(0);
+        this.add(this.shipContainers.x4);
+
         // legs animation
         setTimeout(() => {
             this.scene.add.tween({
@@ -61,6 +75,8 @@ export default class MiningShipEnemy extends AbstractEnemy {
         this._canMine = true;
         this._phase = EnemyPhase.START_MINING;
 
+        this._handleFillingAnimations(this.enemyData.waitBeforeLaunchTime);
+
         // mining pipe animation
         this.scene.add.tween({
             targets: this.miningPipe,
@@ -97,6 +113,21 @@ export default class MiningShipEnemy extends AbstractEnemy {
                 });
             }, 2000);
         }, this.enemyData.waitBeforeLaunchTime);
+    }
+
+    _handleFillingAnimations (totalTime) {
+        let parts = 4;
+        let timePerPart = (totalTime / 1.1) / parts;
+
+        for (let i = 1; i <= parts; i++) {
+            setTimeout(() => {
+                this.scene.add.tween({
+                    targets: this.shipContainers['x' + i],
+                    duration: timePerPart,
+                    alpha: 1
+                });
+            }, timePerPart * i);
+        }
     }
 
     static get TYPE () {
