@@ -20,17 +20,20 @@ export default class Planet {
          * @type {Phaser.GameObjects.Image}
          */
         this.planet = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'earth').setDepth(Depths.PLANET_LAYER1);
+        this.planet.setBlendMode(Phaser.BlendModes.NORMAL);
 
         /**
          * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER4);
+
         /**
          * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.clouds2 = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2b').setDepth(Depths.CLOUDS);
+
         /**
          * @private
          * @type {Phaser.GameObjects.Image}
@@ -41,6 +44,18 @@ export default class Planet {
          * @type {PlanetCollider}
          */
         this.planetCollider = new PlanetCollider(this.scene, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y);
+
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.blendShadow = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'assets2', 'earth_shadow_multiply_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
+        this.blendShadow.setBlendMode(Phaser.BlendModes.MULTIPLY);
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.blendLight = this.scene.add.image(Planet.getCenterOfPlanet().x + 70, Planet.getCenterOfPlanet().y - 90, 'assets2', 'earth_highlight_overlay_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
+        this.blendLight.setAlpha(0.3);
+        this.blendLight.setBlendMode(Phaser.BlendModes.ADD);
 
         /**
          * @type {Counter}

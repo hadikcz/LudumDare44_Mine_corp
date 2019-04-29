@@ -6,7 +6,7 @@ import GameConfig from './GameConfig.js';
 import Stats from 'stats.js/src/Stats';
 
 const config = {
-    type: Phaser.CANVAS,
+    type: Phaser.AUTO,
     pixelArt: false,
     roundPixels: false,
     parent: 'content',
