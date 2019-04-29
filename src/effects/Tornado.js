@@ -18,7 +18,7 @@ export default class Lightning extends Phaser.GameObjects.Sprite {
             frames: this.scene.anims.generateFrameNames('assets2', { prefix: 'twister/twister_', end: 12, zeroPad: 0 }),
             frameRate: 20,
             repeat: Infinity,
-            hideOnComplete: true
+            hideOnComplete: false
         });
     }
 
@@ -32,6 +32,7 @@ export default class Lightning extends Phaser.GameObjects.Sprite {
         this.setRotation(rotation);
         this.setVisible(true);
         this.setActive(true);
+        this.setAlpha(1);
 
         this.play('tornado');
 
