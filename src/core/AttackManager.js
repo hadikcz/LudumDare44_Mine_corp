@@ -37,7 +37,7 @@ export default class AttackManager {
         this.locks[Attacks.TYPES.LIGHTNING] = false;
         this.locks[Attacks.TYPES.TORNADO] = false; // true
         this.locks[Attacks.TYPES.VOLCANO] = false; // true
-        this.locks[Attacks.TYPES.ASTEROID] = true; // true
+        this.locks[Attacks.TYPES.ASTEROID] = false; // true
 
         this.cooldowns = {};
         this.cooldowns[Attacks.TYPES.ASTEROID] = false;
