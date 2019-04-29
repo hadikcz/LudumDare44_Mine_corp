@@ -40,6 +40,14 @@ body {
     position: absolute;
 }
 
+.income .title {
+    font-size: 27px;
+}
+
+.income .corp-icon {
+
+}
+
 .triangle {
     display: inline-block;
     width: 0;

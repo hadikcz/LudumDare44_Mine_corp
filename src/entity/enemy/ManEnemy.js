@@ -10,6 +10,8 @@ export default class ManEnemy extends AbstractEnemy {
         super(scene, ManEnemy.TYPE, 'astronaut_enemy', x, y, 'assets2');
         this.setDepth(Depths.MAN);
 
+        this.setScale(Phaser.Math.RND.realInRange(0.75, 1.1));
+
         this.wanderingAnimationTween = this.scene.tweens.add({
             targets: this.image,
             y: -5,
@@ -19,19 +21,10 @@ export default class ManEnemy extends AbstractEnemy {
             repeat: Infinity
         });
         this.wanderingAnimationTween.pause();
-
-        /**
-         * @private
-         * @type {Phaser.GameObjects.Text}
-         */
-        // this.phaseText = this.scene.add.text(this.x, this.y, this._phase, {fill: '#FF0000'}).setDepth(Depths.UI);
     }
 
     preUpdate () {
         super.preUpdate();
-
-        // this.phaseText.setPosition(this.x, this.y);
-        // this.phaseText.setText(this._phase);
 
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y) - Math.PI / 2);
 
