@@ -194,6 +194,7 @@ export default class AttackManager {
         this.scene.effectManager.launchVolcano(x, y, rotation);
         setTimeout(() => {
             this.findAndDamageEnemies(x, y, Attacks.Volcano);
+            this.scene.effectManager.launchVolcanoExplosion(x, y, rotation);
         }, Attacks.Volcano.growTime);
 
         this.cooldowns[Attacks.TYPES.VOLCANO] = true;

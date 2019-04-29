@@ -181,6 +181,32 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">assets2/asteroid_all_in_one.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>61,234,121,468</rect>
+                <key>scale9Paddings</key>
+                <rect>61,234,121,468</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/asteroid_core.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>59,45,119,90</rect>
+                <key>scale9Paddings</key>
+                <rect>59,45,119,90</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">assets2/astronaut_enemy.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -257,6 +283,28 @@
                 <rect>41,37,83,73</rect>
                 <key>scale9Paddings</key>
                 <rect>41,37,83,73</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/light/light_1.png</key>
+            <key type="filename">assets2/light/light_10.png</key>
+            <key type="filename">assets2/light/light_2.png</key>
+            <key type="filename">assets2/light/light_3.png</key>
+            <key type="filename">assets2/light/light_4.png</key>
+            <key type="filename">assets2/light/light_5.png</key>
+            <key type="filename">assets2/light/light_6.png</key>
+            <key type="filename">assets2/light/light_7.png</key>
+            <key type="filename">assets2/light/light_8.png</key>
+            <key type="filename">assets2/light/light_9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>70,143,140,285</rect>
+                <key>scale9Paddings</key>
+                <rect>70,143,140,285</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -388,6 +436,85 @@
                 <rect>209,140,417,279</rect>
                 <key>scale9Paddings</key>
                 <rect>209,140,417,279</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/volcano.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>67,58,134,116</rect>
+                <key>scale9Paddings</key>
+                <rect>67,58,134,116</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/volcano/volex_1.png</key>
+            <key type="filename">assets2/volcano/volex_10.png</key>
+            <key type="filename">assets2/volcano/volex_12.png</key>
+            <key type="filename">assets2/volcano/volex_13.png</key>
+            <key type="filename">assets2/volcano/volex_14.png</key>
+            <key type="filename">assets2/volcano/volex_16.png</key>
+            <key type="filename">assets2/volcano/volex_17.png</key>
+            <key type="filename">assets2/volcano/volex_3.png</key>
+            <key type="filename">assets2/volcano/volex_5.png</key>
+            <key type="filename">assets2/volcano/volex_7.png</key>
+            <key type="filename">assets2/volcano/volex_9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>121,81,242,162</rect>
+                <key>scale9Paddings</key>
+                <rect>121,81,242,162</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/volcano/volex_11.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>121,81,243,161</rect>
+                <key>scale9Paddings</key>
+                <rect>121,81,243,161</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/volcano/volex_15.png</key>
+            <key type="filename">assets2/volcano/volex_2.png</key>
+            <key type="filename">assets2/volcano/volex_4.png</key>
+            <key type="filename">assets2/volcano/volex_6.png</key>
+            <key type="filename">assets2/volcano/volex_8.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>121,81,243,162</rect>
+                <key>scale9Paddings</key>
+                <rect>121,81,243,162</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/volcano_lava.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>26,38,51,75</rect>
+                <key>scale9Paddings</key>
+                <rect>26,38,51,75</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

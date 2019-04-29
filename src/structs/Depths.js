@@ -1,5 +1,6 @@
 export default {
     SKY: 1,
+    VOLCANOS: 2,
     PLANET_LAYER1: 5,
     PLANET_LAYER2: 6,
     PLANET_LAYER3: 20,
@@ -7,7 +8,6 @@ export default {
     PLANET_LAYER5_BLENDS: 25,
     PLANET_DEATH: 26,
     CLOUDS_FAR: 30,
-    VOLCANOS: 34,
     SMOKE: 45,
     SPACE_MINER: 60,
     SHIPS: 100,

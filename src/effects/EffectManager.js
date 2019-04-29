@@ -6,6 +6,7 @@ import Volcano from 'effects/Volcano';
 import Asteroid from 'effects/Asteroid';
 import Debris from 'effects/Debris';
 import Smoke from 'effects/Smoke';
+import VolcanoExplosion from 'effects/VolcanoExplosion';
 
 export default class EffectManger {
     /**
@@ -81,6 +82,14 @@ export default class EffectManger {
          */
         this._smokeGroup = this.scene.add.group({
             classType: Smoke,
+            runChildUpdate: true
+        });
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         */
+        this._volcanoExplosionGroup = this.scene.add.group({
+            classType: VolcanoExplosion,
             runChildUpdate: true
         });
 
@@ -216,6 +225,24 @@ export default class EffectManger {
     }
 
     /**
+     * @param {number} x
+     * @param {number} y
+     * @param {number} rotation
+     * @return {VolcanoExplosion}
+     */
+    launchVolcanoExplosion (x, y, rotation) {
+        let group = this._volcanoExplosionGroup;
+        /** @type {FlyText} */
+        let effect = group.getFirstDead();
+        if (!effect) {
+            effect = new VolcanoExplosion(this.scene);
+            group.add(effect);
+        }
+        effect.launch(x, y, rotation);
+        return effect;
+    }
+
+    /**
      * @private
      */
     _preparePools () {
@@ -260,6 +287,12 @@ export default class EffectManger {
         group = this._smokeGroup;
         for (let i = 0; i < group.maxSize; i++) {
             let effect = new Smoke(this.scene);
+            group.add(effect);
+        }
+
+        group = this._volcanoExplosionGroup;
+        for (let i = 0; i < group.maxSize; i++) {
+            let effect = new VolcanoExplosion(this.scene);
             group.add(effect);
         }
     }
