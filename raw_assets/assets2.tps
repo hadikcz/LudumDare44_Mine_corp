@@ -207,17 +207,29 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets2/load_bar.png</key>
-            <key type="filename">assets2/load_bar_fill.png</key>
+            <key type="filename">assets2/heavy_miner.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>10,27,20,54</rect>
+                <rect>77,54,155,108</rect>
                 <key>scale9Paddings</key>
-                <rect>10,27,20,54</rect>
+                <rect>77,54,155,108</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/heavy_miner_drill.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>41,37,83,73</rect>
+                <key>scale9Paddings</key>
+                <rect>41,37,83,73</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
@@ -299,6 +311,56 @@
                 <rect>3,11,5,21</rect>
                 <key>scale9Paddings</key>
                 <rect>3,11,5,21</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/transport_ship.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,47,47,94</rect>
+                <key>scale9Paddings</key>
+                <rect>24,47,47,94</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/transport_ship_flames.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,46,14,92</rect>
+                <key>scale9Paddings</key>
+                <rect>7,46,14,92</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets2/twister/twister_1.png</key>
+            <key type="filename">assets2/twister/twister_10.png</key>
+            <key type="filename">assets2/twister/twister_11.png</key>
+            <key type="filename">assets2/twister/twister_12.png</key>
+            <key type="filename">assets2/twister/twister_2.png</key>
+            <key type="filename">assets2/twister/twister_3.png</key>
+            <key type="filename">assets2/twister/twister_4.png</key>
+            <key type="filename">assets2/twister/twister_5.png</key>
+            <key type="filename">assets2/twister/twister_6.png</key>
+            <key type="filename">assets2/twister/twister_7.png</key>
+            <key type="filename">assets2/twister/twister_8.png</key>
+            <key type="filename">assets2/twister/twister_9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>209,140,417,279</rect>
+                <key>scale9Paddings</key>
+                <rect>209,140,417,279</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

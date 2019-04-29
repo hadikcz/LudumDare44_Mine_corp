@@ -70,40 +70,133 @@ body {
     margin-left: 10px;
 }
 
+.attack@font-face {
+    font-family: "AldotheApache";
+    src: url('../fonts/AldotheApache.ttf') format("truetype");
+}
+html,
+body {
+    color: #ffe33e;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    image-rendering: optimizeSpeed;              /* Older versions of FF */
+    image-rendering: -moz-crisp-edges;           /* FF 6.0+ */
+    image-rendering: -webkit-optimize-contrast;  /* Webkit (non standard naming) */
+    image-rendering: -o-crisp-edges;             /* OS X & Windows Opera (12.02+) */
+    image-rendering: crisp-edges;                /* Possible future browsers. */
+    -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
+    image-rendering: pixelated;                  /* Chrome 41 */
+    font-family: 'AldotheApache', Arial;
+    background: #7599bb;
+}
+#content {
+    position: absolute;
+    z-index: 0;
+}
+
+#ui {
+    position: absolute;
+    width: 1024px;
+    height: 640px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.income {
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+    position: absolute;
+}
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent #66ff00 transparent;
+    zoom: 0.5;
+    transform: translateY(-50%);
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.attackBar {
+    position: absolute;
+    right: 15px;
+    pointer-events: all;
+}
+
+.attackBar .lock {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .attackBar .button {
     cursor: pointer;
-    margin-top: 10px;
     display: block;
-    -webkit-filter:saturate(0.2);
-    filter: saturate(0.2);
 }
-
-.attackBar .button .key-manual {
+.attackBar .row {
     position: absolute;
-    color: white;
-    margin-top: -43px;
-    margin-left: 26px;
-    font-size: 23px;
+    width: 114px;
+}
+.attackBar .row .left {
+    float: left;
+}
+.attackBar .row .right {
+    float: right;
 }
 
-.attackBar .button.active {
-    -webkit-filter:saturate(1);
-    filter: saturate(1);
+.attackBar .row.lightning {
+    top: 89px;
+    right: 88px;
+}
+.attackBar .row.tornado {
+    top: 211px;
+    right: 45px;
+}
+.attackBar .row.volcano {
+    top: 325px;
+    right: 45px;
+}
+.attackBar .row.asteroid {
+    top: 439px;
+    right: 88px;
+}
+.button {
+    cursor: pointer;
+    display: block;
+}
+
+.key-manual {
+    color: white;
+    font-size: 19px;
+    margin-top: 9px;
+    margin-left: 5px;
 }
 
 .attackBar .progress {
-    position: absolute;
-    margin-top: -21px;
-    width: 73%;
-    height: 4px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    background: black;
-    margin-left: 9px;
+    transform: rotate(180deg);
+    width: 17px;
+    height: 50px;
+    background: #2f025c;
+    border-radius: 5px;
+    margin-top: 12px;
 }
 
-.attackBar .progress .progress-inner{
+.attackBar .progress .progress-inner {
     width: 100%;
     height: 100%;
-    background: #ff1e00;
+    background: linear-gradient(#ff8429, #ffff67);
+    border-radius: 5px;
 }

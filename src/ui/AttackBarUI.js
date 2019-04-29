@@ -32,6 +32,8 @@ export default class AttackBarUI {
             }
         });
 
+        this.scene.events.on(Events.UnlockedNewAttack, this.redraw, this);
+
         this.scene.input.keyboard.on('keydown', function (event) {
             console.log(event);
             if (event.key === 'q' || event.key === '1') {
@@ -58,11 +60,41 @@ export default class AttackBarUI {
     }
 
     redraw () {
-        $('.button').removeClass('active');
-        $('.button[data-id=' + this.attackManager.getActiveAttack() + ']').addClass('active');
+        $('.button').removeClass('button_lightning_selected');
+        $('.button').removeClass('button_tornado_selected');
+        $('.button').removeClass('button_volcano_selected');
+        $('.button').removeClass('button_asteroid_selected');
+
+        $('.button[data-id=' + this.attackManager.getActiveAttack() + ']').addClass('button_' + this.attackManager.getActiveAttack() + '_selected');
+
+        // unlock
+        if (this.attackManager.locks[Attacks.TYPES.TORNADO]) {
+            $('.button[data-id=tornado]').removeClass('button_tornado');
+            $('.button[data-id=tornado]').addClass('button_tornado_disabled');
+        } else {
+            $('.button[data-id=tornado]').addClass('button_tornado');
+            $('.button[data-id=tornado]').removeClass('button_tornado_disabled');
+        }
+
+        if (this.attackManager.locks[Attacks.TYPES.VOLCANO]) {
+            $('.button[data-id=volcano]').removeClass('button_volcano');
+            $('.button[data-id=volcano]').addClass('button_volcano_disabled');
+        } else {
+            $('.button[data-id=volcano]').addClass('button_volcano');
+            $('.button[data-id=volcano]').removeClass('button_volcano_disabled');
+        }
+
+        if (this.attackManager.locks[Attacks.TYPES.ASTEROID]) {
+            $('.button[data-id=asteroid]').removeClass('button_asteroid');
+            $('.button[data-id=asteroid]').addClass('button_asteroid_disabled');
+        } else {
+            $('.button[data-id=asteroid]').addClass('button_asteroid');
+            $('.button[data-id=asteroid]').removeClass('button_asteroid_disabled');
+        }
     }
 
     show (fade = true) {
+        this.redraw();
         let selector = $('.attackBar');
         if (fade) {
             selector.fadeIn(1000);
@@ -71,7 +103,7 @@ export default class AttackBarUI {
         }
 
         setTimeout(() => {
-            $('.key-manual').fadeOut(1000);
+            // $('.key-manual').fadeOut(1000);
         }, 3500);
     }
 
@@ -80,15 +112,15 @@ export default class AttackBarUI {
 
         // let selector = $('#progress-' + type);
         let selectorInner = $('#progress-inner-' + type);
-        selectorInner.width('0%');
+        selectorInner.height('0%');
 
         let countdownStart = Date.now();
         let countdownInterval = setInterval(() => {
             let elapsedTime = Date.now() - countdownStart;
             let percent = (elapsedTime / attackData.coolDown);
-            selectorInner.width((percent * 100) + '%');
+            selectorInner.height((percent * 100) + '%');
             if (percent >= 1) {
-                selectorInner.width('100%');
+                selectorInner.height('100%');
                 clearInterval(countdownInterval);
             }
         }, 10);

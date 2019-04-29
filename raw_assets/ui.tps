@@ -159,7 +159,7 @@
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
-            <double>1</double>
+            <double>0.5</double>
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
@@ -181,6 +181,51 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">ui-assets/asteroid_icon.png</key>
+            <key type="filename">ui-assets/tornado_icon.png</key>
+            <key type="filename">ui-assets/volcano_icon.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9Paddings</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">ui-assets/button_asteroid.png</key>
+            <key type="filename">ui-assets/button_asteroid_disabled.png</key>
+            <key type="filename">ui-assets/button_asteroid_selected.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>48,49,97,99</rect>
+                <key>scale9Paddings</key>
+                <rect>48,49,97,99</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">ui-assets/button_flash.png</key>
+            <key type="filename">ui-assets/button_flash_disabled.png</key>
+            <key type="filename">ui-assets/button_flash_selected.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>47,46,94,92</rect>
+                <key>scale9Paddings</key>
+                <rect>47,46,94,92</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">ui-assets/button_off.png</key>
             <key type="filename">ui-assets/button_on.png</key>
             <key type="filename">ui-assets/lightning_icon.png</key>
@@ -197,16 +242,47 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">ui-assets/man.png</key>
+            <key type="filename">ui-assets/button_twister.png</key>
+            <key type="filename">ui-assets/button_twister_disabled.png</key>
+            <key type="filename">ui-assets/button_twister_selected.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>6,13,11,26</rect>
+                <rect>46,47,93,93</rect>
                 <key>scale9Paddings</key>
-                <rect>6,13,11,26</rect>
+                <rect>46,47,93,93</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">ui-assets/button_vulcano.png</key>
+            <key type="filename">ui-assets/button_vulcano_disabled.png</key>
+            <key type="filename">ui-assets/button_vulcano_selected.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>47,48,93,96</rect>
+                <key>scale9Paddings</key>
+                <rect>47,48,93,96</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">ui-assets/load_bar.png</key>
+            <key type="filename">ui-assets/load_bar_fill.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,27,20,54</rect>
+                <key>scale9Paddings</key>
+                <rect>10,27,20,54</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

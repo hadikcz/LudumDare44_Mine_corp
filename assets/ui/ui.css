@@ -1,7 +1,7 @@
 /* -----------------------------------------------------
    created with https://www.codeandweb.com/texturepacker 
    -----------------------------------------------------
-   $TexturePacker:SmartUpdate:aa28dffe4a415e36e5fbf6a0692371c9:ce74a2dd8c53159ea153d38f8493fd92:4c7ccf045e54e36629c6cbec5cb72956$
+   $TexturePacker:SmartUpdate:a89325aaff6975f22087c92b562fe3ff:65f515346b6f9410502be57735b21005:4c7ccf045e54e36629c6cbec5cb72956$
    -----------------------------------------------------
 
    usage: <span class="{-spritename-} sprite"></span>
@@ -12,10 +12,24 @@
 
 .sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(ui.png);}
 
-.asteroid_icon {width:64px; height:64px; background-position: -1px -1px}
-.button_off {width:64px; height:64px; background-position: -67px -1px}
-.button_on {width:64px; height:64px; background-position: -133px -1px}
-.lightning_icon {width:64px; height:64px; background-position: -199px -1px}
-.lock {width:46px; height:46px; background-position: -397px -1px}
-.tornado_icon {width:64px; height:64px; background-position: -265px -1px}
-.volcano_icon {width:64px; height:64px; background-position: -331px -1px}
+.asteroid_icon {width:32px; height:32px; background-position: -384px -253px}
+.button_asteroid {width:97px; height:99px; background-position: -1px -1px}
+.button_asteroid_disabled {width:97px; height:99px; background-position: -100px -1px}
+.button_asteroid_selected {width:97px; height:99px; background-position: -199px -1px}
+.button_lightning {width:94px; height:92px; background-position: -1px -102px}
+.button_lightning_disabled {width:94px; height:92px; background-position: -97px -102px}
+.button_lightning_selected {width:94px; height:92px; background-position: -288px -197px}
+.button_off {width:32px; height:32px; background-position: -393px -57px}
+.button_on {width:32px; height:32px; background-position: -393px -91px}
+.button_tornado {width:93px; height:94px; background-position: -1px -196px}
+.button_tornado_disabled {width:93px; height:94px; background-position: -96px -196px}
+.button_tornado_selected {width:93px; height:94px; background-position: -191px -200px}
+.button_volcano {width:93px; height:96px; background-position: -298px -1px}
+.button_volcano_disabled {width:93px; height:96px; background-position: -298px -99px}
+.button_volcano_selected {width:93px; height:96px; background-position: -193px -102px}
+.lightning_icon {width:32px; height:32px; background-position: -393px -125px}
+.load_bar {width:20px; height:54px; background-position: -384px -197px}
+.load_bar_fill {width:20px; height:54px; background-position: -393px -1px}
+.lock {width:23px; height:23px; background-position: -415px -1px}
+.tornado_icon {width:32px; height:32px; background-position: -393px -159px}
+.volcano_icon {width:32px; height:32px; background-position: -406px -193px}
