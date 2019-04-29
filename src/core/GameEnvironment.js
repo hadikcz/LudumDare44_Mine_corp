@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import GameConfig from 'GameConfig';
 import Planet from 'entity/planet/Planet';
 import Block from 'entity/Block';
+import Depths from 'structs/Depths';
 
 export default class GameEnvironment {
     /**
@@ -19,6 +20,12 @@ export default class GameEnvironment {
          * @type {Phaser.GameObjects.Group}
          */
         this.blocks = this.scene.add.group();
+
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.bg = this.scene.add.image(0, 0, 'bg').setOrigin(0, 0).setDepth(Depths.SKY);
 
         /**
          * @type {Planet}

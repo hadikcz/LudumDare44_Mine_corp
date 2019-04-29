@@ -23,11 +23,19 @@ export default class BootScene extends Phaser.Scene {
             this.scene.start('GameScene');
             // this.scene.start('GameOverLostScene');
         }, this);
-        this.load.image('bg', 'assets/images/bg2.png');
+        // this.load.image('bg', 'assets/images/bg2.png');
         this.load.image('block', 'assets/images/block.png');
-        this.load.image('core', 'assets/images/core2.png');
-        this.load.image('core_no_color', 'assets/images/core2_no_color.png');
+        // this.load.image('core', 'assets/images/core2.png');
+        // this.load.image('core_no_color', 'assets/images/core2_no_color.png');
 
         this.load.atlas('assets', 'assets/images/assets.png', 'assets/images/assets.json');
+
+        // new ones
+        // large one
+        this.load.image('bg', 'assets/images/large/bg.png');
+        this.load.image('earth', 'assets/images/large/earth.png');
+        this.load.image('core', 'assets/images/large/core.png');
+        this.load.image('core_no_color', 'assets/images/large/core_no_colors.png');
+        this.load.image('clouds', 'assets/images/large/clouds.png');
     }
 }

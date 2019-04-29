@@ -19,18 +19,24 @@ export default class Planet {
          * @private
          * @type {Phaser.GameObjects.Image}
          */
-        this.bg = this.scene.add.image(0, 0, 'bg').setOrigin(0, 0).setDepth(Depths.PLANET_LAYER3);
+        this.planet = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'earth').setDepth(Depths.PLANET_LAYER1);
 
         /**
          * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER4);
+
         /**
          * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.coreNoColor = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core_no_color').setDepth(Depths.PLANET_LAYER3);
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.clouds = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds').setDepth(Depths.CLOUDS);
 
         /**
          * @type {PlanetCollider}
@@ -82,6 +88,8 @@ export default class Planet {
         this.core.setScale(scale);
         this.coreNoColor.setScale(scale);
         this.core.setAlpha(alpha);
+
+        this.clouds.rotation -= 0.001;
     }
 
     _processMineCorpIncome (damage) {

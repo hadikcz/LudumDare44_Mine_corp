@@ -1,12 +1,12 @@
 export default {
     GameWindowSettings: {
-        width: 1024,
-        height: 640,
-        zoom: 1.0
+        width: 1024, // 1024 * 2
+        height: 640, // 640 * 2
+        zoom: 0.5 // 1.0
     },
     World: {
-        width: 1024,
-        height: 640,
+        width: 1024 * 2,
+        height: 640 * 2,
         offsetX: 35,
         offsetY: 0
     },
@@ -27,11 +27,11 @@ export default {
         landing: {
             offsetAngle: 12
         },
-        spawnRadius: 500,
-        radius: 188, // 230
+        spawnRadius: 500 * 2,
+        radius: 160 * 2, // 188 * 2
         offset: {
-            x: 17, // 51
-            y: 17 // 16
+            x: 17,
+            y: 17
         },
         offsetCircle: {
             x: 10,

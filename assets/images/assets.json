@@ -4,72 +4,30 @@
 			"image": "assets.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 186,
-				"h": 252
+				"w": 392,
+				"h": 508
 			},
-			"scale": 1,
+			"scale": 2,
 			"frames": [
 				{
 					"filename": "volcano",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 134,
-						"h": 84
+						"w": 268,
+						"h": 168
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 134,
-						"h": 84
+						"w": 268,
+						"h": 168
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 134,
-						"h": 84
-					}
-				},
-				{
-					"filename": "tornado",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 57,
-						"h": 105
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 0,
-						"w": 54,
-						"h": 105
-					},
-					"frame": {
-						"x": 1,
-						"y": 87,
-						"w": 54,
-						"h": 105
-					}
-				},
-				{
-					"filename": "landing_ship",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 24,
-						"h": 110
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 24,
-						"h": 110
-					},
-					"frame": {
-						"x": 57,
-						"y": 87,
-						"w": 24,
-						"h": 110
+						"w": 268,
+						"h": 168
 					}
 				},
 				{
@@ -77,62 +35,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 40,
-						"h": 168
+						"w": 80,
+						"h": 336
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 40,
-						"h": 168
+						"w": 80,
+						"h": 336
 					},
 					"frame": {
-						"x": 137,
-						"y": 1,
-						"w": 40,
-						"h": 168
-					}
-				},
-				{
-					"filename": "robot",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 49,
-						"h": 85
-					},
-					"spriteSourceSize": {
-						"x": 5,
-						"y": 5,
-						"w": 44,
-						"h": 80
-					},
-					"frame": {
-						"x": 83,
-						"y": 87,
-						"w": 44,
-						"h": 80
-					}
-				},
-				{
-					"filename": "mining_ship",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 44,
-						"h": 79
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 3,
-						"w": 40,
-						"h": 76
-					},
-					"frame": {
-						"x": 83,
-						"y": 169,
-						"w": 40,
-						"h": 76
+						"x": 1,
+						"y": 171,
+						"w": 80,
+						"h": 336
 					}
 				},
 				{
@@ -140,41 +56,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 60,
-						"h": 63
+						"w": 120,
+						"h": 126
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 60,
-						"h": 63
+						"w": 120,
+						"h": 126
 					},
 					"frame": {
-						"x": 125,
-						"y": 171,
-						"w": 60,
-						"h": 63
-					}
-				},
-				{
-					"filename": "man",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 22,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 16,
-						"w": 18,
-						"h": 36
-					},
-					"frame": {
-						"x": 1,
-						"y": 194,
-						"w": 18,
-						"h": 36
+						"x": 271,
+						"y": 1,
+						"w": 120,
+						"h": 126
 					}
 				},
 				{
@@ -182,62 +77,41 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 59,
-						"h": 45
+						"w": 118,
+						"h": 90
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 59,
-						"h": 45
+						"w": 118,
+						"h": 90
 					},
 					"frame": {
-						"x": 21,
-						"y": 199,
-						"w": 59,
-						"h": 45
+						"x": 271,
+						"y": 129,
+						"w": 118,
+						"h": 90
 					}
 				},
 				{
-					"filename": "healthbar_bar",
+					"filename": "landing_ship",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 21,
-						"h": 5
+						"w": 48,
+						"h": 220
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 21,
-						"h": 5
+						"w": 48,
+						"h": 220
 					},
 					"frame": {
-						"x": 1,
-						"y": 246,
-						"w": 21,
-						"h": 5
-					}
-				},
-				{
-					"filename": "healthbar_bg",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 21,
-						"h": 5
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 21,
-						"h": 5
-					},
-					"frame": {
-						"x": 24,
-						"y": 246,
-						"w": 21,
-						"h": 5
+						"x": 83,
+						"y": 221,
+						"w": 48,
+						"h": 220
 					}
 				},
 				{
@@ -245,20 +119,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 11,
-						"h": 11
+						"w": 22,
+						"h": 22
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 11,
-						"h": 11
+						"w": 22,
+						"h": 22
 					},
 					"frame": {
-						"x": 1,
-						"y": 232,
-						"w": 11,
-						"h": 11
+						"x": 83,
+						"y": 171,
+						"w": 22,
+						"h": 22
 					}
 				},
 				{
@@ -266,20 +140,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 11,
-						"h": 11
+						"w": 22,
+						"h": 22
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 11,
-						"h": 11
+						"w": 22,
+						"h": 22
 					},
 					"frame": {
-						"x": 125,
-						"y": 236,
-						"w": 11,
-						"h": 11
+						"x": 83,
+						"y": 195,
+						"w": 22,
+						"h": 22
 					}
 				},
 				{
@@ -287,20 +161,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 9,
-						"h": 9
+						"w": 18,
+						"h": 18
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 9,
-						"h": 9
+						"w": 18,
+						"h": 18
 					},
 					"frame": {
-						"x": 138,
-						"y": 236,
-						"w": 9,
-						"h": 9
+						"x": 107,
+						"y": 171,
+						"w": 18,
+						"h": 18
 					}
 				},
 				{
@@ -308,20 +182,83 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 8,
-						"h": 7
+						"w": 16,
+						"h": 14
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 8,
-						"h": 7
+						"w": 16,
+						"h": 14
 					},
 					"frame": {
-						"x": 149,
-						"y": 236,
-						"w": 8,
-						"h": 7
+						"x": 107,
+						"y": 191,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "healthbar_bar",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 10
+					},
+					"frame": {
+						"x": 107,
+						"y": 207,
+						"w": 42,
+						"h": 10
+					}
+				},
+				{
+					"filename": "healthbar_bg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 10
+					},
+					"frame": {
+						"x": 125,
+						"y": 191,
+						"w": 42,
+						"h": 10
+					}
+				},
+				{
+					"filename": "robot",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 98,
+						"h": 170
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 10,
+						"w": 88,
+						"h": 160
+					},
+					"frame": {
+						"x": 169,
+						"y": 171,
+						"w": 88,
+						"h": 160
 					}
 				},
 				{
@@ -329,20 +266,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 7,
-						"h": 2
+						"w": 14,
+						"h": 4
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 7,
-						"h": 2
+						"w": 14,
+						"h": 4
 					},
 					"frame": {
-						"x": 21,
-						"y": 194,
-						"w": 7,
-						"h": 2
+						"x": 151,
+						"y": 203,
+						"w": 14,
+						"h": 4
 					}
 				},
 				{
@@ -350,20 +287,83 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 2,
-						"h": 2
+						"w": 4,
+						"h": 4
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 2,
-						"h": 2
+						"w": 4,
+						"h": 4
 					},
 					"frame": {
-						"x": 179,
-						"y": 1,
-						"w": 2,
-						"h": 2
+						"x": 259,
+						"y": 171,
+						"w": 4,
+						"h": 4
+					}
+				},
+				{
+					"filename": "mining_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 88,
+						"h": 158
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 6,
+						"w": 80,
+						"h": 152
+					},
+					"frame": {
+						"x": 133,
+						"y": 333,
+						"w": 80,
+						"h": 152
+					}
+				},
+				{
+					"filename": "tornado",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 210
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 105,
+						"h": 210
+					},
+					"frame": {
+						"x": 259,
+						"y": 221,
+						"w": 105,
+						"h": 210
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 104
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 32,
+						"w": 36,
+						"h": 72
+					},
+					"frame": {
+						"x": 215,
+						"y": 433,
+						"w": 36,
+						"h": 72
 					}
 				}
 			]
@@ -372,6 +372,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:3791c5818bf00957ef6f2402a41b0be6:4ac4c33bfa39d90ac1827339e1bbeca9:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:1f8a1084807743854856f1ee42de9b57:4ac4c33bfa39d90ac1827339e1bbeca9:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
