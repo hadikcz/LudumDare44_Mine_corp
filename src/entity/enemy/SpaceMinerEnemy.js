@@ -25,9 +25,27 @@ export default class SpaceMinerEnemy extends AbstractEnemy {
         }
     }
 
+    preDestroy() {
+        super.preDestroy();
+        try {
+            this.soundTimer.destroy();
+        } catch (e){}
+    }
+
     _startMining () {
         this._canMine = true;
         this._phase = EnemyPhase.MINING;
+
+
+        this.scene.soundManager.laser.play();
+        this.soundTimer = this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: 5000,
+            callbackScope: this,
+            callback: () => {
+                this.scene.soundManager.laser.play();
+            }
+        });
 
         this.scene.cameras.main.flash(300, 255, 255, 255);
         this.scene.cameras.main.shake(700);

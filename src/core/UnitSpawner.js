@@ -60,7 +60,7 @@ export default class UnitSpawner {
             //     callbackScope: this,
             //     callback: this._spawnFactory
             // });
-            // this._spawnFactory();
+            // this._spawnSpaceMiner();
 
             // spawn intervals
             this._spawnTransportShip();

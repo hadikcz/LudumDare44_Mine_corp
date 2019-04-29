@@ -149,6 +149,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
     }
 
     land (landX, landY) {
+        this.scene.soundManager.engine2.play();
         this._landing.set(landX, landY);
         this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, landX, landY) - Math.PI / 2);
 
@@ -236,8 +237,10 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
             this.scene.events.emit(Events.OnKill, this.type);
 
             if (this.type !== 'man') {
+                this.scene.soundManager.explosion1.play();
                 this.spawnDebris(15);
             } else {
+                this.scene.soundManager.die1.play();
                 this.spawnDebris(15, 'bloodCell');
                 this.spawnDebris(4, 'limb');
             }

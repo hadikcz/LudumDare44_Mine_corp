@@ -37,9 +37,9 @@ export default class AttackManager {
 
         this.locks = {};
         this.locks[Attacks.TYPES.LIGHTNING] = false;
-        this.locks[Attacks.TYPES.TORNADO] = true; // true
-        this.locks[Attacks.TYPES.VOLCANO] = true; // true
-        this.locks[Attacks.TYPES.ASTEROID] = true; // true
+        this.locks[Attacks.TYPES.TORNADO] = false; // true
+        this.locks[Attacks.TYPES.VOLCANO] = false; // true
+        this.locks[Attacks.TYPES.ASTEROID] = false; // true
 
         this.cooldowns = {};
         this.cooldowns[Attacks.TYPES.ASTEROID] = false;
@@ -142,6 +142,8 @@ export default class AttackManager {
     _launchLightning (x, y) {
         if (this.cooldowns[Attacks.TYPES.LIGHTNING]) return;
 
+        this.scene.soundManager.lightning.play();
+
         let rotation = Planet.getRotationTowardPlanetCenter(x, y);
         this.scene.effectManager.launchLightning(x, y, rotation);
         this.findAndDamageEnemies(x, y, Attacks.Lightning);
@@ -161,6 +163,8 @@ export default class AttackManager {
      */
     _launchTornado (x, y) {
         if (this.cooldowns[Attacks.TYPES.TORNADO]) return;
+
+        this.scene.soundManager.tornado.play();
 
         let rotation = Planet.getRotationTowardPlanetCenter(x, y);
         this.scene.effectManager.launchTornado(x, y, rotation);

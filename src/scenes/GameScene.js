@@ -10,6 +10,7 @@ import UI from './../ui/UI';
 import UnitSpawner from 'core/UnitSpawner';
 import AttackManager from 'core/AttackManager';
 import Events from 'structs/Events';
+import SoundManager from 'core/SoundManager';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -45,6 +46,8 @@ export default class GameScene extends Phaser.Scene {
 
         this.lightSystem = new LightSystem(this);
         this.gameEnvironment = new GameEnvironment(this);
+
+        this.soundManager = new SoundManager(this);
 
         this.unitSpawner = new UnitSpawner(this);
         this.controller = new Controller(this);

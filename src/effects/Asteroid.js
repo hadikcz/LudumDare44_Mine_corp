@@ -37,6 +37,8 @@ export default class Lightning extends Phaser.GameObjects.Image {
             onComplete: () => {
                 this.scene.cameras.main.flash(500, 255, 255, 255, true);
                 this.scene.cameras.main.shake(400);
+
+                this.scene.soundManager.volcano.play();
                 this.setActive(false);
                 this.setVisible(false);
             }

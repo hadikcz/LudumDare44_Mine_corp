@@ -45,5 +45,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('clouds_2b', 'assets/images/large/clouds_2b.png');
 
         this.load.atlas('assets2', 'assets/images/assets2.png', 'assets/images/assets2.json');
+
+        this.load.audio('lightning', 'assets/sounds/lightning.mp3');
+        this.load.audio('explosion1', 'assets/sounds/explosion1.mp3');
+        this.load.audio('die1', 'assets/sounds/die1.mp3');
+        this.load.audio('tornado', 'assets/sounds/tornado.mp3');
+        this.load.audio('engine2', 'assets/sounds/engine2.mp3');
+        this.load.audio('volcano', 'assets/sounds/volcano.mp3');
+        this.load.audio('asteroid', 'assets/sounds/asteroid.mp3');
+        this.load.audio('laser', 'assets/sounds/laser.mp3');
     }
 }

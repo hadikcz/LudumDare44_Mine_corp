@@ -37,6 +37,7 @@ export default class Lightning extends Phaser.GameObjects.Container {
             ease: 'Linear',
             onComplete: () => {
                 this.lava.setAlpha(1);
+                this.scene.soundManager.volcano.play();
                 this.scene.cameras.main.flash(500, 255, 0, 0, true);
             }
         });

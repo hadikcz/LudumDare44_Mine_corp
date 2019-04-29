@@ -1,6 +1,6 @@
 import AbstractEnemy from 'entity/enemy/AbstractEnemy';
 import Depths from 'structs/Depths';
-import Phaser from "phaser";
+import Phaser from 'phaser';
 import Planet from 'entity/planet/Planet';
 import EnemyPhase from 'structs/EnemyPhase';
 import Enemies from 'structs/Enemies';
@@ -37,10 +37,17 @@ export default class ManEnemy extends AbstractEnemy {
         }
     }
 
+    preDestroy () {
+        super.preDestroy();
+        try {
+            this.timer1.destroy();
+        } catch (e) {}
+    }
+
     _startMining () {
         this._canMine = true;
         this._phase = EnemyPhase.MINING;
-        this.scene.time.addEvent({
+        this.timer1 = this.scene.time.addEvent({
             delay: Enemies.MAN.miningTime,
             callbackScope: this,
             callback: () => {
