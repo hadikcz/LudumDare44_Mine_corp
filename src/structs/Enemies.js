@@ -50,8 +50,8 @@ export default {
             name: 'Mining ship',
             hp: 15,
             damage: 15,
-            timeBetweenSpawn: 10000,
-            startSpawningAfter: 30000,
+            timeBetweenSpawn: 12000,
+            startSpawningAfter: 35000,
             waitBeforeLaunchTime: 15000, // 15000
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
@@ -67,8 +67,8 @@ export default {
             name: 'Factory',
             hp: 20,
             damage: 20,
-            timeBetweenSpawn: 20000,
-            startSpawningAfter: 70000,
+            timeBetweenSpawn: 25000,
+            startSpawningAfter: 80000,
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
