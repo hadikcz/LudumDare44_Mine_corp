@@ -74,12 +74,13 @@ export default class UnitSpawner {
                 callback: this._spawnFactory
             });
 
-            this.scene.time.addEvent({
-                repeat: Infinity,
-                delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
-                callbackScope: this,
-                callback: this._spawnRobot
-            });
+            // Robot disabled, no assets
+            // this.scene.time.addEvent({
+            //     repeat: Infinity,
+            //     delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
+            //     callbackScope: this,
+            //     callback: this._spawnRobot
+            // });
 
             this.scene.time.addEvent({
                 repeat: Infinity,
