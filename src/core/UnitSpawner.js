@@ -36,34 +36,42 @@ export default class UnitSpawner {
             }
         });
 
-        // spawn intervals
+        // test spawner
         this.scene.time.addEvent({
             repeat: Infinity,
-            delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnTransportShip
-        });
-
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
+            delay: 1500,
             callbackScope: this,
             callback: this._spawnMiningShip
         });
-
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnFactory
-        });
-
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnRobot
-        });
+        //
+        // // spawn intervals
+        // this.scene.time.addEvent({
+        //     repeat: Infinity,
+        //     delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
+        //     callbackScope: this,
+        //     callback: this._spawnTransportShip
+        // });
+        //
+        // this.scene.time.addEvent({
+        //     repeat: Infinity,
+        //     delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
+        //     callbackScope: this,
+        //     callback: this._spawnMiningShip
+        // });
+        //
+        // this.scene.time.addEvent({
+        //     repeat: Infinity,
+        //     delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
+        //     callbackScope: this,
+        //     callback: this._spawnFactory
+        // });
+        //
+        // this.scene.time.addEvent({
+        //     repeat: Infinity,
+        //     delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
+        //     callbackScope: this,
+        //     callback: this._spawnRobot
+        // });
     }
 
     _spawnTransportShip () {

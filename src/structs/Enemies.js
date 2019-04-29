@@ -43,7 +43,7 @@ export default {
             hp: 15,
             damage: 15,
             timeBetweenSpawn: 10000,
-            waitBeforeLaunchTime: 15000,
+            waitBeforeLaunchTime: 2500, // 15000
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
