@@ -36,7 +36,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('earth', 'assets/images/large/earth.png');
         this.load.image('core', 'assets/images/large/core.png');
         this.load.image('core_no_color', 'assets/images/large/core_no_colors.png');
-        this.load.image('clouds', 'assets/images/large/clouds.png');
+        this.load.image('clouds_2a', 'assets/images/large/clouds_2a.png');
+        this.load.image('clouds_2b', 'assets/images/large/clouds_2b.png');
 
         this.load.atlas('assets2', 'assets/images/assets2.png', 'assets/images/assets2.json');
     }

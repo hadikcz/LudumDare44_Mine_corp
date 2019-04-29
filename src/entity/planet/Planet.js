@@ -30,7 +30,12 @@ export default class Planet {
          * @private
          * @type {Phaser.GameObjects.Image}
          */
-        this.clouds = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds').setDepth(Depths.CLOUDS);
+        this.clouds2 = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2b').setDepth(Depths.CLOUDS);
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.clouds = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2a').setDepth(Depths.CLOUDS);
 
         /**
          * @type {PlanetCollider}
@@ -81,6 +86,7 @@ export default class Planet {
         this.core.setScale(scale);
 
         this.clouds.rotation -= 0.0005;
+        this.clouds2.rotation -= 0.00025;
     }
 
     _processMineCorpIncome (damage) {
