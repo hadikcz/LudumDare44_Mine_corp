@@ -216,6 +216,21 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         });
     }
 
+    deployToOrbit (x, y) {
+        this.setRotation(Phaser.Math.Angle.Between(this.x, this.y, x, y) - Math.PI / 2);
+
+        this.scene.tweens.add({
+            targets: this,
+            ease: Phaser.Math.Easing.Expo.Out,
+            duration: Enemies.SHIPS.landingTime,
+            x: x,
+            y: y,
+            onComplete: () => {
+                this._phase = EnemyPhase.ORBITING;
+            }
+        });
+    }
+
     destroy () {
         if (this.hp.get() <= 0) {
             if (this.type !== 'man') {

@@ -8,6 +8,7 @@ import FactoryEnemy from 'entity/enemy/FactoryEnemy';
 import RobotEnemy from 'entity/enemy/RobotEnemy';
 import Enemies from 'structs/Enemies';
 import GameConfig from 'GameConfig';
+import SpaceMinerEnemy from 'entity/enemy/SpaceMinerEnemy';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -45,10 +46,10 @@ export default class UnitSpawner {
             this.scene.events.emit(Events.ShowUI);
             // test spawner
             // this.scene.time.addEvent({
-            //     repeat: Infinity,
+            //     // repeat: Infinity,
             //     delay: 1500,
             //     callbackScope: this,
-            //     callback: this._spawnMiningShip
+            //     callback: this._spawnSpaceMiner
             // });
 
             // spawn intervals
@@ -79,6 +80,13 @@ export default class UnitSpawner {
                 callbackScope: this,
                 callback: this._spawnRobot
             });
+
+            this.scene.time.addEvent({
+                repeat: Infinity,
+                delay: Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn,
+                callbackScope: this,
+                callback: this._spawnSpaceMiner
+            });
         }, wait);
     }
 
@@ -102,6 +110,11 @@ export default class UnitSpawner {
         this.landUnit(RobotEnemy.TYPE, landPosition.x, landPosition.y);
     }
 
+    _spawnSpaceMiner () {
+        let orbitPosition = Planet.getRandomOrbitPosition();
+        this.deployToOrbitUnit(SpaceMinerEnemy.TYPE, orbitPosition.x, orbitPosition.y);
+    }
+
     deployFromSurface (unitType, pointerX, pointerY) {
         let landingPosition = Planet.findNearestLandPosition(pointerX, pointerY);
         let unit = this._createUnitByType(unitType, landingPosition.x, landingPosition.y);
@@ -116,6 +129,13 @@ export default class UnitSpawner {
         let unit = this._createUnitByType(unitType, spawnPosition.x, spawnPosition.y);
         this.units.add(unit);
         unit.land(landingPosition.x, landingPosition.y);
+    }
+
+    deployToOrbitUnit (unitType, x, y) {
+        let spawnPosition = Planet.calculateSpawnPosition(x, y);
+
+        let unit = this._createUnitByType(unitType, spawnPosition.x, spawnPosition.y);
+        unit.deployToOrbit(x, y);
     }
 
     deployOnLandUnit (unitType, spawnX, spawnY, deployOverX, deployOverY) {
@@ -148,6 +168,8 @@ export default class UnitSpawner {
                 return new FactoryEnemy(this.scene, x, y);
             case RobotEnemy.TYPE:
                 return new RobotEnemy(this.scene, x, y);
+            case SpaceMinerEnemy.TYPE:
+                return new SpaceMinerEnemy(this.scene, x, y);
         }
     }
 }

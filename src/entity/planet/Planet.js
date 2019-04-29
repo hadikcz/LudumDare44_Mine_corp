@@ -32,7 +32,7 @@ export default class Planet {
          * @private
          * @type {Phaser.GameObjects.Image}
          */
-        this.clouds2 = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2b').setDepth(Depths.CLOUDS);
+        this.clouds2 = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2b').setDepth(Depths.CLOUDS_FAR);
 
         /**
          * @private
@@ -147,6 +147,15 @@ export default class Planet {
             Planet.getCenterOfPlanet().y,
             GameConfig.Planet.radius
         );
+    }
+
+    /**
+     * @return {Phaser.Math.Vector2}
+     */
+    static getRandomOrbitPosition () {
+        let orbit = new Phaser.Curves.Ellipse(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, GameConfig.Planet.orbitRadius);
+        let points = orbit.getPoints(256);
+        return ArrayHelpers.getRandomFromArray(points);
     }
 
     static findNearestLandPosition (pointerX, pointerY) {

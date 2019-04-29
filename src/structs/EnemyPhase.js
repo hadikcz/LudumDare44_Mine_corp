@@ -1,6 +1,7 @@
 export default {
     SPAWNED: 'spawned',
     LANDING: 'landing',
+    ORBITING: 'orbiting',
     LANDED: 'landed',
     DEPLOYING_CREW: 'deploying_crew',
     MINING: 'mining',

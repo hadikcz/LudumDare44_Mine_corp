@@ -81,9 +81,24 @@ export default {
             type: 'huge_robot', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
             name: 'Huge robot',
             hp: 45,
-            damage: 45,
+            damage: 35,
             timeBetweenSpawn: 35000,
             waitBeforeLaunchTime: 45000,
+            particles: {
+                height: 55 / GameConfig.GameWindowSettings.zoom,
+                force: [50, 450]
+            },
+            hpBar: {
+                x: 50,
+                y: -70
+            }
+        },
+        {
+            type: 'space_ship', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
+            name: 'Heavy miner',
+            hp: 50,
+            damage: 50,
+            timeBetweenSpawn: 50000,
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]

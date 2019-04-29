@@ -30,6 +30,7 @@ export default {
         },
         spawnRadius: 500 * 2, // 500 * 2
         radius: 160 * 2, // 188 * 2... 2x vetsi 160*2
+        orbitRadius: 160 * 3,
         offset: {
             x: 17,
             y: 17
