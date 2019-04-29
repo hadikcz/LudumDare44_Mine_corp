@@ -89,6 +89,7 @@ export default class Planet {
 
     update () {
         this.planetHpText.setText(Math.floor(this.hp.getPercent()) + '% (' + this.hp.get() + ')');
+        let alpha = this.hp.getPercent() / 110;
 
         let scale = this.hp.getPercent() / 85;
         if (scale <= 0.25) {
@@ -102,6 +103,9 @@ export default class Planet {
 
         this.clouds.rotation -= 0.0005;
         this.clouds2.rotation -= 0.00025;
+
+        this.blendShadow.setAlpha(alpha);
+        this.blendLight.setAlpha(this.blendLight.alpha * alpha);
     }
 
     _processMineCorpIncome (damage) {
