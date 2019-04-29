@@ -19,7 +19,7 @@ export default class MineCorpIncomeUI {
          */
         this.planet = planet;
 
-        this.scene.events.on(Events.MineOperationsBegin, this.show, this);
+        this.scene.events.on(Events.ShowUI, this.show, this);
     }
 
     show (startRefresh = true) {

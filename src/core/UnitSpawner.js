@@ -32,6 +32,10 @@ export default class UnitSpawner {
             callbackScope: this,
             callback: () => {
                 this.scene.events.emit(Events.MineOperationsBegin);
+
+                setTimeout(() => {
+                    this.scene.events.emit(Events.ShowUI);
+                }, 2000);
                 this._mineOpStarts = true;
             }
         });

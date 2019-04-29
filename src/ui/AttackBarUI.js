@@ -20,8 +20,11 @@ export default class AttackBarUI {
          */
         this.attackManager = attackManager;
 
-        this.show(false);
-        this.scene.events.on(Events.MineOperationsBegin, this.show, this);
+        // this.show(false);
+        setTimeout(() => {
+
+        })
+        this.scene.events.on(Events.ShowUI, this.show, this);
         this.scene.events.on(Events.UsedAttack, this._usedAttack, this);
 
         let self = this;

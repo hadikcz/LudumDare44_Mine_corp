@@ -3,5 +3,6 @@ export default {
     ReturnDamageToPlanet: 'ReturnDamageToPlanet',
     MineOperationsBegin: 'MineOperationsBegin',
     UsedAttack: 'UsedAttack',
-    UnlockedNewAttack: 'UnlockedNewAttack'
+    UnlockedNewAttack: 'UnlockedNewAttack',
+    ShowUI: 'ShowUI'
 };
