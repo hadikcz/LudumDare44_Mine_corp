@@ -12,5 +12,6 @@ export default {
     MAN: 120,
     ATTACKS: 125,
     DEBRIS: 150,
+    PLANET_HP: 180,
     UI: 10000
 };

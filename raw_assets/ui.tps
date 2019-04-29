@@ -211,9 +211,9 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">ui-assets/button_flash.png</key>
-            <key type="filename">ui-assets/button_flash_disabled.png</key>
-            <key type="filename">ui-assets/button_flash_selected.png</key>
+            <key type="filename">ui-assets/button_lightning.png</key>
+            <key type="filename">ui-assets/button_lightning_disabled.png</key>
+            <key type="filename">ui-assets/button_lightning_selected.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -242,9 +242,9 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">ui-assets/button_twister.png</key>
-            <key type="filename">ui-assets/button_twister_disabled.png</key>
-            <key type="filename">ui-assets/button_twister_selected.png</key>
+            <key type="filename">ui-assets/button_tornado.png</key>
+            <key type="filename">ui-assets/button_tornado_disabled.png</key>
+            <key type="filename">ui-assets/button_tornado_selected.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -257,9 +257,9 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">ui-assets/button_vulcano.png</key>
-            <key type="filename">ui-assets/button_vulcano_disabled.png</key>
-            <key type="filename">ui-assets/button_vulcano_selected.png</key>
+            <key type="filename">ui-assets/button_volcano.png</key>
+            <key type="filename">ui-assets/button_volcano_disabled.png</key>
+            <key type="filename">ui-assets/button_volcano_selected.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

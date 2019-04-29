@@ -66,12 +66,6 @@ export default class Planet {
          * @type {number}
          */
         this.mineCorpIncome = 0;
-
-        /**
-         * @type {Phaser.GameObjects.Text}
-         */
-        this.planetHpText = this.scene.add.text(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, '100%', { fill: '#ff0000' }).setDepth(Depths.UI);
-
         this.scene.events.on(Events.ApplyDamageToPlanet, (damage) => {
             this.hp.take(damage);
             this._processMineCorpIncome(damage);
@@ -88,7 +82,7 @@ export default class Planet {
     }
 
     update () {
-        this.planetHpText.setText(Math.floor(this.hp.getPercent()) + '% (' + this.hp.get() + ')');
+        this.scene.ui.planetHpTextUI.redrawHp(Math.floor(this.hp.get()));
         let alpha = this.hp.getPercent() / 110;
 
         let scale = this.hp.getPercent() / 85;
