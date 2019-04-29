@@ -20,7 +20,7 @@ export default class ManEnemy extends AbstractEnemy {
             yoyo: -1,
             repeat: Infinity
         });
-        this.wanderingAnimationTween.pause();
+        // this.wanderingAnimationTween.pause();
     }
 
     preUpdate () {
@@ -56,7 +56,7 @@ export default class ManEnemy extends AbstractEnemy {
         let randomPointAroundPlayer = circle.getRandomPoint();
         let randomPointToMove = Planet.findNearestLandPosition(randomPointAroundPlayer.x, randomPointAroundPlayer.y);
 
-        this.wanderingAnimationTween.play();
+        this.wanderingAnimationTween.resume();
 
         this.scene.tweens.add({
             targets: this,
