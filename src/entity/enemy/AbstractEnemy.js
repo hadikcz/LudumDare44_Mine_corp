@@ -104,12 +104,12 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
          * @type {ProgressBarUI}
          */
         this.healthbar = new ProgressBarUI(this.scene, {
-            x: 20,
-            y: -5,
+            x: this.enemyData.hpBar.x,
+            y: this.enemyData.hpBar.y,
             rotation: -Math.PI / 2,
-            atlas: 'assets',
-            atlasBg: 'healthbar_bg',
-            atlasBar: 'healthbar_bar',
+            atlas: 'assets2',
+            atlasBg: 'enemy_bar',
+            atlasBar: 'enemy_bar_fill',
             depth: Depths.UI,
             offsetX: 0,
             offsetY: 0

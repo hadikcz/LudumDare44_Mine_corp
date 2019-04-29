@@ -24,6 +24,10 @@ export default {
             particles: {
                 height: 20 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 180]
+            },
+            hpBar: {
+                x: 0,
+                y: 0
             }
         },
         {
@@ -35,6 +39,10 @@ export default {
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
+            },
+            hpBar: {
+                x: 50,
+                y: -65
             }
         },
         {
@@ -47,6 +55,10 @@ export default {
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
+            },
+            hpBar: {
+                x: 50,
+                y: -65
             }
         },
         {
@@ -59,6 +71,10 @@ export default {
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
+            },
+            hpBar: {
+                x: 50,
+                y: -65
             }
         },
         {
@@ -71,6 +87,10 @@ export default {
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
+            },
+            hpBar: {
+                x: 50,
+                y: -70
             }
         }
     ],
