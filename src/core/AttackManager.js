@@ -2,6 +2,7 @@ import Planet from 'entity/planet/Planet';
 import Attacks from 'structs/Attacks';
 import Depths from 'structs/Depths';
 import Events from 'structs/Events';
+import TransformHelpers from 'helpers/TransformHelpers';
 
 export default class AttackManager {
     /**
@@ -98,12 +99,29 @@ export default class AttackManager {
      * @param {*} attackData
      */
     findAndDamageEnemies (x, y, attackData) {
-        let radiusCircle = new Phaser.Geom.Circle(x, y, attackData.radius);
-        // this.scene.add.circle(x, y, attackData.radius, 0xFF0000, 0.5).setDepth(Depths.UI);
+        let circles = [];
+        let rotation = Planet.getRotationTowardPlanetCenter(x, y) - Math.PI / 2;
+
+        circles.push(new Phaser.Geom.Circle(x, y, attackData.radius));
+
+        let previousPivot = { x: x, y: y };
+        if (attackData.circlesCount > 1) {
+            for (let i = 0; i < attackData.circlesCount; i++) {
+                let pivot = TransformHelpers.calcPivot(previousPivot.x, previousPivot.y, rotation, attackData.radius);
+                let circle = new Phaser.Geom.Circle(pivot.x, pivot.y, attackData.radius);
+                circles.push(circle);
+                previousPivot = pivot;
+            }
+        }
 
         this.scene.unitSpawner.units.getChildren().forEach((/** @type {AbstractEnemy} */ unit) => {
-            if (radiusCircle.contains(unit.x, unit.y)) {
-                unit.applyDamage(attackData.damage);
+            for (let i = 0; i < circles.length; i++) {
+                let radiusCircle = circles[i];
+                // this.scene.add.circle(radiusCircle.x, radiusCircle.y, attackData.radius, 0xFF0000, 0.5).setDepth(Depths.UI);
+                if (radiusCircle.contains(unit.x, unit.y)) {
+                    unit.applyDamage(attackData.damage);
+                    break;
+                }
             }
         });
     }
