@@ -38,5 +38,10 @@ export default {
             x: 10,
             y: 10
         }
+    },
+    timing: {
+        timeBeforeZoomOut: 3500,
+        zoomOutTime: 3000,
+        timeBeforeAttack: 10000
     }
 };

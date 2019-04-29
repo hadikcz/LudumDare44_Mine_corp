@@ -7,6 +7,7 @@ import Events from 'structs/Events';
 import FactoryEnemy from 'entity/enemy/FactoryEnemy';
 import RobotEnemy from 'entity/enemy/RobotEnemy';
 import Enemies from 'structs/Enemies';
+import GameConfig from 'GameConfig';
 
 export default class UnitSpawner {
     constructor (scene) {
@@ -32,50 +33,53 @@ export default class UnitSpawner {
             callbackScope: this,
             callback: () => {
                 this.scene.events.emit(Events.MineOperationsBegin);
-
-                setTimeout(() => {
-                    this.scene.events.emit(Events.ShowUI);
-                }, 2000);
                 this._mineOpStarts = true;
             }
         });
 
-        // test spawner
-        // this.scene.time.addEvent({
-        //     repeat: Infinity,
-        //     delay: 1500,
-        //     callbackScope: this,
-        //     callback: this._spawnMiningShip
-        // });
+        let wait = GameConfig.timing.timeBeforeAttack;
+        if (window.skipStory) {
+            wait = 0;
+        }
+        setTimeout(() => {
+            this.scene.events.emit(Events.ShowUI);
+            // test spawner
+            // this.scene.time.addEvent({
+            //     repeat: Infinity,
+            //     delay: 1500,
+            //     callbackScope: this,
+            //     callback: this._spawnMiningShip
+            // });
 
-        // spawn intervals
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnTransportShip
-        });
+            // spawn intervals
+            this.scene.time.addEvent({
+                repeat: Infinity,
+                delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
+                callbackScope: this,
+                callback: this._spawnTransportShip
+            });
 
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnMiningShip
-        });
+            this.scene.time.addEvent({
+                repeat: Infinity,
+                delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
+                callbackScope: this,
+                callback: this._spawnMiningShip
+            });
 
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnFactory
-        });
+            this.scene.time.addEvent({
+                repeat: Infinity,
+                delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
+                callbackScope: this,
+                callback: this._spawnFactory
+            });
 
-        this.scene.time.addEvent({
-            repeat: Infinity,
-            delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
-            callbackScope: this,
-            callback: this._spawnRobot
-        });
+            this.scene.time.addEvent({
+                repeat: Infinity,
+                delay: Enemies.getDataByType(RobotEnemy.TYPE).timeBetweenSpawn,
+                callbackScope: this,
+                callback: this._spawnRobot
+            });
+        }, wait);
     }
 
     _spawnTransportShip () {

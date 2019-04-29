@@ -1,9 +1,13 @@
 /* globals __DEV__ */
 import Phaser from 'phaser';
 import BootScene from './scenes/BootScene';
+import StoryStartScene from './scenes/StoryStartScene';
 import GameScene from './scenes/GameScene';
+import SkipStoryScene from './scenes/SkipStoryScene';
 import GameConfig from './GameConfig.js';
 import Stats from 'stats.js/src/Stats';
+
+window.skipStory = true;
 
 const config = {
     type: Phaser.AUTO,
@@ -34,7 +38,9 @@ const config = {
     antialias: true,
     scene: [
         BootScene,
-        GameScene
+        GameScene,
+        StoryStartScene,
+        SkipStoryScene
     ]
 };
 

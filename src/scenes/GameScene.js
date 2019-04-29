@@ -29,20 +29,18 @@ export default class GameScene extends Phaser.Scene {
     create () {
         window.gameScene = this;
         this.physics.world.setBounds(0, 0, GameConfig.World.width, GameConfig.World.height);
-        // this.matter.world.setBounds(0, 0, GameConfig.World.width, GameConfig.World.height);
         this.effectManager = new EffectManager(this);
-        // this.cameras.main.setOrigin(0, 0);
         this.cameras.main.startFollow({ x: GameConfig.World.width / 2, y: GameConfig.World.height / 2 });
-        this.cameras.main.setZoom(GameConfig.GameWindowSettings.initZoom);
-        // this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
 
-        setTimeout(() => {
-            this.cameras.main.zoomTo(GameConfig.GameWindowSettings.zoom, 3000);
-        }, 2000);
+        if (!window.skipStory) {
+            this.cameras.main.setZoom(GameConfig.GameWindowSettings.initZoom);
 
-        // unzoom 2x from center
-        // this.cameras.main.setZoom(0.5);
-        // this.cameras.main.startFollow({x: -GameConfig.World.width / 2, y: -GameConfig.World.height / 2});
+            setTimeout(() => {
+                this.cameras.main.zoomTo(GameConfig.GameWindowSettings.zoom, GameConfig.timing.zoomOutTime);
+            }, GameConfig.timing.timeBeforeZoomOut);
+        } else {
+            this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
+        }
 
         this.lightSystem = new LightSystem(this);
         this.gameEnvironment = new GameEnvironment(this);
@@ -53,18 +51,6 @@ export default class GameScene extends Phaser.Scene {
         this.attackManager = new AttackManager(this);
 
         this.ui = new UI(this);
-
-        // fade in
-        // this.fadeRect = this.add.rectangle(0, 0, 1000, 1000, 0x000000, 1).setAlpha(1).setDepth(99999);
-        // this.tweens.add({
-        //     targets: this.fadeRect,
-        //     alpha: 0,
-        //     duration: 1000,
-        //     ease: 'Linear',
-        //     onComplete: () => {
-        //         this.fadeRect.destroy();
-        //     }
-        // });
 
         this.input.on('dragstart', function (pointer, obj) {
             obj.body.moves = false;
@@ -81,12 +67,5 @@ export default class GameScene extends Phaser.Scene {
 
     update () {
         this.gameEnvironment.update();
-    }
-
-    /**
-     * @return {Phaser.Physics.Arcade.Body}
-     */
-    getPlanetColliderBody () {
-        return this.gameEnvironment.planet.planetCollider.body;
     }
 }

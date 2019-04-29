@@ -18,10 +18,13 @@ export default class BootScene extends Phaser.Scene {
 
         this.load.on('complete', () => {
             progress.destroy();
-            // this.scene.start('GameOverScene');
-            // this.scene.start('EnableSoundScene');
+
             this.scene.start('GameScene');
-            // this.scene.start('GameOverLostScene');
+            if (!window.skipStory) {
+                this.scene.launch('StoryStartScene');
+            } else {
+                this.scene.launch('SkipStoryScene');
+            }
         }, this);
         // this.load.image('bg', 'assets/images/bg2.png');
         this.load.image('block', 'assets/images/block.png');
