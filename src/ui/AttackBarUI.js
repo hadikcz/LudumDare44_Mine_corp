@@ -35,7 +35,6 @@ export default class AttackBarUI {
         this.scene.events.on(Events.UnlockedNewAttack, this.redraw, this);
 
         this.scene.input.keyboard.on('keydown', function (event) {
-            console.log(event);
             if (event.key === 'q' || event.key === '1') {
                 self.switchTo(Attacks.TYPES.LIGHTNING);
             }

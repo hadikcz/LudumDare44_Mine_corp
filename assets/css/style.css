@@ -103,8 +103,7 @@ body {
 
 .attackBar .lock {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
+    transform: translate(53px, -53px);
 }
 
 .attack@font-face {
@@ -173,12 +172,6 @@ body {
     pointer-events: all;
 }
 
-.attackBar .lock {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
 .attackBar .button {
     cursor: pointer;
     display: block;
@@ -236,4 +229,20 @@ body {
     height: 100%;
     background: linear-gradient(#ff8429, #ffff67);
     border-radius: 5px;
+}
+
+.attackBar .mission_icon {
+    position: absolute;
+    transform: translate(118px, -17px);
+}
+
+.attackBar .mission_icon.mission_3 {
+    transform: translate(123px, -17px);
+}
+
+.attackBar .quest {
+    position: absolute;
+    color: white;
+    transform: translate(80px, -29px);
+    font-size: 11px;
 }
