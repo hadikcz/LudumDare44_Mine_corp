@@ -48,12 +48,12 @@ export default class Planet {
         /**
          * @type {Phaser.GameObjects.Image}
          */
-        this.blendShadow = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'assets2', 'earth_shadow_multiply_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
+        this.blendShadow = this.scene.add.image(Planet.getCenterOfPlanet().x - 25, Planet.getCenterOfPlanet().y + 25, 'assets2', 'earth_shadow_multiply_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
         this.blendShadow.setBlendMode(Phaser.BlendModes.MULTIPLY);
         /**
          * @type {Phaser.GameObjects.Image}
          */
-        this.blendLight = this.scene.add.image(Planet.getCenterOfPlanet().x + 70, Planet.getCenterOfPlanet().y - 90, 'assets2', 'earth_highlight_overlay_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
+        this.blendLight = this.scene.add.image(Planet.getCenterOfPlanet().x + 90, Planet.getCenterOfPlanet().y - 120, 'assets2', 'earth_highlight_overlay_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
         this.blendLight.setAlpha(0.3);
         this.blendLight.setBlendMode(Phaser.BlendModes.ADD);
 
