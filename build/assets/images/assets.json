@@ -1,0 +1,377 @@
+{
+	"textures": [
+		{
+			"image": "assets.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 392,
+				"h": 508
+			},
+			"scale": 2,
+			"frames": [
+				{
+					"filename": "volcano",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 268,
+						"h": 168
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 268,
+						"h": 168
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 268,
+						"h": 168
+					}
+				},
+				{
+					"filename": "lightning",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 336
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 336
+					},
+					"frame": {
+						"x": 1,
+						"y": 171,
+						"w": 80,
+						"h": 336
+					}
+				},
+				{
+					"filename": "asteroid",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 120,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 120,
+						"h": 126
+					},
+					"frame": {
+						"x": 271,
+						"y": 1,
+						"w": 120,
+						"h": 126
+					}
+				},
+				{
+					"filename": "factory",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 118,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 118,
+						"h": 90
+					},
+					"frame": {
+						"x": 271,
+						"y": 129,
+						"w": 118,
+						"h": 90
+					}
+				},
+				{
+					"filename": "landing_ship",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 48,
+						"h": 220
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 48,
+						"h": 220
+					},
+					"frame": {
+						"x": 83,
+						"y": 221,
+						"w": 48,
+						"h": 220
+					}
+				},
+				{
+					"filename": "debris2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 22
+					},
+					"frame": {
+						"x": 83,
+						"y": 171,
+						"w": 22,
+						"h": 22
+					}
+				},
+				{
+					"filename": "debris3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 22
+					},
+					"frame": {
+						"x": 83,
+						"y": 195,
+						"w": 22,
+						"h": 22
+					}
+				},
+				{
+					"filename": "smoke",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 18
+					},
+					"frame": {
+						"x": 107,
+						"y": 171,
+						"w": 18,
+						"h": 18
+					}
+				},
+				{
+					"filename": "debris1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 107,
+						"y": 191,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "healthbar_bar",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 12
+					},
+					"frame": {
+						"x": 107,
+						"y": 207,
+						"w": 44,
+						"h": 12
+					}
+				},
+				{
+					"filename": "healthbar_bg",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 12
+					},
+					"frame": {
+						"x": 125,
+						"y": 191,
+						"w": 44,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bloodCell",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 8
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 8
+					},
+					"frame": {
+						"x": 127,
+						"y": 171,
+						"w": 8,
+						"h": 8
+					}
+				},
+				{
+					"filename": "limb",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 18,
+						"h": 6
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 18,
+						"h": 6
+					},
+					"frame": {
+						"x": 127,
+						"y": 181,
+						"w": 18,
+						"h": 6
+					}
+				},
+				{
+					"filename": "robot",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 98,
+						"h": 170
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 10,
+						"w": 88,
+						"h": 160
+					},
+					"frame": {
+						"x": 171,
+						"y": 171,
+						"w": 88,
+						"h": 160
+					}
+				},
+				{
+					"filename": "man",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 44,
+						"h": 104
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 32,
+						"w": 36,
+						"h": 72
+					},
+					"frame": {
+						"x": 133,
+						"y": 221,
+						"w": 36,
+						"h": 72
+					}
+				},
+				{
+					"filename": "mining_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 88,
+						"h": 158
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 6,
+						"w": 80,
+						"h": 152
+					},
+					"frame": {
+						"x": 133,
+						"y": 333,
+						"w": 80,
+						"h": 152
+					}
+				},
+				{
+					"filename": "tornado",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 114,
+						"h": 210
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 105,
+						"h": 210
+					},
+					"frame": {
+						"x": 261,
+						"y": 221,
+						"w": 105,
+						"h": 210
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:89f1e5268b74763cec2c975638b6fd42:1de030e28bc9d15d0d8c0980c5185ac0:a759b6bbc8381ac9c472b28f589ad0d6$"
+	}
+}

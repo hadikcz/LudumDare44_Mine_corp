@@ -1,0 +1,1322 @@
+{
+	"textures": [
+		{
+			"image": "assets2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2043,
+				"h": 1990
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "earth_shadow_multiply_effect",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 783,
+						"h": 748
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 20,
+						"w": 742,
+						"h": 709
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 742,
+						"h": 709
+					}
+				},
+				{
+					"filename": "asteroid_all_in_one",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 242,
+						"h": 936
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 33,
+						"w": 210,
+						"h": 877
+					},
+					"frame": {
+						"x": 0,
+						"y": 724,
+						"w": 210,
+						"h": 877
+					}
+				},
+				{
+					"filename": "earth_highlight_overlay_effect",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 454,
+						"h": 367
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 7,
+						"w": 437,
+						"h": 354
+					},
+					"frame": {
+						"x": 757,
+						"y": 0,
+						"w": 437,
+						"h": 354
+					}
+				},
+				{
+					"filename": "light/light_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 70,
+						"w": 273,
+						"h": 482
+					},
+					"frame": {
+						"x": 225,
+						"y": 724,
+						"w": 273,
+						"h": 482
+					}
+				},
+				{
+					"filename": "light/light_7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 56,
+						"w": 216,
+						"h": 501
+					},
+					"frame": {
+						"x": 513,
+						"y": 724,
+						"w": 216,
+						"h": 501
+					}
+				},
+				{
+					"filename": "volcano/volex_9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 94,
+						"y": 46,
+						"w": 380,
+						"h": 231
+					},
+					"frame": {
+						"x": 757,
+						"y": 369,
+						"w": 380,
+						"h": 231
+					}
+				},
+				{
+					"filename": "light/light_8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 54,
+						"w": 207,
+						"h": 505
+					},
+					"frame": {
+						"x": 225,
+						"y": 1221,
+						"w": 207,
+						"h": 505
+					}
+				},
+				{
+					"filename": "light/light_6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 69,
+						"w": 202,
+						"h": 485
+					},
+					"frame": {
+						"x": 447,
+						"y": 1240,
+						"w": 202,
+						"h": 485
+					}
+				},
+				{
+					"filename": "volcano/volex_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 57,
+						"y": 26,
+						"w": 342,
+						"h": 230
+					},
+					"frame": {
+						"x": 1209,
+						"y": 0,
+						"w": 342,
+						"h": 230
+					}
+				},
+				{
+					"filename": "twister/twister_11",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 5,
+						"w": 258,
+						"h": 249
+					},
+					"frame": {
+						"x": 0,
+						"y": 1741,
+						"w": 258,
+						"h": 249
+					}
+				},
+				{
+					"filename": "twister/twister_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 79,
+						"y": 5,
+						"w": 255,
+						"h": 249
+					},
+					"frame": {
+						"x": 273,
+						"y": 1741,
+						"w": 255,
+						"h": 249
+					}
+				},
+				{
+					"filename": "light/light_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 62,
+						"w": 180,
+						"h": 474
+					},
+					"frame": {
+						"x": 664,
+						"y": 1240,
+						"w": 180,
+						"h": 474
+					}
+				},
+				{
+					"filename": "heavy_miner",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 309,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 2,
+						"w": 303,
+						"h": 212
+					},
+					"frame": {
+						"x": 1566,
+						"y": 0,
+						"w": 303,
+						"h": 212
+					}
+				},
+				{
+					"filename": "light/light_9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 80,
+						"y": 118,
+						"w": 158,
+						"h": 440
+					},
+					"frame": {
+						"x": 744,
+						"y": 724,
+						"w": 158,
+						"h": 440
+					}
+				},
+				{
+					"filename": "light/light_10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 96,
+						"y": 143,
+						"w": 130,
+						"h": 402
+					},
+					"frame": {
+						"x": 917,
+						"y": 615,
+						"w": 130,
+						"h": 402
+					}
+				},
+				{
+					"filename": "volcano/volex_17",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 192,
+						"y": 0,
+						"w": 290,
+						"h": 188
+					},
+					"frame": {
+						"x": 1209,
+						"y": 245,
+						"w": 290,
+						"h": 188
+					}
+				},
+				{
+					"filename": "volcano/volex_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 111,
+						"y": 45,
+						"w": 276,
+						"h": 258
+					},
+					"frame": {
+						"x": 1152,
+						"y": 448,
+						"w": 276,
+						"h": 258
+					}
+				},
+				{
+					"filename": "volcano/volex_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 101,
+						"y": 69,
+						"w": 267,
+						"h": 254
+					},
+					"frame": {
+						"x": 1062,
+						"y": 721,
+						"w": 267,
+						"h": 254
+					}
+				},
+				{
+					"filename": "volcano/volex_11",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 323
+					},
+					"spriteSourceSize": {
+						"x": 170,
+						"y": 32,
+						"w": 158,
+						"h": 233
+					},
+					"frame": {
+						"x": 1884,
+						"y": 0,
+						"w": 158,
+						"h": 233
+					}
+				},
+				{
+					"filename": "twister/twister_6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 80,
+						"y": 5,
+						"w": 255,
+						"h": 249
+					},
+					"frame": {
+						"x": 543,
+						"y": 1740,
+						"w": 255,
+						"h": 249
+					}
+				},
+				{
+					"filename": "volcano/volex_13",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 181,
+						"y": 3,
+						"w": 138,
+						"h": 252
+					},
+					"frame": {
+						"x": 1344,
+						"y": 721,
+						"w": 138,
+						"h": 252
+					}
+				},
+				{
+					"filename": "twister/twister_8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 6,
+						"w": 250,
+						"h": 249
+					},
+					"frame": {
+						"x": 1443,
+						"y": 448,
+						"w": 250,
+						"h": 249
+					}
+				},
+				{
+					"filename": "twister/twister_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 81,
+						"y": 6,
+						"w": 253,
+						"h": 248
+					},
+					"frame": {
+						"x": 1497,
+						"y": 712,
+						"w": 253,
+						"h": 248
+					}
+				},
+				{
+					"filename": "volcano",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 268,
+						"h": 232
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 268,
+						"h": 232
+					},
+					"frame": {
+						"x": 1062,
+						"y": 990,
+						"w": 268,
+						"h": 232
+					}
+				},
+				{
+					"filename": "light/light_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 0,
+						"w": 191,
+						"h": 235
+					},
+					"frame": {
+						"x": 1345,
+						"y": 988,
+						"w": 191,
+						"h": 235
+					}
+				},
+				{
+					"filename": "twister/twister_12",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 7,
+						"w": 259,
+						"h": 248
+					},
+					"frame": {
+						"x": 1551,
+						"y": 975,
+						"w": 259,
+						"h": 248
+					}
+				},
+				{
+					"filename": "twister/twister_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 6,
+						"w": 259,
+						"h": 248
+					},
+					"frame": {
+						"x": 859,
+						"y": 1237,
+						"w": 259,
+						"h": 248
+					}
+				},
+				{
+					"filename": "twister/twister_10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 76,
+						"y": 7,
+						"w": 259,
+						"h": 246
+					},
+					"frame": {
+						"x": 859,
+						"y": 1500,
+						"w": 259,
+						"h": 246
+					}
+				},
+				{
+					"filename": "volcano/volex_7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 142,
+						"y": 32,
+						"w": 191,
+						"h": 229
+					},
+					"frame": {
+						"x": 813,
+						"y": 1761,
+						"w": 191,
+						"h": 229
+					}
+				},
+				{
+					"filename": "light/light_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 29,
+						"w": 183,
+						"h": 219
+					},
+					"frame": {
+						"x": 1133,
+						"y": 1237,
+						"w": 183,
+						"h": 219
+					}
+				},
+				{
+					"filename": "volcano/volex_10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 61,
+						"y": 42,
+						"w": 271,
+						"h": 219
+					},
+					"frame": {
+						"x": 1331,
+						"y": 1238,
+						"w": 271,
+						"h": 219
+					}
+				},
+				{
+					"filename": "twister/twister_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 77,
+						"y": 6,
+						"w": 259,
+						"h": 247
+					},
+					"frame": {
+						"x": 1617,
+						"y": 1238,
+						"w": 259,
+						"h": 247
+					}
+				},
+				{
+					"filename": "volcano/volex_12",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 173,
+						"y": 54,
+						"w": 151,
+						"h": 225
+					},
+					"frame": {
+						"x": 1133,
+						"y": 1471,
+						"w": 151,
+						"h": 225
+					}
+				},
+				{
+					"filename": "twister/twister_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 79,
+						"y": 6,
+						"w": 256,
+						"h": 248
+					},
+					"frame": {
+						"x": 1299,
+						"y": 1472,
+						"w": 256,
+						"h": 248
+					}
+				},
+				{
+					"filename": "twister/twister_9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 81,
+						"y": 6,
+						"w": 252,
+						"h": 248
+					},
+					"frame": {
+						"x": 1570,
+						"y": 1500,
+						"w": 252,
+						"h": 248
+					}
+				},
+				{
+					"filename": "volcano/volex_6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 134,
+						"y": 35,
+						"w": 209,
+						"h": 228
+					},
+					"frame": {
+						"x": 1019,
+						"y": 1761,
+						"w": 209,
+						"h": 228
+					}
+				},
+				{
+					"filename": "twister/twister_7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 418,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 92,
+						"y": 7,
+						"w": 234,
+						"h": 247
+					},
+					"frame": {
+						"x": 1243,
+						"y": 1735,
+						"w": 234,
+						"h": 247
+					}
+				},
+				{
+					"filename": "asteroid_core",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 237,
+						"h": 180
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 4,
+						"w": 209,
+						"h": 167
+					},
+					"frame": {
+						"x": 1492,
+						"y": 1763,
+						"w": 209,
+						"h": 167
+					}
+				},
+				{
+					"filename": "light/light_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 570
+					},
+					"spriteSourceSize": {
+						"x": 80,
+						"y": 42,
+						"w": 135,
+						"h": 179
+					},
+					"frame": {
+						"x": 1716,
+						"y": 1763,
+						"w": 135,
+						"h": 179
+					}
+				},
+				{
+					"filename": "volcano/volex_14",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 185,
+						"y": 17,
+						"w": 129,
+						"h": 225
+					},
+					"frame": {
+						"x": 1837,
+						"y": 1500,
+						"w": 129,
+						"h": 225
+					}
+				},
+				{
+					"filename": "volcano/volex_15",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 187,
+						"y": 62,
+						"w": 127,
+						"h": 131
+					},
+					"frame": {
+						"x": 917,
+						"y": 1032,
+						"w": 127,
+						"h": 131
+					}
+				},
+				{
+					"filename": "transport_ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 94,
+						"h": 188
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 3,
+						"w": 91,
+						"h": 182
+					},
+					"frame": {
+						"x": 1866,
+						"y": 1740,
+						"w": 91,
+						"h": 182
+					}
+				},
+				{
+					"filename": "transport_ship_flames",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 184
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 184
+					},
+					"frame": {
+						"x": 1514,
+						"y": 245,
+						"w": 28,
+						"h": 184
+					}
+				},
+				{
+					"filename": "ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 195,
+						"h": 156
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 192,
+						"h": 154
+					},
+					"frame": {
+						"x": 1566,
+						"y": 227,
+						"w": 192,
+						"h": 154
+					}
+				},
+				{
+					"filename": "volcano/volex_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 112,
+						"y": 40,
+						"w": 250,
+						"h": 230
+					},
+					"frame": {
+						"x": 1773,
+						"y": 248,
+						"w": 250,
+						"h": 230
+					}
+				},
+				{
+					"filename": "heavy_miner_drill",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 165,
+						"h": 146
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 165,
+						"h": 146
+					},
+					"frame": {
+						"x": 1708,
+						"y": 493,
+						"w": 165,
+						"h": 146
+					}
+				},
+				{
+					"filename": "volcano/volex_8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 485,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 117,
+						"y": 26,
+						"w": 226,
+						"h": 233
+					},
+					"frame": {
+						"x": 1765,
+						"y": 654,
+						"w": 226,
+						"h": 233
+					}
+				},
+				{
+					"filename": "volcano/volex_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 125,
+						"y": 54,
+						"w": 216,
+						"h": 231
+					},
+					"frame": {
+						"x": 1825,
+						"y": 902,
+						"w": 216,
+						"h": 231
+					}
+				},
+				{
+					"filename": "volcano/volex_16",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 484,
+						"h": 324
+					},
+					"spriteSourceSize": {
+						"x": 192,
+						"y": 62,
+						"w": 123,
+						"h": 128
+					},
+					"frame": {
+						"x": 1888,
+						"y": 493,
+						"w": 123,
+						"h": 128
+					}
+				},
+				{
+					"filename": "ship_legs",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 72,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 70,
+						"h": 45
+					},
+					"frame": {
+						"x": 1492,
+						"y": 1945,
+						"w": 70,
+						"h": 45
+					}
+				},
+				{
+					"filename": "ship_flames",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 65,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 65,
+						"h": 100
+					},
+					"frame": {
+						"x": 0,
+						"y": 1616,
+						"w": 65,
+						"h": 100
+					}
+				},
+				{
+					"filename": "volcano_lava",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 102,
+						"h": 151
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 102,
+						"h": 151
+					},
+					"frame": {
+						"x": 1891,
+						"y": 1148,
+						"w": 102,
+						"h": 151
+					}
+				},
+				{
+					"filename": "factory",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 109,
+						"h": 129
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 97,
+						"h": 127
+					},
+					"frame": {
+						"x": 1891,
+						"y": 1314,
+						"w": 97,
+						"h": 127
+					}
+				},
+				{
+					"filename": "ship_conteiner_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 35,
+						"h": 65
+					},
+					"frame": {
+						"x": 2008,
+						"y": 1148,
+						"w": 35,
+						"h": 65
+					}
+				},
+				{
+					"filename": "astronaut_enemy",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 51,
+						"h": 88
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 51,
+						"h": 88
+					},
+					"frame": {
+						"x": 757,
+						"y": 615,
+						"w": 51,
+						"h": 88
+					}
+				},
+				{
+					"filename": "enemy_bar",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 82,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 76,
+						"h": 24
+					},
+					"frame": {
+						"x": 744,
+						"y": 1179,
+						"w": 76,
+						"h": 24
+					}
+				},
+				{
+					"filename": "enemy_bar_fill",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 82,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 76,
+						"h": 24
+					},
+					"frame": {
+						"x": 1133,
+						"y": 1711,
+						"w": 76,
+						"h": 24
+					}
+				},
+				{
+					"filename": "red_dot",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 58,
+						"h": 58
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 6,
+						"w": 47,
+						"h": 47
+					},
+					"frame": {
+						"x": 1062,
+						"y": 615,
+						"w": 47,
+						"h": 47
+					}
+				},
+				{
+					"filename": "ship_conteiner_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 19,
+						"w": 34,
+						"h": 48
+					},
+					"frame": {
+						"x": 1152,
+						"y": 369,
+						"w": 34,
+						"h": 48
+					}
+				},
+				{
+					"filename": "ship_conteiner_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 34,
+						"w": 34,
+						"h": 33
+					},
+					"frame": {
+						"x": 1708,
+						"y": 654,
+						"w": 34,
+						"h": 33
+					}
+				},
+				{
+					"filename": "ship_orange_line",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 11,
+						"h": 41
+					},
+					"frame": {
+						"x": 1765,
+						"y": 902,
+						"w": 11,
+						"h": 41
+					}
+				},
+				{
+					"filename": "ship_conteiner_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 53,
+						"w": 33,
+						"h": 14
+					},
+					"frame": {
+						"x": 1577,
+						"y": 1945,
+						"w": 33,
+						"h": 14
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:01fa8280be05949577294ec9a3335bb0:efff53c8be18bd59cb96c817a582f540:09550fb4fdcdfdbbc019b92dacf78d7a$"
+	}
+}

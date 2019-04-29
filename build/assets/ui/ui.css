@@ -1,0 +1,39 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:64167d8ff2a5286931012eed3dfed14b:884c3b2ed871b63c50185334aa4fb7ed:4c7ccf045e54e36629c6cbec5cb72956$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(ui.png);}
+
+.asteroid_icon {width:32px; height:32px; background-position: -385px -155px}
+.button_asteroid {width:97px; height:99px; background-position: -1px -1px}
+.button_asteroid_disabled {width:97px; height:99px; background-position: -1px -102px}
+.button_asteroid_selected {width:97px; height:99px; background-position: -100px -1px}
+.button_lightning {width:94px; height:92px; background-position: -1px -203px}
+.button_lightning_disabled {width:94px; height:92px; background-position: -97px -203px}
+.button_lightning_selected {width:94px; height:92px; background-position: -294px -1px}
+.button_off {width:32px; height:32px; background-position: -385px -189px}
+.button_on {width:32px; height:32px; background-position: -383px -223px}
+.button_tornado {width:93px; height:94px; background-position: -193px -200px}
+.button_tornado_disabled {width:93px; height:94px; background-position: -288px -200px}
+.button_tornado_selected {width:93px; height:94px; background-position: -290px -99px}
+.button_volcano {width:93px; height:96px; background-position: -100px -102px}
+.button_volcano_disabled {width:93px; height:96px; background-position: -195px -102px}
+.button_volcano_selected {width:93px; height:96px; background-position: -199px -1px}
+.lightning_icon {width:32px; height:32px; background-position: -417px -223px}
+.load_bar {width:20px; height:54px; background-position: -427px -45px}
+.load_bar_fill {width:20px; height:54px; background-position: -427px -101px}
+.lock {width:23px; height:42px; background-position: -419px -157px}
+.mine_corp_icon {width:42px; height:42px; background-position: -390px -1px}
+.mission_1 {width:33px; height:34px; background-position: -385px -119px}
+.mission_2 {width:35px; height:36px; background-position: -390px -45px}
+.mission_3 {width:35px; height:34px; background-position: -390px -83px}
+.tornado_icon {width:32px; height:32px; background-position: -383px -257px}
+.volcano_icon {width:32px; height:32px; background-position: -417px -257px}
