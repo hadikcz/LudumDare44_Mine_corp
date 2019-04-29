@@ -4,8 +4,8 @@
 			"image": "assets2.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 2036,
-				"h": 2044
+				"w": 999,
+				"h": 1063
 			},
 			"scale": 1,
 			"frames": [
@@ -31,129 +31,45 @@
 					}
 				},
 				{
-					"filename": "twister/twister_12",
+					"filename": "earth_highlight_overlay_effect",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 835,
-						"h": 558
+						"w": 454,
+						"h": 367
 					},
 					"spriteSourceSize": {
-						"x": 155,
-						"y": 15,
-						"w": 514,
-						"h": 494
+						"x": 9,
+						"y": 7,
+						"w": 437,
+						"h": 354
 					},
 					"frame": {
 						"x": 0,
 						"y": 709,
-						"w": 514,
-						"h": 494
+						"w": 437,
+						"h": 354
 					}
 				},
 				{
-					"filename": "twister/twister_3",
+					"filename": "heavy_miner",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 835,
-						"h": 558
+						"w": 309,
+						"h": 216
 					},
 					"spriteSourceSize": {
-						"x": 155,
-						"y": 14,
-						"w": 514,
-						"h": 493
+						"x": 3,
+						"y": 2,
+						"w": 303,
+						"h": 212
 					},
 					"frame": {
-						"x": 514,
+						"x": 437,
 						"y": 709,
-						"w": 514,
-						"h": 493
-					}
-				},
-				{
-					"filename": "twister/twister_2",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 155,
-						"y": 13,
-						"w": 514,
-						"h": 492
-					},
-					"frame": {
-						"x": 742,
-						"y": 0,
-						"w": 514,
-						"h": 492
-					}
-				},
-				{
-					"filename": "twister/twister_10",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 154,
-						"y": 16,
-						"w": 514,
-						"h": 488
-					},
-					"frame": {
-						"x": 514,
-						"y": 1202,
-						"w": 514,
-						"h": 488
-					}
-				},
-				{
-					"filename": "twister/twister_11",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 155,
-						"y": 12,
-						"w": 513,
-						"h": 495
-					},
-					"frame": {
-						"x": 0,
-						"y": 1203,
-						"w": 513,
-						"h": 495
-					}
-				},
-				{
-					"filename": "twister/twister_6",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 161,
-						"y": 12,
-						"w": 507,
-						"h": 495
-					},
-					"frame": {
-						"x": 1028,
-						"y": 492,
-						"w": 507,
-						"h": 495
+						"w": 303,
+						"h": 212
 					}
 				},
 				{
@@ -172,30 +88,51 @@
 					},
 					"frame": {
 						"x": 742,
-						"y": 492,
+						"y": 0,
 						"w": 192,
 						"h": 154
 					}
 				},
 				{
-					"filename": "load_bar",
+					"filename": "heavy_miner_drill",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 165,
+						"h": 146
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 165,
+						"h": 146
+					},
+					"frame": {
+						"x": 742,
+						"y": 154,
+						"w": 165,
+						"h": 146
+					}
+				},
+				{
+					"filename": "transport_ship",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 40,
-						"h": 108
+						"w": 94,
+						"h": 188
 					},
 					"spriteSourceSize": {
 						"x": 2,
-						"y": 2,
-						"w": 37,
-						"h": 104
+						"y": 3,
+						"w": 91,
+						"h": 182
 					},
 					"frame": {
-						"x": 934,
-						"y": 492,
-						"w": 37,
-						"h": 104
+						"x": 742,
+						"y": 300,
+						"w": 91,
+						"h": 182
 					}
 				},
 				{
@@ -214,9 +151,282 @@
 					},
 					"frame": {
 						"x": 934,
-						"y": 596,
+						"y": 0,
 						"w": 65,
 						"h": 100
+					}
+				},
+				{
+					"filename": "twister/twister_12",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 3,
+						"w": 131,
+						"h": 126
+					},
+					"frame": {
+						"x": 437,
+						"y": 921,
+						"w": 131,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 2,
+						"w": 131,
+						"h": 126
+					},
+					"frame": {
+						"x": 568,
+						"y": 921,
+						"w": 131,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 2,
+						"w": 127,
+						"h": 127
+					},
+					"frame": {
+						"x": 742,
+						"y": 482,
+						"w": 127,
+						"h": 127
+					}
+				},
+				{
+					"filename": "twister/twister_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 2,
+						"w": 128,
+						"h": 126
+					},
+					"frame": {
+						"x": 742,
+						"y": 609,
+						"w": 128,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_11",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 2,
+						"w": 130,
+						"h": 126
+					},
+					"frame": {
+						"x": 740,
+						"y": 735,
+						"w": 130,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 2,
+						"w": 131,
+						"h": 126
+					},
+					"frame": {
+						"x": 833,
+						"y": 300,
+						"w": 131,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 2,
+						"w": 129,
+						"h": 126
+					},
+					"frame": {
+						"x": 870,
+						"y": 426,
+						"w": 129,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 2,
+						"w": 129,
+						"h": 126
+					},
+					"frame": {
+						"x": 870,
+						"y": 552,
+						"w": 129,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 2,
+						"w": 129,
+						"h": 126
+					},
+					"frame": {
+						"x": 870,
+						"y": 678,
+						"w": 129,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 3,
+						"w": 131,
+						"h": 125
+					},
+					"frame": {
+						"x": 740,
+						"y": 861,
+						"w": 131,
+						"h": 125
+					}
+				},
+				{
+					"filename": "twister/twister_9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 2,
+						"w": 127,
+						"h": 126
+					},
+					"frame": {
+						"x": 871,
+						"y": 804,
+						"w": 127,
+						"h": 126
+					}
+				},
+				{
+					"filename": "twister/twister_7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 209,
+						"h": 140
+					},
+					"spriteSourceSize": {
+						"x": 45,
+						"y": 3,
+						"w": 119,
+						"h": 125
+					},
+					"frame": {
+						"x": 871,
+						"y": 930,
+						"w": 119,
+						"h": 125
+					}
+				},
+				{
+					"filename": "load_bar",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 108
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 37,
+						"h": 104
+					},
+					"frame": {
+						"x": 699,
+						"y": 921,
+						"w": 37,
+						"h": 104
 					}
 				},
 				{
@@ -234,31 +444,52 @@
 						"h": 104
 					},
 					"frame": {
-						"x": 971,
-						"y": 492,
+						"x": 907,
+						"y": 154,
 						"w": 37,
 						"h": 104
 					}
 				},
 				{
-					"filename": "ship_orange_line",
+					"filename": "transport_ship_flames",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 11,
-						"h": 42
+						"w": 28,
+						"h": 184
 					},
 					"spriteSourceSize": {
 						"x": 0,
-						"y": 1,
-						"w": 11,
-						"h": 41
+						"y": 0,
+						"w": 28,
+						"h": 184
 					},
 					"frame": {
-						"x": 999,
-						"y": 596,
-						"w": 11,
-						"h": 41
+						"x": 944,
+						"y": 100,
+						"w": 28,
+						"h": 184
+					}
+				},
+				{
+					"filename": "ship_conteiner_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 35,
+						"h": 65
+					},
+					"frame": {
+						"x": 964,
+						"y": 284,
+						"w": 35,
+						"h": 65
 					}
 				},
 				{
@@ -276,8 +507,8 @@
 						"h": 45
 					},
 					"frame": {
-						"x": 742,
-						"y": 646,
+						"x": 736,
+						"y": 986,
 						"w": 70,
 						"h": 45
 					}
@@ -297,31 +528,10 @@
 						"h": 47
 					},
 					"frame": {
-						"x": 812,
-						"y": 646,
+						"x": 806,
+						"y": 986,
 						"w": 47,
 						"h": 47
-					}
-				},
-				{
-					"filename": "ship_conteiner_1",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 36,
-						"h": 68
-					},
-					"spriteSourceSize": {
-						"x": 3,
-						"y": 53,
-						"w": 33,
-						"h": 14
-					},
-					"frame": {
-						"x": 742,
-						"y": 691,
-						"w": 33,
-						"h": 14
 					}
 				},
 				{
@@ -339,8 +549,8 @@
 						"h": 48
 					},
 					"frame": {
-						"x": 859,
-						"y": 646,
+						"x": 833,
+						"y": 426,
 						"w": 34,
 						"h": 48
 					}
@@ -360,161 +570,35 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 893,
-						"y": 646,
+						"x": 907,
+						"y": 258,
 						"w": 34,
 						"h": 33
 					}
 				},
 				{
-					"filename": "twister/twister_7",
+					"filename": "ship_orange_line",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 835,
-						"h": 558
+						"w": 11,
+						"h": 42
 					},
 					"spriteSourceSize": {
-						"x": 186,
-						"y": 15,
-						"w": 464,
-						"h": 492
+						"x": 0,
+						"y": 1,
+						"w": 11,
+						"h": 41
 					},
 					"frame": {
-						"x": 1256,
-						"y": 0,
-						"w": 464,
-						"h": 492
+						"x": 964,
+						"y": 349,
+						"w": 11,
+						"h": 41
 					}
 				},
 				{
-					"filename": "twister/twister_8",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 169,
-						"y": 13,
-						"w": 497,
-						"h": 495
-					},
-					"frame": {
-						"x": 1028,
-						"y": 987,
-						"w": 497,
-						"h": 495
-					}
-				},
-				{
-					"filename": "twister/twister_5",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 160,
-						"y": 13,
-						"w": 507,
-						"h": 494
-					},
-					"frame": {
-						"x": 1028,
-						"y": 1482,
-						"w": 507,
-						"h": 494
-					}
-				},
-				{
-					"filename": "twister/twister_4",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 160,
-						"y": 12,
-						"w": 506,
-						"h": 494
-					},
-					"frame": {
-						"x": 1525,
-						"y": 987,
-						"w": 506,
-						"h": 494
-					}
-				},
-				{
-					"filename": "twister/twister_1",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 164,
-						"y": 14,
-						"w": 501,
-						"h": 493
-					},
-					"frame": {
-						"x": 1535,
-						"y": 492,
-						"w": 501,
-						"h": 493
-					}
-				},
-				{
-					"filename": "twister/twister_9",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 835,
-						"h": 558
-					},
-					"spriteSourceSize": {
-						"x": 163,
-						"y": 14,
-						"w": 501,
-						"h": 493
-					},
-					"frame": {
-						"x": 1535,
-						"y": 1481,
-						"w": 501,
-						"h": 493
-					}
-				},
-				{
-					"filename": "earth_highlight_overlay_effect",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 454,
-						"h": 367
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 7,
-						"w": 437,
-						"h": 354
-					},
-					"frame": {
-						"x": 513,
-						"y": 1690,
-						"w": 437,
-						"h": 354
-					}
-				},
-				{
-					"filename": "ship_conteiner_4",
+					"filename": "ship_conteiner_1",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -522,16 +606,16 @@
 						"h": 68
 					},
 					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 35,
-						"h": 65
+						"x": 3,
+						"y": 53,
+						"w": 33,
+						"h": 14
 					},
 					"frame": {
-						"x": 950,
-						"y": 1690,
-						"w": 35,
-						"h": 65
+						"x": 437,
+						"y": 1047,
+						"w": 33,
+						"h": 14
 					}
 				}
 			]
@@ -540,6 +624,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:9ce4c63fc6d056fd35ef007eea3c2264:2a7847e2b68a6969f13f7ad62eb7efe2:09550fb4fdcdfdbbc019b92dacf78d7a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:f31a77ce5f23e249de23eea8fb913ddb:0f1c0dfc0081364d3800038e1b18f57e:09550fb4fdcdfdbbc019b92dacf78d7a$"
 	}
 }

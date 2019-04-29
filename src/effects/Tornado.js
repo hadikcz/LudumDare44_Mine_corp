@@ -11,7 +11,7 @@ export default class Lightning extends Phaser.GameObjects.Sprite {
         this.setActive(false);
         this.setVisible(false);
 
-        this.setScale(0.25, 0.25);
+        // this.setScale(0.25, 0.25);
 
         this.animation = this.scene.anims.create({
             key: 'tornado',
