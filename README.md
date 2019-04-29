@@ -2,7 +2,7 @@
 
 ## Do you protect your self, against faith ?
 
-![game_card.png](///raw/225/z/22c18.png)
+![Image of game](https://raw.githubusercontent.com/hadikcz/LudumDare44_Mine_corp/master/screens/screen.png)
 
 # About game:
 You are the planet Earth, and you must protect your natural wealth, against evil Mine Corp. which will try to take your wealth, and kill you. They destroy your sisters and you are next.
