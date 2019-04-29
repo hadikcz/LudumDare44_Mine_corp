@@ -36,6 +36,7 @@ export default class BootScene extends Phaser.Scene {
         // new ones
         // large one
         this.load.image('bg', 'assets/images/large/bg.png');
+        this.load.image('bg_death', 'assets/images/large/bg_death.png');
         this.load.image('earth', 'assets/images/large/earth.png');
         this.load.image('core', 'assets/images/large/core.png');
         this.load.image('core_no_color', 'assets/images/large/core_no_colors.png');

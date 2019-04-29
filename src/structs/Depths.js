@@ -5,6 +5,7 @@ export default {
     PLANET_LAYER3: 20,
     PLANET_LAYER4: 21,
     PLANET_LAYER5_BLENDS: 25,
+    PLANET_DEATH: 26,
     CLOUDS_FAR: 30,
     VOLCANOS: 34,
     SMOKE: 45,

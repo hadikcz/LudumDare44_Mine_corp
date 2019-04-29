@@ -29,4 +29,10 @@ export default class UI {
          */
         this.planetHpTextUI = new PlanetHpTextUI(this.scene);
     }
+
+    hide () {
+        this.attackBarUI.fadeOut();
+        this.mineCorpIncomeUI.fadeOut();
+        this.planetHpTextUI.fadeOut();
+    }
 }

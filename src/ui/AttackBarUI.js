@@ -107,6 +107,10 @@ export default class AttackBarUI {
         }, 3500);
     }
 
+    fadeOut () {
+        $('.attackBar').fadeOut(1000);
+    }
+
     _usedAttack (type) {
         let attackData = Attacks.getDataByType(type);
 

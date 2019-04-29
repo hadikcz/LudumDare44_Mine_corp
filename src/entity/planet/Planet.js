@@ -29,13 +29,11 @@ export default class Planet {
         this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER4);
 
         /**
-         * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.clouds2 = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2b').setDepth(Depths.CLOUDS_FAR);
 
         /**
-         * @private
          * @type {Phaser.GameObjects.Image}
          */
         this.clouds = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'clouds_2a').setDepth(Depths.CLOUDS);
@@ -82,7 +80,15 @@ export default class Planet {
     }
 
     update () {
+        if (this.scene.isGameOver) {
+            return;
+        }
         this.scene.ui.planetHpTextUI.redrawHp(Math.floor(this.hp.get()));
+
+        if (this.hp.get() <= 0 && !this.scene.isGameOver) {
+            this.scene.ui.planetHpTextUI.redrawHp(0);
+            this.scene.gameOver();
+        }
         let alpha = this.hp.getPercent() / 110;
 
         let scale = this.hp.getPercent() / 85;

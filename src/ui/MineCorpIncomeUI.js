@@ -20,6 +20,8 @@ export default class MineCorpIncomeUI {
         this.planet = planet;
 
         this.scene.events.on(Events.ShowUI, this.show, this);
+
+        this.interval = null;
     }
 
     show (startRefresh = true) {
@@ -27,9 +29,14 @@ export default class MineCorpIncomeUI {
         if (!startRefresh) return;
 
         setTimeout(() => {
-            setInterval(() => {
+            this.interval = setInterval(() => {
                 $('#incomeValue').html(this.scene.gameEnvironment.planet.mineCorpIncome);
             }, 500);
         }, 1200);
+    }
+
+    fadeOut () {
+        clearInterval(this.interval);
+        $('.income').fadeOut(1000);
     }
 }

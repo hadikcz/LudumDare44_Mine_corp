@@ -23,7 +23,7 @@ export default class GameScene extends Phaser.Scene {
          */
         this.ui = null;
 
-        this.gameOver = false;
+        this.isGameOver = false;
     }
 
     create () {
@@ -67,5 +67,33 @@ export default class GameScene extends Phaser.Scene {
 
     update () {
         this.gameEnvironment.update();
+    }
+
+    gameOver () {
+        this.isGameOver = true;
+        this.ui.hide();
+        this.add.tween({
+            targets: this.gameEnvironment.bgDeath,
+            alpha: 1,
+            duration: 5000
+        });
+
+        this.add.tween({
+            targets: [this.gameEnvironment.planet.clouds, this.gameEnvironment.planet.clouds2],
+            alpha: 0,
+            duration: 5000
+        });
+
+        setTimeout(() => {
+            this.scene.launch('StoryTellEndScene');
+        }, 4000);
+
+        setTimeout(() => {
+            this.scene.stop('GameScene');
+            // this.cameras.main.fadeOut(1000);
+            // setTimeout(() => {
+            //     this.scene.stop('GameScene');
+            // }, 5000);
+        }, 9000);
     }
 }

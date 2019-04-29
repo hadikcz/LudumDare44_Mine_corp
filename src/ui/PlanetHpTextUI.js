@@ -36,8 +36,6 @@ export default class MineCorpIncomeUI {
         this.hpText = this.scene.add.text(center.x + hpTextPos.x, center.y + hpTextPos.y, 'HP', { fill: '#FFF', fontFamily: 'AldotheApache', fontSize: 100 }).setDepth(Depths.PLANET_HP);
         this.hpValueText = this.scene.add.text(center.x + hpValuePos.x, center.y + hpValuePos.y, '10 000', fontSettings).setDepth(Depths.PLANET_HP).setOrigin(0.5);
         this.hide();
-
-
         this.scene.events.on(Events.ShowUI, this.show, this);
     }
 
@@ -57,6 +55,14 @@ export default class MineCorpIncomeUI {
         this.scene.add.tween({
             targets: [this.yourText, this.hpText, this.hpValueText],
             alpha: 1,
+            duration: 1000
+        });
+    }
+
+    fadeOut () {
+        this.scene.add.tween({
+            targets: [this.yourTextShadow, this.hpTextShadow, this.hpValueTextShadow, this.yourText, this.hpText, this.hpValueText],
+            alpha: 0,
             duration: 1000
         });
     }

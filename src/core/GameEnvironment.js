@@ -28,6 +28,11 @@ export default class GameEnvironment {
         this.bg = this.scene.add.image(0, 0, 'bg').setOrigin(0, 0).setDepth(Depths.SKY);
 
         /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.bgDeath = this.scene.add.image(0, 0, 'bg_death').setOrigin(0, 0).setDepth(Depths.PLANET_DEATH).setAlpha(0);
+
+        /**
          * @type {Planet}
          */
         this.planet = new Planet(this.scene);
