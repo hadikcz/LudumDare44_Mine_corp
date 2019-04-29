@@ -3,6 +3,7 @@ import Attacks from 'structs/Attacks';
 import Depths from 'structs/Depths';
 import Events from 'structs/Events';
 import TransformHelpers from 'helpers/TransformHelpers';
+import Phaser from "phaser";
 
 export default class AttackManager {
     /**
@@ -215,6 +216,7 @@ export default class AttackManager {
         this.scene.effectManager.launchAsteroid(x, y, rotation);
         setTimeout(() => {
             this.findAndDamageEnemies(x, y, Attacks.Asteroid);
+            this.spawnDebris(x, y, 25);
         }, Attacks.Asteroid.landingTime);
 
         this.cooldowns[Attacks.TYPES.ASTEROID] = true;
@@ -223,5 +225,16 @@ export default class AttackManager {
         }, Attacks.Asteroid.coolDown);
 
         this.scene.events.emit(Events.UsedAttack, Attacks.TYPES.ASTEROID);
+    }
+
+    spawnDebris (x, y, count = 3) {
+        let angleOutOfCore = Planet.getRotationTowardPlanetCenter(x, y) - Math.PI / 2;
+
+        for (let i = 0; i < count; i++) {
+            let modifiedAngle = angleOutOfCore + Phaser.Math.DegToRad(Phaser.Math.RND.integerInRange(-80, 80));
+            let velocity = TransformHelpers.rotationToVelocity(modifiedAngle, Phaser.Math.RND.integerInRange(150, 250));
+            let centerOfObject = TransformHelpers.calcPivot(x, y, angleOutOfCore, 80);
+            this.scene.effectManager.launchDebris(centerOfObject.x, centerOfObject.y, angleOutOfCore, velocity.x, velocity.y);
+        }
     }
 }
