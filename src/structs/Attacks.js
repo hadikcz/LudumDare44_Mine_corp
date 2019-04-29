@@ -4,7 +4,7 @@ export default {
         name: 'Lightning',
         duration: -1, // -1 = instant
         coolDown: 250, // 500ms
-        damage: 1, // per s
+        damage: 1, // 1per s
         radius: 25, // px
         circlesCount: 12
     },

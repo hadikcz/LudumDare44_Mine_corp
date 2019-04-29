@@ -3,6 +3,8 @@ import GameConfig from 'GameConfig';
 import Planet from 'entity/planet/Planet';
 import Block from 'entity/Block';
 import Depths from 'structs/Depths';
+import Events from 'structs/Events';
+import Attacks from 'structs/Attacks';
 
 export default class GameEnvironment {
     /**
@@ -42,6 +44,35 @@ export default class GameEnvironment {
         // this.scene.physics.add.collider(this.scene.effectManager.debrisGroup, this.scene.effectManager.debrisGroup);
 
         // this._createTestBlocks();
+
+        this.kills = {};
+        this.kills['man'] = 0;
+        this.kills['landing_ship'] = 0;
+        this.kills['mining_ship'] = 0;
+        this.kills['factory'] = 0;
+        this.kills['space_ship'] = 0;
+
+        this.scene.events.on(Events.OnKill, (type) => {
+            this.kills[type]++;
+            if (type === 'landing_ship') {
+                this.kills['man'] += 3;
+            }
+
+            if (this.kills['man'] >= 20 && this.scene.attackManager.locks[Attacks.TYPES.TORNADO]) {
+                this.scene.attackManager.locks[Attacks.TYPES.TORNADO] = false;
+                this.scene.ui.attackBarUI.redraw();
+            }
+
+            if (this.kills['mining_ship'] >= 8 && this.scene.attackManager.locks[Attacks.TYPES.VOLCANO]) {
+                this.scene.attackManager.locks[Attacks.TYPES.VOLCANO] = false;
+                this.scene.ui.attackBarUI.redraw();
+            }
+
+            if (this.kills['factory'] >= 3 && this.scene.attackManager.locks[Attacks.TYPES.ASTEROID]) {
+                this.scene.attackManager.locks[Attacks.TYPES.ASTEROID] = false;
+                this.scene.ui.attackBarUI.redraw();
+            }
+        }, this);
     }
 
     update () {

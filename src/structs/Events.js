@@ -4,5 +4,6 @@ export default {
     MineOperationsBegin: 'MineOperationsBegin',
     UsedAttack: 'UsedAttack',
     UnlockedNewAttack: 'UnlockedNewAttack',
-    ShowUI: 'ShowUI'
+    ShowUI: 'ShowUI',
+    OnKill: 'OnKill'
 };

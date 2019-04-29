@@ -71,6 +71,7 @@ export default class AttackBarUI {
             $('.button[data-id=tornado]').removeClass('button_tornado');
             $('.button[data-id=tornado]').addClass('button_tornado_disabled');
         } else {
+            $('.tornadoLock').hide();
             $('.button[data-id=tornado]').addClass('button_tornado');
             $('.button[data-id=tornado]').removeClass('button_tornado_disabled');
         }
@@ -79,6 +80,7 @@ export default class AttackBarUI {
             $('.button[data-id=volcano]').removeClass('button_volcano');
             $('.button[data-id=volcano]').addClass('button_volcano_disabled');
         } else {
+            $('.volcanoLock').hide();
             $('.button[data-id=volcano]').addClass('button_volcano');
             $('.button[data-id=volcano]').removeClass('button_volcano_disabled');
         }
@@ -87,6 +89,7 @@ export default class AttackBarUI {
             $('.button[data-id=asteroid]').removeClass('button_asteroid');
             $('.button[data-id=asteroid]').addClass('button_asteroid_disabled');
         } else {
+            $('.asteroidLock').hide();
             $('.button[data-id=asteroid]').addClass('button_asteroid');
             $('.button[data-id=asteroid]').removeClass('button_asteroid_disabled');
         }

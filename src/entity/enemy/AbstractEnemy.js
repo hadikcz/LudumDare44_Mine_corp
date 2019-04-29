@@ -233,6 +233,8 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
 
     destroy () {
         if (this.hp.get() <= 0) {
+            this.scene.events.emit(Events.OnKill, this.type);
+
             if (this.type !== 'man') {
                 this.spawnDebris(15);
             } else {
