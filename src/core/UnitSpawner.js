@@ -29,6 +29,15 @@ export default class UnitSpawner {
          */
         this._mineOpStarts = false;
 
+        /**
+         * @type {number}
+         */
+        this.dealyShorter = {};
+        this.dealyShorter[LandingShipEnemy.TYPE] = 1;
+        this.dealyShorter[MiningShipEnemy.TYPE] = 1;
+        this.dealyShorter[FactoryEnemy.TYPE] = 1;
+        this.dealyShorter[SpaceMinerEnemy.TYPE] = 1;
+
         this.scene.time.addEvent({
             delay: 3000,
             callbackScope: this,
@@ -51,34 +60,17 @@ export default class UnitSpawner {
             //     callbackScope: this,
             //     callback: this._spawnFactory
             // });
-            this._spawnFactory();
+            // this._spawnFactory();
 
             // spawn intervals
-            this.spawnIntervalTransportShip = this.scene.time.addEvent({
-                repeat: Infinity,
-                delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
-                callbackScope: this,
-                callback: this._spawnTransportShip
-            });
+            this._spawnTransportShip();
 
             setTimeout(() => {
                 this._spawnMiningShip();
-                this.spawnIntervalMiningShip = this.scene.time.addEvent({
-                    repeat: Infinity,
-                    delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
-                    callbackScope: this,
-                    callback: this._spawnMiningShip
-                });
             }, Enemies.getDataByType(MiningShipEnemy.TYPE).startSpawningAfter);
 
             setTimeout(() => {
                 this._spawnFactory();
-                this.spawnIntervalFactory = this.scene.time.addEvent({
-                    repeat: Infinity,
-                    delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
-                    callbackScope: this,
-                    callback: this._spawnFactory
-                });
             }, Enemies.getDataByType(FactoryEnemy.TYPE).startSpawningAfter);
 
             // Robot disabled, no assets
@@ -91,29 +83,61 @@ export default class UnitSpawner {
 
             setTimeout(() => {
                 this._spawnSpaceMiner();
-                this.spawnIntervalSpaceMiner = this.scene.time.addEvent({
-                    repeat: Infinity,
-                    delay: Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn,
-                    callbackScope: this,
-                    callback: this._spawnSpaceMiner
-                });
             }, Enemies.getDataByType(SpaceMinerEnemy.TYPE).startSpawningAfter);
         }, wait);
+
+        this.scene.time.addEvent({
+            repeat: Infinity,
+            delay: 60000,
+            callbackScope: this,
+            callback: this._shorterDelayBetweenSpawns
+        });
+    }
+
+    _shorterDelayBetweenSpawns () {
+        this.spawnIntervalTransportShip.destroy();
     }
 
     _spawnTransportShip () {
         let landPosition = this._getRandomLandPosition();
         this.landUnit(LandingShipEnemy.TYPE, landPosition.x, landPosition.y);
+
+        this.scene.time.addEvent({
+            delay: Math.round(Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn / this.dealyShorter[LandingShipEnemy.TYPE]),
+            callbackScope: this,
+            callback: () => {
+                this.dealyShorter[LandingShipEnemy.TYPE] += 0.01;
+                this._spawnTransportShip();
+            }
+        });
     }
 
     _spawnMiningShip () {
         let landPosition = this._getRandomLandPosition();
         this.landUnit(MiningShipEnemy.TYPE, landPosition.x, landPosition.y);
+
+        this.scene.time.addEvent({
+            delay: Math.round(Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn / this.dealyShorter[MiningShipEnemy.TYPE]),
+            callbackScope: this,
+            callback: () => {
+                this.dealyShorter[MiningShipEnemy.TYPE] += 0.03;
+                this._spawnMiningShip();
+            }
+        });
     }
 
     _spawnFactory () {
         let landPosition = this._getRandomLandPosition();
         this.deployFromSurface(FactoryEnemy.TYPE, landPosition.x, landPosition.y);
+
+        this.scene.time.addEvent({
+            delay: Math.round(Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn / this.dealyShorter[FactoryEnemy.TYPE]),
+            callbackScope: this,
+            callback: () => {
+                this.dealyShorter[FactoryEnemy.TYPE] += 0.08;
+                this._spawnFactory();
+            }
+        });
     }
 
     _spawnRobot () {
@@ -124,6 +148,15 @@ export default class UnitSpawner {
     _spawnSpaceMiner () {
         let orbitPosition = Planet.getRandomOrbitPosition();
         this.deployToOrbitUnit(SpaceMinerEnemy.TYPE, orbitPosition.x, orbitPosition.y);
+
+        this.scene.time.addEvent({
+            delay: Math.round(Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn / this.dealyShorter[SpaceMinerEnemy.TYPE]),
+            callbackScope: this,
+            callback: () => {
+                this.dealyShorter[SpaceMinerEnemy.TYPE] += 0.1;
+                this._spawnSpaceMiner();
+            }
+        });
     }
 
     deployFromSurface (unitType, pointerX, pointerY) {
