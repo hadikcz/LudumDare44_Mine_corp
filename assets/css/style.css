@@ -43,9 +43,38 @@ body {
 .income .title {
     font-size: 27px;
 }
+.income hr {
+    margin-block-start: 0em;
+    margin-block-end: 0.3em;
+    border-width: 0.5px;
+    margin-left: 44px;
+    width: 99px;
+}
 
-.income .corp-icon {
+.income .income-number {
+    font-size: 19px;
+    float: right;
+}
 
+.income .total-income-text {
+    font-size: 19px;
+    float: right;
+}
+.income .corp-text {
+    display: inline-block;
+    font-size: 15px;
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+.corp-icon {
+    background: url(../ui/mine_crop_logo.svg) no-repeat;
+    width: 39px;
+    height: 39px;
+    display: inline-block;
 }
 
 .triangle {
@@ -128,7 +157,7 @@ body {
     border-width: 0 10px 20px 10px;
     border-color: transparent transparent #66ff00 transparent;
     zoom: 0.5;
-    transform: translateY(-50%);
+    transform: translate(-34%, -20%);
     animation: blinker 2s linear infinite;
 }
 

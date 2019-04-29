@@ -220,6 +220,20 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">assets2/enemy_bar.png</key>
+            <key type="filename">assets2/enemy_bar_fill.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,21,15,41</rect>
+                <key>scale9Paddings</key>
+                <rect>7,21,15,41</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">assets2/heavy_miner.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
