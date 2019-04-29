@@ -7,7 +7,7 @@ import Enemies from 'structs/Enemies';
 
 export default class ManEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
-        super(scene, ManEnemy.TYPE, 'man', x, y);
+        super(scene, ManEnemy.TYPE, 'astronaut_enemy', x, y, 'assets2');
         this.setDepth(Depths.MAN);
 
         this.wanderingAnimationTween = this.scene.tweens.add({
