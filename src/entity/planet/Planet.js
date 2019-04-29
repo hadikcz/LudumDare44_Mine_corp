@@ -26,7 +26,14 @@ export default class Planet {
          * @private
          * @type {Phaser.GameObjects.Image}
          */
-        this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER4);
+        this.core = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'core').setDepth(Depths.PLANET_LAYER3);
+
+        /**
+         * @private
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.planetFront = this.scene.add.image(Planet.getCenterOfPlanet().x, Planet.getCenterOfPlanet().y, 'planet_front').setDepth(Depths.PLANET_LAYER4);
+        this.planetFront.setScale(0.85);
 
         /**
          * @type {Phaser.GameObjects.Image}
@@ -54,6 +61,14 @@ export default class Planet {
         this.blendLight = this.scene.add.image(Planet.getCenterOfPlanet().x + 90, Planet.getCenterOfPlanet().y - 120, 'assets2', 'earth_highlight_overlay_effect').setDepth(Depths.PLANET_LAYER5_BLENDS)
         this.blendLight.setAlpha(0.3);
         this.blendLight.setBlendMode(Phaser.BlendModes.ADD);
+
+        this.scene.events.on(Events.ShowUI, () => {
+            this.scene.tweens.add({
+                targets: this.planetFront,
+                alpha: 0,
+                duration: 1000
+            });
+        }, this);
 
         /**
          * @type {Counter}
