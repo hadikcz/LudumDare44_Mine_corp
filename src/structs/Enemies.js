@@ -1,3 +1,5 @@
+import GameConfig from 'GameConfig';
+
 export default {
     SHIPS: {
         landingTime: 2500, // 2500
@@ -20,7 +22,7 @@ export default {
             hp: 1,
             damage: 1,
             particles: {
-                height: 20,
+                height: 20 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 180]
             }
         },
@@ -31,7 +33,7 @@ export default {
             damage: 1,
             timeBetweenSpawn: 5000,
             particles: {
-                height: 55,
+                height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
             }
         },
@@ -43,7 +45,7 @@ export default {
             timeBetweenSpawn: 10000,
             waitBeforeLaunchTime: 15000,
             particles: {
-                height: 55,
+                height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
             }
         },
@@ -55,7 +57,7 @@ export default {
             timeBetweenSpawn: 20000,
             waitBeforeLaunchTime: 20000,
             particles: {
-                height: 55,
+                height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
             }
         },
@@ -67,7 +69,7 @@ export default {
             timeBetweenSpawn: 35000,
             waitBeforeLaunchTime: 45000,
             particles: {
-                height: 55,
+                height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
             }
         }

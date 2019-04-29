@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import Depths from 'structs/Depths';
 import Attacks from 'structs/Attacks';
 import Planet from 'entity/planet/Planet';
+import GameConfig from 'GameConfig';
 
 export default class Lightning extends Phaser.GameObjects.Image {
     constructor (scene) {
@@ -19,7 +20,7 @@ export default class Lightning extends Phaser.GameObjects.Image {
      * @param {number} rotation
      */
     launch (x, y, rotation) {
-        let spawnPosition = Planet.calculateSpawnPosition(x, y, 350);
+        let spawnPosition = Planet.calculateSpawnPosition(x, y, 350 / GameConfig.GameWindowSettings.zoom);
         this.setPosition(spawnPosition.x, spawnPosition.y);
         this.setRotation(rotation);
         this.setVisible(true);

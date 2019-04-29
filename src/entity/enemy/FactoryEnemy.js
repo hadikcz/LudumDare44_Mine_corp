@@ -7,6 +7,7 @@ import Enemies from 'structs/Enemies';
 import Events from 'structs/Events';
 import Planet from 'entity/planet/Planet';
 import Phaser from "phaser";
+import GameConfig from 'GameConfig';
 
 export default class FactoryEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
@@ -17,7 +18,7 @@ export default class FactoryEnemy extends AbstractEnemy {
          * @type {{x: number, y: number}}
          * @private
          */
-        this._smokeFrom = TransformHelpers.calcPivot(this.x, this.y, Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2, 45);
+        this._smokeFrom = TransformHelpers.calcPivot(this.x, this.y, Planet.getRotationTowardPlanetCenter(this.x, this.y) - Math.PI / 2, 45 / GameConfig.GameWindowSettings.zoom);
     }
 
     preUpdate () {
