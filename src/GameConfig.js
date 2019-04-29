@@ -2,11 +2,12 @@ export default {
     GameWindowSettings: {
         width: 1024, // 1024 * 2
         height: 640, // 640 * 2
-        zoom: 0.5 // 1.0
+        zoom: 1, // 1.0...0.5
+        initZoom: 0.75
     },
     World: {
-        width: 1024 * 2,
-        height: 640 * 2,
+        width: 1024, // 1024 * 2,
+        height: 640,
         offsetX: 35,
         offsetY: 0
     },
@@ -27,8 +28,8 @@ export default {
         landing: {
             offsetAngle: 12
         },
-        spawnRadius: 500 * 2,
-        radius: 160 * 2, // 188 * 2
+        spawnRadius: 500, // 500 * 2
+        radius: 160, // 188 * 2... 2x vetsi 160*2
         offset: {
             x: 17,
             y: 17

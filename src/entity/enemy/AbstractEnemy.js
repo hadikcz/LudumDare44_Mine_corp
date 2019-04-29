@@ -12,7 +12,7 @@ import ProgressBarUI from 'ui/ProgressBarUI';
  * @abstract
  */
 export default class AbstractEnemy extends Phaser.GameObjects.Container {
-    constructor (scene, type, key, x, y) {
+    constructor (scene, type, key, x, y, texture = 'assets') {
         super(scene, x, y, []);
         this.scene.add.existing(this);
 
@@ -70,7 +70,7 @@ export default class AbstractEnemy extends Phaser.GameObjects.Container {
         /**
          * @type {Phaser.GameObjects.Image}
          */
-        this.image = this.scene.add.image(0, 0, 'assets', key).setOrigin(0.5, 1);
+        this.image = this.scene.add.image(0, 0, texture, key).setOrigin(0.5, 1);
         this.add(this.image);
 
         /**

@@ -7,8 +7,8 @@ import Stats from 'stats.js/src/Stats';
 
 const config = {
     type: Phaser.CANVAS,
-    pixelArt: true,
-    roundPixels: true,
+    pixelArt: false,
+    roundPixels: false,
     parent: 'content',
     width: GameConfig.GameWindowSettings.width,
     height: GameConfig.GameWindowSettings.height,

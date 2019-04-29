@@ -89,7 +89,7 @@ export default class Planet {
         this.coreNoColor.setScale(scale);
         this.core.setAlpha(alpha);
 
-        this.clouds.rotation -= 0.001;
+        this.clouds.rotation -= 0.0005;
     }
 
     _processMineCorpIncome (damage) {

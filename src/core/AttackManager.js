@@ -94,7 +94,7 @@ export default class AttackManager {
      */
     findAndDamageEnemies (x, y, attackData) {
         let radiusCircle = new Phaser.Geom.Circle(x, y, attackData.radius);
-        // this.scene.add.circle(x, y, attackData.radius, 0xFF0000, 0.5).setDepth(Depths.UI);
+        this.scene.add.circle(x, y, attackData.radius, 0xFF0000, 0.5).setDepth(Depths.UI);
 
         this.scene.unitSpawner.units.getChildren().forEach((/** @type {AbstractEnemy} */ unit) => {
             if (radiusCircle.contains(unit.x, unit.y)) {

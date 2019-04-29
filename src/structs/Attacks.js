@@ -1,3 +1,4 @@
+import GameConfig from 'GameConfig';
 export default {
     Lightning: {
         name: 'Lightning',
@@ -11,14 +12,14 @@ export default {
         duration: 5000,
         coolDown: 20000, // 20000 ms
         damage: 0.25, // per 100ms (2.5 per s)
-        radius: 30 // px
+        radius: 30 / GameConfig.GameWindowSettings.zoom // px
     },
     Volcano: {
         name: 'Volcano',
         duration: -1,
         coolDown: 45000, // ms
         damage: 20, // per s
-        radius: 75,
+        radius: 75 / GameConfig.GameWindowSettings.zoom,
         growTime: 800
     },
     Asteroid: {
@@ -26,7 +27,7 @@ export default {
         duration: -1,
         coolDown: 60000, // 60000ms
         damage: 50, // per s
-        radius: 125,
+        radius: 125 / GameConfig.GameWindowSettings.zoom,
         landingTime: 1500
     },
     TYPES: {

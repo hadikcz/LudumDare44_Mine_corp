@@ -8,7 +8,7 @@ import Events from 'structs/Events';
 
 export default class MiningShipEnemy extends AbstractEnemy {
     constructor (scene, x, y) {
-        super(scene, MiningShipEnemy.TYPE, 'mining_ship', x, y);
+        super(scene, MiningShipEnemy.TYPE, 'ship', x, y, 'assets2');
         this.setDepth(Depths.SHIPS);
     }
 
