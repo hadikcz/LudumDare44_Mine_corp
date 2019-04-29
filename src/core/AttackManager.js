@@ -46,6 +46,12 @@ export default class AttackManager {
         this.cooldowns[Attacks.TYPES.VOLCANO] = false;
         this.cooldowns[Attacks.TYPES.ASTEROID] = false;
 
+        this.canAttack = false;
+
+        this.scene.events.on(Events.ShowUI, () => {
+            this.canAttack = true;
+        }, this);
+
         /**
          * @type {string}
          * @private
@@ -54,6 +60,7 @@ export default class AttackManager {
     }
 
     attack () {
+        if (!this.canAttack) return;
         let landPosition = Planet.findNearestLandPosition(this.scene.input.activePointer.worldX, this.scene.input.activePointer.worldY);
         switch (this._activeAttack) {
             case Attacks.TYPES.LIGHTNING:

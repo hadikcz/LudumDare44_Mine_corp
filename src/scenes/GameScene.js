@@ -9,6 +9,7 @@ import LightSystem from './../core/lights/LightSystem';
 import UI from './../ui/UI';
 import UnitSpawner from 'core/UnitSpawner';
 import AttackManager from 'core/AttackManager';
+import Events from 'structs/Events';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -70,6 +71,8 @@ export default class GameScene extends Phaser.Scene {
     }
 
     gameOver () {
+        this.attackManager.canAttack = false;
+        window.totalIncome = this.gameEnvironment.planet.mineCorpIncome;
         this.isGameOver = true;
         this.ui.hide();
         this.add.tween({

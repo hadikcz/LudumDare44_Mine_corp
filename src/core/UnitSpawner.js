@@ -45,12 +45,12 @@ export default class UnitSpawner {
         setTimeout(() => {
             this.scene.events.emit(Events.ShowUI);
             // test spawner
-            this.scene.time.addEvent({
-                // repeat: Infinity,
-                delay: 1500,
-                callbackScope: this,
-                callback: this._spawnSpaceMiner
-            });
+            // this.scene.time.addEvent({
+            //     // repeat: Infinity,
+            //     delay: 1500,
+            //     callbackScope: this,
+            //     callback: this._spawnSpaceMiner
+            // });
 
             // spawn intervals
             this.scene.time.addEvent({
