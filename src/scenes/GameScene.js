@@ -74,15 +74,19 @@ export default class GameScene extends Phaser.Scene {
     }
 
     gameOver () {
+        this.sound.setMute(true);
         this.attackManager.canAttack = false;
         window.totalIncome = this.gameEnvironment.planet.mineCorpIncome;
         this.isGameOver = true;
         this.ui.hide();
-        this.add.tween({
-            targets: this.gameEnvironment.bgDeath,
-            alpha: 1,
-            duration: 5000
-        });
+        setTimeout(() => {
+            this.cameras.main.fadeOut(1000);
+        }, 2500);
+        // this.add.tween({
+        //     targets: this.gameEnvironment.bgDeath,
+        //     alpha: 1,
+        //     duration: 5000
+        // });
 
         this.add.tween({
             targets: [this.gameEnvironment.planet.clouds, this.gameEnvironment.planet.clouds2],

@@ -8,7 +8,7 @@ import SkipStoryScene from './scenes/SkipStoryScene';
 import GameConfig from './GameConfig.js';
 import Stats from 'stats.js/src/Stats';
 
-window.skipStory = false;
+window.skipStory = true;
 window.totalIncome = 0;
 window.started = Math.round(Date.now() / 1000);
 
