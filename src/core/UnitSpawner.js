@@ -49,11 +49,12 @@ export default class UnitSpawner {
             //     // repeat: Infinity,
             //     delay: 1500,
             //     callbackScope: this,
-            //     callback: this._spawnSpaceMiner
+            //     callback: this._spawnFactory
             // });
+            this._spawnFactory();
 
             // spawn intervals
-            this.scene.time.addEvent({
+            this.spawnIntervalTransportShip = this.scene.time.addEvent({
                 repeat: Infinity,
                 delay: Enemies.getDataByType(LandingShipEnemy.TYPE).timeBetweenSpawn,
                 callbackScope: this,
@@ -62,7 +63,7 @@ export default class UnitSpawner {
 
             setTimeout(() => {
                 this._spawnMiningShip();
-                this.scene.time.addEvent({
+                this.spawnIntervalMiningShip = this.scene.time.addEvent({
                     repeat: Infinity,
                     delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
                     callbackScope: this,
@@ -72,7 +73,7 @@ export default class UnitSpawner {
 
             setTimeout(() => {
                 this._spawnFactory();
-                this.scene.time.addEvent({
+                this.spawnIntervalFactory = this.scene.time.addEvent({
                     repeat: Infinity,
                     delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
                     callbackScope: this,
@@ -90,7 +91,7 @@ export default class UnitSpawner {
 
             setTimeout(() => {
                 this._spawnSpaceMiner();
-                this.scene.time.addEvent({
+                this.spawnIntervalSpaceMiner = this.scene.time.addEvent({
                     repeat: Infinity,
                     delay: Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn,
                     callbackScope: this,

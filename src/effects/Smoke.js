@@ -23,7 +23,7 @@ export default class Lightning extends Phaser.GameObjects.Image {
         this.setActive(true);
         this.setScale(Phaser.Math.RND.realInRange(0.8, 1.2));
 
-        let moveTo = TransformHelpers.calcPivot(x, y, Planet.getRotationTowardPlanetCenter(x, y) - Math.PI / 2 + Phaser.Math.DegToRad(Phaser.Math.RND.integerInRange(-25, 25)), 150);
+        let moveTo = TransformHelpers.calcPivot(x, y, Planet.getRotationTowardPlanetCenter(x, y) - Math.PI / 2 + Phaser.Math.DegToRad(Phaser.Math.RND.integerInRange(-15, 15)), 150);
 
         this.scene.tweens.add({
             targets: this,
@@ -37,7 +37,7 @@ export default class Lightning extends Phaser.GameObjects.Image {
         });
         this.scene.tweens.add({
             targets: this,
-            duration: 1500,
+            duration: 3000,
             alpha: 0
         });
     }
