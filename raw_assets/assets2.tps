@@ -132,7 +132,7 @@
             <key>json</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../assets/images/assets.json</filename>
+                <filename>../assets/images/assets2.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -159,11 +159,11 @@
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
-            <double>2</double>
+            <double>1</double>
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
-            <uint>1</uint>
+            <uint>0</uint>
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMargin</key>
@@ -181,207 +181,131 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">assets-assets/asteroid.png</key>
+            <key type="filename">assets2/earth_highlight_overlay_effect.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>15,16,30,31</rect>
+                <rect>114,92,227,183</rect>
                 <key>scale9Paddings</key>
-                <rect>15,16,30,31</rect>
+                <rect>114,92,227,183</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/bloodCell.png</key>
+            <key type="filename">assets2/earth_shadow_multiply_effect.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>1,1,1,1</rect>
+                <rect>196,187,391,374</rect>
                 <key>scale9Paddings</key>
-                <rect>1,1,1,1</rect>
+                <rect>196,187,391,374</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/debris1.png</key>
+            <key type="filename">assets2/load_bar.png</key>
+            <key type="filename">assets2/load_bar_fill.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>2,2,4,3</rect>
+                <rect>10,27,20,54</rect>
                 <key>scale9Paddings</key>
-                <rect>2,2,4,3</rect>
+                <rect>10,27,20,54</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/debris2.png</key>
-            <key type="filename">assets-assets/debris3.png</key>
+            <key type="filename">assets2/red_dot.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>3,3,5,5</rect>
+                <rect>15,15,29,29</rect>
                 <key>scale9Paddings</key>
-                <rect>3,3,5,5</rect>
+                <rect>15,15,29,29</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/factory.png</key>
+            <key type="filename">assets2/ship.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>15,11,29,23</rect>
+                <rect>49,39,97,78</rect>
                 <key>scale9Paddings</key>
-                <rect>15,11,29,23</rect>
+                <rect>49,39,97,78</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/healthbar_bar.png</key>
-            <key type="filename">assets-assets/healthbar_bg.png</key>
+            <key type="filename">assets2/ship_conteiner_1.png</key>
+            <key type="filename">assets2/ship_conteiner_2.png</key>
+            <key type="filename">assets2/ship_conteiner_3.png</key>
+            <key type="filename">assets2/ship_conteiner_4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>5,1,11,3</rect>
+                <rect>9,17,18,34</rect>
                 <key>scale9Paddings</key>
-                <rect>5,1,11,3</rect>
+                <rect>9,17,18,34</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/landing_ship.png</key>
+            <key type="filename">assets2/ship_flames.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>6,28,12,55</rect>
+                <rect>16,26,33,53</rect>
                 <key>scale9Paddings</key>
-                <rect>6,28,12,55</rect>
+                <rect>16,26,33,53</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/lightning.png</key>
+            <key type="filename">assets2/ship_legs.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>10,42,20,84</rect>
+                <rect>18,11,36,23</rect>
                 <key>scale9Paddings</key>
-                <rect>10,42,20,84</rect>
+                <rect>18,11,36,23</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">assets-assets/limb.png</key>
+            <key type="filename">assets2/ship_orange_line.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>2,1,3,1</rect>
+                <rect>3,11,5,21</rect>
                 <key>scale9Paddings</key>
-                <rect>2,1,3,1</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/man.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>6,13,11,26</rect>
-                <key>scale9Paddings</key>
-                <rect>6,13,11,26</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/mining_ship.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>11,20,22,39</rect>
-                <key>scale9Paddings</key>
-                <rect>11,20,22,39</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/robot.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,21,25,43</rect>
-                <key>scale9Paddings</key>
-                <rect>12,21,25,43</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/smoke.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>2,2,5,5</rect>
-                <key>scale9Paddings</key>
-                <rect>2,2,5,5</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/tornado.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>14,26,29,53</rect>
-                <key>scale9Paddings</key>
-                <rect>14,26,29,53</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">assets-assets/volcano.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0.5</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>34,21,67,42</rect>
-                <key>scale9Paddings</key>
-                <rect>34,21,67,42</rect>
+                <rect>3,11,5,21</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>assets-assets</filename>
+            <filename>assets2</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

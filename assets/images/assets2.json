@@ -1,0 +1,293 @@
+{
+	"textures": [
+		{
+			"image": "assets2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 742,
+				"h": 1063
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "earth_shadow_multiply_effect",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 783,
+						"h": 748
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 20,
+						"w": 742,
+						"h": 709
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 742,
+						"h": 709
+					}
+				},
+				{
+					"filename": "earth_highlight_overlay_effect",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 454,
+						"h": 367
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 7,
+						"w": 437,
+						"h": 354
+					},
+					"frame": {
+						"x": 0,
+						"y": 709,
+						"w": 437,
+						"h": 354
+					}
+				},
+				{
+					"filename": "ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 195,
+						"h": 156
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 192,
+						"h": 154
+					},
+					"frame": {
+						"x": 437,
+						"y": 709,
+						"w": 192,
+						"h": 154
+					}
+				},
+				{
+					"filename": "ship_legs",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 72,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 70,
+						"h": 45
+					},
+					"frame": {
+						"x": 629,
+						"y": 709,
+						"w": 70,
+						"h": 45
+					}
+				},
+				{
+					"filename": "load_bar",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 108
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 37,
+						"h": 104
+					},
+					"frame": {
+						"x": 699,
+						"y": 709,
+						"w": 37,
+						"h": 104
+					}
+				},
+				{
+					"filename": "ship_flames",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 65,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 65,
+						"h": 100
+					},
+					"frame": {
+						"x": 629,
+						"y": 754,
+						"w": 65,
+						"h": 100
+					}
+				},
+				{
+					"filename": "red_dot",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 58,
+						"h": 58
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 6,
+						"w": 47,
+						"h": 47
+					},
+					"frame": {
+						"x": 694,
+						"y": 813,
+						"w": 47,
+						"h": 47
+					}
+				},
+				{
+					"filename": "load_bar_fill",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 108
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 37,
+						"h": 104
+					},
+					"frame": {
+						"x": 629,
+						"y": 854,
+						"w": 37,
+						"h": 104
+					}
+				},
+				{
+					"filename": "ship_orange_line",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 11,
+						"h": 41
+					},
+					"frame": {
+						"x": 666,
+						"y": 854,
+						"w": 11,
+						"h": 41
+					}
+				},
+				{
+					"filename": "ship_conteiner_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 35,
+						"h": 65
+					},
+					"frame": {
+						"x": 677,
+						"y": 860,
+						"w": 35,
+						"h": 65
+					}
+				},
+				{
+					"filename": "ship_conteiner_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 19,
+						"w": 34,
+						"h": 48
+					},
+					"frame": {
+						"x": 666,
+						"y": 925,
+						"w": 34,
+						"h": 48
+					}
+				},
+				{
+					"filename": "ship_conteiner_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 34,
+						"w": 34,
+						"h": 33
+					},
+					"frame": {
+						"x": 700,
+						"y": 925,
+						"w": 34,
+						"h": 33
+					}
+				},
+				{
+					"filename": "ship_conteiner_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 36,
+						"h": 68
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 53,
+						"w": 33,
+						"h": 14
+					},
+					"frame": {
+						"x": 700,
+						"y": 958,
+						"w": 33,
+						"h": 14
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:aff1990f723b40fd5f8cae4af358796a:3ad72cd7171b6aaebfe385174059c51d:09550fb4fdcdfdbbc019b92dacf78d7a$"
+	}
+}

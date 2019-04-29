@@ -33,12 +33,11 @@ export default class GameScene extends Phaser.Scene {
         this.effectManager = new EffectManager(this);
         // this.cameras.main.setOrigin(0, 0);
         this.cameras.main.startFollow({ x: GameConfig.World.width / 2, y: GameConfig.World.height / 2 });
-        this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
+        this.cameras.main.setZoom(GameConfig.GameWindowSettings.initZoom);
 
-        // setTimeout(() => {
-        //     this.cameras.main.zoomTo(GameConfig.GameWindowSettings.zoom, 3000);
-        // }, 2000);
-        // this.cameras.main.setZoom(GameConfig.GameWindowSettings.zoom);
+        setTimeout(() => {
+            this.cameras.main.zoomTo(GameConfig.GameWindowSettings.zoom, 3000);
+        }, 2000);
 
         // unzoom 2x from center
         // this.cameras.main.setZoom(0.5);
