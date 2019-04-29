@@ -60,19 +60,25 @@ export default class UnitSpawner {
                 callback: this._spawnTransportShip
             });
 
-            this.scene.time.addEvent({
-                repeat: Infinity,
-                delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
-                callbackScope: this,
-                callback: this._spawnMiningShip
-            });
+            setTimeout(() => {
+                this._spawnMiningShip();
+                this.scene.time.addEvent({
+                    repeat: Infinity,
+                    delay: Enemies.getDataByType(MiningShipEnemy.TYPE).timeBetweenSpawn,
+                    callbackScope: this,
+                    callback: this._spawnMiningShip
+                });
+            }, Enemies.getDataByType(MiningShipEnemy.TYPE).startSpawningAfter);
 
-            this.scene.time.addEvent({
-                repeat: Infinity,
-                delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
-                callbackScope: this,
-                callback: this._spawnFactory
-            });
+            setTimeout(() => {
+                this._spawnFactory();
+                this.scene.time.addEvent({
+                    repeat: Infinity,
+                    delay: Enemies.getDataByType(FactoryEnemy.TYPE).timeBetweenSpawn,
+                    callbackScope: this,
+                    callback: this._spawnFactory
+                });
+            }, Enemies.getDataByType(FactoryEnemy.TYPE).startSpawningAfter);
 
             // Robot disabled, no assets
             // this.scene.time.addEvent({
@@ -82,12 +88,15 @@ export default class UnitSpawner {
             //     callback: this._spawnRobot
             // });
 
-            this.scene.time.addEvent({
-                repeat: Infinity,
-                delay: Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn,
-                callbackScope: this,
-                callback: this._spawnSpaceMiner
-            });
+            setTimeout(() => {
+                this._spawnSpaceMiner();
+                this.scene.time.addEvent({
+                    repeat: Infinity,
+                    delay: Enemies.getDataByType(SpaceMinerEnemy.TYPE).timeBetweenSpawn,
+                    callbackScope: this,
+                    callback: this._spawnSpaceMiner
+                });
+            }, Enemies.getDataByType(SpaceMinerEnemy.TYPE).startSpawningAfter);
         }, wait);
     }
 

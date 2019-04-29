@@ -51,6 +51,7 @@ export default {
             hp: 15,
             damage: 15,
             timeBetweenSpawn: 10000,
+            startSpawningAfter: 30000,
             waitBeforeLaunchTime: 15000, // 15000
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
@@ -67,7 +68,7 @@ export default {
             hp: 20,
             damage: 20,
             timeBetweenSpawn: 20000,
-            waitBeforeLaunchTime: 20000,
+            startSpawningAfter: 70000,
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
@@ -77,13 +78,14 @@ export default {
                 y: -65
             }
         },
-        {
+        { // disabled
             type: 'huge_robot', //AbstractEnemy.ENEMY_TYPE_LANDING_SHIP,
             name: 'Huge robot',
             hp: 45,
             damage: 35,
             timeBetweenSpawn: 35000,
             waitBeforeLaunchTime: 45000,
+            startSpawningAfter: 100000,
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
@@ -99,6 +101,7 @@ export default {
             hp: 50,
             damage: 50,
             timeBetweenSpawn: 50000,
+            startSpawningAfter: 100000,
             particles: {
                 height: 55 / GameConfig.GameWindowSettings.zoom,
                 force: [50, 450]
