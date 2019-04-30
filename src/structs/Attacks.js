@@ -11,7 +11,7 @@ export default {
     Tornado: {
         name: 'Tornado',
         duration: 5000,
-        coolDown: 20000, // 20000 ms
+        coolDown: 10000, // 20000 ms
         damage: 0.25, // per 100ms (2.5 per s)
         radius: 40 / GameConfig.GameWindowSettings.zoom, // px
         circlesCount: 2
@@ -19,7 +19,7 @@ export default {
     Volcano: {
         name: 'Volcano',
         duration: -1,
-        coolDown: 45000, // ms
+        coolDown: 20000, // ms
         damage: 20, // per s
         radius: 75 / GameConfig.GameWindowSettings.zoom,
         growTime: 800, // px
@@ -28,7 +28,7 @@ export default {
     Asteroid: {
         name: 'Asteroid',
         duration: -1,
-        coolDown: 60000, // 60000ms
+        coolDown: 30000, // 60000ms
         damage: 50, // per s
         radius: 150 / GameConfig.GameWindowSettings.zoom,
         landingTime: 1500, // px
