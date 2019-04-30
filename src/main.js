@@ -50,10 +50,10 @@ const config = {
 
 let game = new Phaser.Game(config);
 
-var stats = new Stats();
-document.body.appendChild(stats.dom);
-
-requestAnimationFrame(function loop () {
-    stats.update();
-    requestAnimationFrame(loop);
-});
+// var stats = new Stats();
+// document.body.appendChild(stats.dom);
+//
+// requestAnimationFrame(function loop () {
+//     stats.update();
+//     requestAnimationFrame(loop);
+// });
