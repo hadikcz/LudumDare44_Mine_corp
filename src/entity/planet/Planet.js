@@ -73,7 +73,7 @@ export default class Planet {
         /**
          * @type {Counter}
          */
-        this.hp = new Counter(10000);
+        this.hp = new Counter(15000);
 
         /**
          * @type {number}

@@ -63,7 +63,7 @@ export default class GameEnvironment {
                 this.scene.ui.attackBarUI.redraw();
             }
 
-            if (this.kills['mining_ship'] >= 8 && this.scene.attackManager.locks[Attacks.TYPES.VOLCANO]) {
+            if (this.kills['mining_ship'] >= 4 && this.scene.attackManager.locks[Attacks.TYPES.VOLCANO]) {
                 this.scene.attackManager.locks[Attacks.TYPES.VOLCANO] = false;
                 this.scene.ui.attackBarUI.redraw();
             }
